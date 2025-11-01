@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
     <!-- Navigation -->
+    <UiSplashCursor />
     <nav
         :class="[
         'fixed w-full z-50 transition-all duration-300',
@@ -11,7 +12,7 @@
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center space-x-2">
             <UAvatar size="2xl" src="/images/photo2.png" />
-            <span class="font-bold text-xl">Nebel Massengo</span>
+            <UiShinyText class="font-bold text-xl" text="Duorli Rejouis Nebel Massengo"/>
           </div>
 
           <div class="hidden md:flex space-x-8">
