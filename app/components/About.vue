@@ -10,15 +10,22 @@
       </h2>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+
+        <UiSpotlightCard
+            class-name="custom-spotlight-card"
+            spotlight-color="rgba(255, 255, 255, 0.25)"
+        >
           <h3 class="text-2xl font-bold mb-4 text-cyan-400">Profil</h3>
           <p class="text-slate-300 leading-relaxed">
             Développeur Full Stack avec <strong>6 ans d'expérience</strong>, spécialisé dans la conception de solutions robustes et optimisées.
             Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en méthodologie agile et accompagné des équipes techniques vers l'excellence.
           </p>
-        </div>
+        </UiSpotlightCard>
 
-        <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+        <UiSpotlightCard
+            class-name="custom-spotlight-card"
+            spotlight-color="rgba(255, 255, 255, 0.25)"
+        >
           <h3 class="text-2xl font-bold mb-4 text-cyan-400">Recherche</h3>
           <div class="space-y-3 text-slate-300">
             <p><strong class="text-white">Type de poste :</strong> CDI - Développeur Full Stack / Tech Lead</p>
@@ -26,7 +33,8 @@
             <p><strong class="text-white">Mobilité :</strong> Île-de-France</p>
             <p><strong class="text-white">Permis :</strong> B</p>
           </div>
-        </div>
+        </UiSpotlightCard>
+
       </div>
     </div>
   </section>

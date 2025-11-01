@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
     <!-- Navigation -->
-    <UiSplashCursor />
+    <UiSplashCursor/>
     <nav
         :class="[
         'fixed w-full z-50 transition-all duration-300',
@@ -11,30 +11,49 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center space-x-2">
-            <UAvatar size="2xl" src="/images/photo2.png" />
+            <UAvatar size="2xl" src="/images/photo2.png"/>
             <UiShinyText class="font-bold text-xl" text="Duorli Rejouis Nebel Massengo"/>
           </div>
 
-          <div class="hidden md:flex space-x-8">
+          <div class="hidden md:flex justify-center items-center space-x-8">
             <a
                 v-for="item in menuItems"
                 :key="item"
-                :href="`#${item.toLowerCase().replace(/\s+/g, '-').replace(/à/g, 'a')}`"
-                class="hover:text-cyan-400 transition-colors duration-200 font-medium"
+                :href="`#${item.toLowerCase().replace(/\s+/g, '-').replace(/à/g, 'a').replace(/é/g, 'e')}`"
+                class="hover:text-cyan-400 transition-colors duration-200 font-medium mt-1"
             >
               {{ item }}
             </a>
+            <div
+                v-if="locale === 'en'"
+                class="flex items-center space-x-2 cursor-pointer border py-0.5 px-1 rounded-lg font-bold"
+                @click="setLocale('fr')"
+            >
+              <span>FR</span>
+              <UIcon name="twemoji:flag-france" size="25"/>
+            </div>
+            <div
+                v-if="locale === 'fr'"
+                class="flex items-center space-x-2 cursor-pointer border py-0.5 px-1 rounded-lg font-bold"
+                @click="setLocale('en')"
+            >
+              <span>EN</span>
+              <UIcon name="twemoji:flag-united-states" size="25"/>
+            </div>
+
           </div>
+
+
 
           <button
               class="md:hidden text-white"
               @click="isMenuOpen = !isMenuOpen"
           >
             <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
             <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
@@ -57,22 +76,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <Hero />
+    <Hero/>
 
     <!-- About Section -->
-    <About />
+    <About/>
 
     <!-- Skills Section -->
-    <Skills />
+    <Skills/>
 
     <!-- Experience Section -->
-    <Experience />
+    <Experience/>
 
     <!-- Education Section -->
-    <Education />
+    <Education/>
 
     <!-- Contact Section -->
-    <Contact />
+    <Contact/>
 
     <!-- Footer -->
     <Footer/>
@@ -90,6 +109,8 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
 
+const {locale, setLocale} = useI18n()
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
@@ -97,6 +118,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
+
 </script>
 
 <style scoped>
