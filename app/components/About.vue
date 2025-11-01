@@ -6,16 +6,16 @@
   <section id="a-propos" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        À propos
+        {{ $t('about_me')}}
       </h2>
 
       <div class="grid md:grid-cols-2 gap-8">
 
         <UiSpotlightCard
-            class-name="custom-spotlight-card"
+            class-name="border border-slate-700/50 hover:border-cyan-500/50"
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
-          <h3 class="text-2xl font-bold mb-4 text-cyan-400">Profil</h3>
+          <h3 class="text-2xl font-bold mb-4 text-cyan-400">{{ $t('profile') }}</h3>
           <p class="text-slate-300 leading-relaxed">
             Développeur Full Stack avec <strong>6 ans d'expérience</strong>, spécialisé dans la conception de solutions robustes et optimisées.
             Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en méthodologie agile et accompagné des équipes techniques vers l'excellence.
@@ -23,7 +23,7 @@
         </UiSpotlightCard>
 
         <UiSpotlightCard
-            class-name="custom-spotlight-card"
+            class-name="border border-slate-700/50 hover:border-cyan-500/50"
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
           <h3 class="text-2xl font-bold mb-4 text-cyan-400">Recherche</h3>

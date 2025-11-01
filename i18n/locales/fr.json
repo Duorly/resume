@@ -1,5 +1,8 @@
 {
   "welcome": "Welcome",
   "short_description": " ans d'expérience en développement web et mobile, architecture logicielle et cloud (AWS, GCP). Passionné par la création de solutions performantes et l'accompagnement technique d'équipes.",
-  "contact_me": "Me contacter"
+  "contact_me": "Me contacter",
+  "about_me": "À propos de moi",
+  "i_am": "Je suis",
+  "profile" : "Profil"
 }

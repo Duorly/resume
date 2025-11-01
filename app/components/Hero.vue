@@ -20,9 +20,7 @@
           class-name="text-7xl md:text-7xl font-extrabold my-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
       />
 
-      <p class="flex items-center justify-center gap-2 text-center text-2xl md:text-3xl mb-4 text-cyan-300 font-semibold">
-        Développeur Full Stack
-      </p>
+      <UiAlternativeText/>
 
       <p class="text-lg md:text-xl mb-8 text-slate-300 max-w-3xl mx-auto leading-relaxed">
         <UiCountUp
@@ -34,7 +32,8 @@
             :delay="0"
             :start-when="true"
             class-name="count-up-text"
-        /> {{ $t('short_description') }}
+        />
+        {{ $t('short_description') }}
       </p>
 
       <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
@@ -43,7 +42,7 @@
             class="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-full font-semibold transition-all duration-200 shadow-lg"
         >
           <UIcon name="lucide:mail" size="22"/>
-          {{ $t('contact_me')}}
+          {{ $t('contact_me') }}
         </a>
         <a
             href="https://github.com/Duorly"
@@ -62,15 +61,17 @@
       <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            <path
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
           +33 7 75 72 55 82
         </div>
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
           Île-de-France
@@ -102,7 +103,3 @@
 
   </section>
 </template>
-
-<style scoped>
-
-</style>

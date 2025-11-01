@@ -1,5 +1,8 @@
 {
   "welcome": "Welcome",
   "short_description": " years of experience in web and mobile development, software architecture and cloud (AWS, GCP). Passionate about creating high-performance solutions and providing technical support to teams.",
-  "contact_me": "Contact me"
+  "contact_me": "Contact me",
+  "about_me": "About me",
+  "i_am": "I am",
+  "profile": "Profile"
 }

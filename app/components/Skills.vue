@@ -4,25 +4,49 @@ const skillCategories = [
     title: 'Backend',
     color: 'cyan-400',
     icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    skills: ['PHP (Laravel, Symfony)', 'Java (Spring Boot)', 'Python', 'Node.js (Express, NestJS)']
+    skills: [
+      { name: 'Laravel', icon: 'logos:laravel' },
+      { name: 'Spring Boot', icon: 'logos:spring-icon' },
+      { name: 'Express', icon: 'logos:nodejs-icon' },
+      { name: 'NestJS', icon: 'logos:nestjs' }
+    ]
   },
   {
     title: 'Frontend',
     color: 'purple-400',
     icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    skills: ['Vue.js', 'Nuxt', 'React', 'Angular']
+    skills: [
+      { name: 'Vue.js', icon: 'logos:vue' },
+      { name: 'Nuxt', icon: 'logos:nuxt-icon' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'Angular', icon: 'logos:angular-icon' },
+      {name: 'Next.js', icon: 'logos:nextjs-icon'},
+      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+      { name: 'Vite', icon: 'logos:vitejs' }
+    ]
   },
   {
     title: 'Cloud & DevOps',
     color: 'blue-400',
     icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
-    skills: ['AWS', 'GCP', 'Cloudflare']
+    skills: [
+      { name: 'AWS', icon: 'logos:aws' },
+      { name: 'GCP', icon: 'logos:google-cloud' },
+      { name: 'Cloudflare', icon: 'logos:cloudflare-icon' },
+      { name: 'Vercel', icon: 'logos:vercel-icon' }
+    ]
   },
   {
-    title: 'Outils & Méthodologies',
+    title: 'Outils',
     color: 'green-400',
     icon: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-    skills: ['Docker', 'CI/CD (Jenkins, Github Actions)', 'Git', 'Jira', 'Scrum/Agile']
+    skills: [
+      { name: 'Docker', icon: 'logos:docker-icon' },
+      { name: 'CI/CD (GitHub Actions)', icon: 'logos:github-actions' },
+      { name: 'Git', icon: 'logos:git-icon' },
+      { name: 'Jira', icon: 'logos:jira' },
+      { name: 'Postman', icon: 'logos:postman-icon' }
+    ]
   }
 ];
 </script>
@@ -35,10 +59,11 @@ const skillCategories = [
       </h2>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div
+        <UiSpotlightCard
             v-for="(category, index) in skillCategories"
             :key="index"
-            class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+            class-name="border border-slate-700/50 hover:border-cyan-500/50"
+            spotlight-color="rgba(255, 255, 255, 0.25)"
         >
           <div class="flex items-center gap-3 mb-6">
             <svg :class="`text-${category.color}`" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,21 +71,22 @@ const skillCategories = [
             </svg>
             <h3 :class="`text-2xl font-bold text-${category.color}`">{{ category.title }}</h3>
           </div>
+
           <div class="flex flex-wrap gap-2">
-              <span
-                  v-for="(skill, i) in category.skills"
-                  :key="i"
-                  :class="`px-4 py-2 bg-slate-700/50 rounded-full text-sm font-medium hover:bg-${category.color.split('-')[0]}-600/20 hover:text-${category.color.split('-')[0]}-300 transition-colors`"
-              >
-                {{ skill }}
-              </span>
+            <div
+                v-for="(skill, i) in category.skills"
+                :key="i"
+                :class="`flex items-center gap-2 px-4 py-2 bg-slate-700/50 rounded-full text-sm font-medium hover:bg-${category.color.split('-')[0]}-600/20 hover:text-${category.color.split('-')[0]}-300 transition-colors`"
+            >
+              <UIcon :name="skill.icon" class="size-5 shrink-0" />
+              {{ skill.name }}
+            </div>
           </div>
-        </div>
+        </UiSpotlightCard>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-
 </style>
