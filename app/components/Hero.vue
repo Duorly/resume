@@ -17,7 +17,7 @@
           :colors="['#00d3f2', '#4c00b8', '#51a2ff', '#c27fff', '#fff']"
           :animation-speed="6"
           :show-border="false"
-          class-name="text-7xl md:text-7xl font-extrabold my-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+          class-name="text-2xl md:text-7xl font-extrabold my-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
       />
 
       <UiAlternativeText/>

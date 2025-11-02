@@ -12,7 +12,7 @@
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center space-x-2">
             <UAvatar size="2xl" src="/images/photo2.png"/>
-            <UiShinyText class="font-bold text-xl" text="Duorli Rejouis Nebel Massengo"/>
+            <UiShinyText class="font-bold text-lg md:text-xl" text="Duorli Rejouis Nebel Massengo"/>
           </div>
 
           <div class="hidden md:flex justify-center items-center space-x-8">
@@ -64,11 +64,11 @@
           <a
               v-for="item in menuItems"
               :key="item"
-              :href="`#${item.toLowerCase().replace(/\s+/g, '-').replace(/à/g, 'a')}`"
+              :href="`#${item.toLowerCase()}`"
               class="block px-3 py-2 hover:bg-slate-800 rounded-lg transition-colors"
               @click="isMenuOpen = false"
           >
-            {{ item }}
+            {{ $t(item) }}
           </a>
         </div>
       </div>

@@ -18,7 +18,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <p class="flex items-center justify-center gap-2 text-center text-2xl md:text-3xl mb-4 text-cyan-300 font-semibold">
+  <p class="flex items-center justify-center gap-2 text-center text-lg md:text-3xl mb-4 text-cyan-300 font-semibold">
     {{ $t('i_am') }}
     <transition name="fade-slide" mode="out-in">
       <span :key="roles[currentRole]" class="text-blue-400 font-bold">
