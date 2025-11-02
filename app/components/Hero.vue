@@ -25,7 +25,7 @@
       <p class="text-lg md:text-xl mb-8 text-slate-300 max-w-3xl mx-auto leading-relaxed">
         <UiCountUp
             :from="0"
-            :to="6"
+            :to="new Date().getFullYear() - 2019"
             separator=","
             direction="up"
             :duration="3"

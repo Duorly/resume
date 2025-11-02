@@ -92,12 +92,17 @@
     <!-- Contact Section -->
     <Contact/>
 
+    <!-- Testimonials Section -->
+    <Testimonials/>
+
     <!-- Footer -->
     <Footer/>
   </div>
 </template>
 
 <script setup>
+import Testimonials from "~/components/Testimonials.vue";
+
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 

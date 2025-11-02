@@ -12,7 +12,7 @@ const experiences = [
   },
   {
     date: 'Oct 2024 - Sept 2025',
-    title: 'Tech Lead',
+    title: 'Tech Lead / Chef de projet',
     company: 'XKSGROUP',
     description:
         "Encadrement technique des projets et conception d'architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs dans une logique de qualité et de scalabilité.",
