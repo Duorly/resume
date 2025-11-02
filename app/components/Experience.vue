@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import type {TimelineItem} from '@nuxt/ui'
-
-const items = [
+const experiences = [
   {
     date: 'Oct 2024 - Présent',
     title: 'Tech Lead',
-    subtitle: 'XKSGROUP',
+    company: 'XKSGROUP',
     description: 'Conception d\'architecture technique et validation des choix technologiques. Revue de code et gestion de la dette technique.',
-    icon: 'i-lucide-briefcase',
-    value: 'xksgroup',
     location: 'Cergy, France',
-    logo: 'https://via.placeholder.com/60x60/0891b2/ffffff?text=XKS',
+    icon: 'i-lucide-briefcase',
+    color: 'bg-cyan-500',
     tasks: [
       'Conception d\'architecture technique et validation des choix technologiques',
       'Revue de code et gestion de la dette technique',
@@ -21,12 +18,11 @@ const items = [
   {
     date: 'Mai - Sept 2024',
     title: 'Tech Lead Backend',
-    subtitle: 'FASEYA',
+    company: 'FASEYA',
     description: 'Développement backend et déploiement sur AWS. Gestion de la dette technique et choix d\'architectures.',
-    icon: 'i-lucide-server',
-    value: 'faseya',
     location: 'Dakar, Sénégal',
-    logo: 'https://via.placeholder.com/60x60/06b6d4/ffffff?text=FASEYA',
+    icon: 'i-lucide-server',
+    color: 'bg-blue-500',
     tasks: [
       'Développement backend et déploiement sur AWS',
       'Gestion de la dette technique et choix d\'architectures',
@@ -37,12 +33,11 @@ const items = [
   {
     date: 'Oct 2023 - Mars 2024',
     title: 'Tech Lead / Chef de projet',
-    subtitle: 'Nanocreatives',
+    company: 'Nanocreatives',
     description: 'Conception et développement de solutions logicielles. Déploiement d\'applications sur cloud Linux.',
-    icon: 'i-lucide-layers',
-    value: 'nanocreatives',
     location: 'Brazzaville, Congo',
-    logo: 'https://via.placeholder.com/60x60/0ea5e9/ffffff?text=NC',
+    icon: 'i-lucide-layers',
+    color: 'bg-indigo-500',
     tasks: [
       'Conception et développement de solutions logicielles',
       'Déploiement d\'applications sur cloud Linux',
@@ -53,12 +48,11 @@ const items = [
   {
     date: 'Sept - Nov 2023',
     title: 'Consultant IT',
-    subtitle: 'UNFPA (Nations Unies)',
+    company: 'UNFPA (Nations Unies)',
     description: 'Déploiement de la plateforme GLPI. Collecte des besoins secteur santé et production de rapports statistiques.',
-    icon: 'i-lucide-globe',
-    value: 'unfpa',
     location: 'Brazzaville, Congo',
-    logo: 'https://via.placeholder.com/60x60/0284c7/ffffff?text=UN',
+    icon: 'i-lucide-globe',
+    color: 'bg-purple-500',
     tasks: [
       'Déploiement de la plateforme GLPI',
       'Collecte des besoins secteur santé',
@@ -69,12 +63,11 @@ const items = [
   {
     date: 'Janv - Juin 2022',
     title: 'Consultant Développeur',
-    subtitle: 'AGRER - Union Européenne',
+    company: 'AGRER - Union Européenne',
     description: 'Développement d\'une application agricole. Pilotage de projet et coordination d\'équipes.',
-    icon: 'i-lucide-leaf',
-    value: 'agrer',
     location: 'Brazzaville, Congo',
-    logo: 'https://via.placeholder.com/60x60/0369a1/ffffff?text=EU',
+    icon: 'i-lucide-leaf',
+    color: 'bg-green-500',
     tasks: [
       'Développement d\'une application agricole',
       'Pilotage de projet et coordination d\'équipes',
@@ -82,31 +75,84 @@ const items = [
       'Formation de plus de 300 utilisateurs'
     ]
   }
-] satisfies TimelineItem[]
+]
 </script>
 
 <template>
   <section id="experiences" class="py-20 px-4 bg-slate-900/50">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        Experience Professionnelle
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+        Expérience Professionnelle
       </h2>
-      <div class="max-w-2xl mx-auto w-full">
-        <UTimeline
-            :items="items" :default-value="0"
-            :ui="{ item: 'even:flex-row-reverse even:-translate-x-[calc(100%-2rem)] even:text-right' }"
-            class="translate-x-[calc(50%-1rem)]"
-        >
-          <template #title="{ item }">
-            <div class="flex justify-between items-center w-full">
-              <div class="font-bold">{{ item.title }}</div>
-              <div class="flex justify-center items-center gap-2 font-normal text-muted">
-                <UIcon name="lucide:map-pin"/>
-                {{ item.location }}
+
+      <div class="relative">
+        <!-- Ligne verticale centrale -->
+        <div
+            class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-purple-500"/>
+
+        <!-- Timeline items -->
+        <div class="space-y-12">
+          <div
+              v-for="(exp, index) in experiences"
+              :key="index"
+              :class="[
+              'relative flex items-center',
+              index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+            ]"
+          >
+            <!-- Contenu à gauche ou droite -->
+            <div
+                :class="[
+              'w-[calc(50%-2rem)]',
+              index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'
+            ]">
+              <UiSpotlightCard
+                  class-name="border border-slate-700/50 hover:border-cyan-500/50"
+                  spotlight-color="rgba(255, 255, 255, 0.25)">
+                <div class="text-sm text-cyan-400 font-semibold mb-2">{{ exp.date }}</div>
+                <div :class="['flex items-center justify-between mb-2', index % 2 === 0 ? 'flex-row-reverse' : 'flex-row']">
+                  <h3 class="text-xl font-bold text-white">{{ exp.title }}</h3>
+                  <div class="text-cyan-300 font-medium">{{ exp.company }}</div>
+                </div>
+
+                <div
+                    class="flex items-center gap-1 text-sm text-gray-400 mb-3"
+                    :class="index % 2 === 0 ? 'justify-end' : 'justify-start'">
+                  <UIcon name="i-lucide-map-pin" class="w-4 h-4"/>
+                  <span>{{ exp.location }}</span>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed">{{ exp.description }}</p>
+
+                <!-- Tâches -->
+                <ul class="mt-4 space-y-2" :class="index % 2 === 0 ? 'text-right' : 'text-left'">
+                  <li
+                      v-for="(task, taskIndex) in exp.tasks"
+                      :key="taskIndex"
+                      class="text-xs text-gray-400 flex items-start gap-2"
+                      :class="index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'"
+                  >
+                    <span class="text-cyan-400 mt-1">•</span>
+                    <span>{{ task }}</span>
+                  </li>
+                </ul>
+              </UiSpotlightCard>
+            </div>
+
+            <!-- Point central avec icône -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+              <div
+                  :class="[
+                'w-12 h-12 rounded-full flex items-center justify-center border-4 border-slate-900',
+                exp.color
+              ]">
+                <UIcon :name="exp.icon" class="w-6 h-6 text-white"/>
               </div>
             </div>
-          </template>
-        </UTimeline>
+
+            <!-- Espace vide de l'autre côté -->
+            <div class="w-[calc(50%-2rem)]"/>
+          </div>
+        </div>
       </div>
     </div>
   </section>
