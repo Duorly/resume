@@ -117,6 +117,12 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
+defineOgImageComponent('NuxtSeo', {
+  title: 'Duorli Nebel — Développeur Full Stack',
+  description: 'Création d’applications web modernes, performantes et scalables. Expert Vue.js, Nuxt, Spring Boot, Laravel et Cloud (AWS, GCP).',
+  theme: '#06b6d4', // ton accent cyan
+  colorMode: 'dark', // s’adapte bien à ton style portfolio
+})
 </script>
 
 <style scoped>
