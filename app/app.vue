@@ -98,7 +98,6 @@
 </template>
 
 <script setup>
-
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 

@@ -11,7 +11,7 @@ const experiences = [
     color: 'bg-amber-500'
   },
   {
-    date: 'Oct 2024 - Présent',
+    date: 'Oct 2024 - Sept 2025',
     title: 'Tech Lead',
     company: 'XKSGROUP',
     description:
@@ -57,7 +57,7 @@ const experiences = [
     description:
         "Développement d’une application de suivi agricole financée par l’Union Européenne. Coordination d’équipes et formation de plus de 300 utilisateurs pour améliorer la collecte et l’analyse des données terrain.",
     location: 'Brazzaville, Congo',
-    icon: 'i-lucide-leaf',
+    icon: 'i-lucide-briefcase',
     color: 'bg-green-500'
   }
 ]

@@ -86,7 +86,7 @@
     </div>
 
     <div class="w-full overflow-x-hidden">
-      <UMarquee class="mt-5">
+      <UMarquee class="mt-5" :overlay="true">
         <UIcon name="logos:nuxt-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:nextjs-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:react" class="size-10 shrink-0"/>
