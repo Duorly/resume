@@ -19,10 +19,10 @@
             <a
                 v-for="item in menuItems"
                 :key="item"
-                :href="`#${item.toLowerCase().replace(/\s+/g, '-').replace(/à/g, 'a').replace(/é/g, 'e')}`"
+                :href="`#${item.toLowerCase()}`"
                 class="hover:text-cyan-400 transition-colors duration-200 font-medium mt-1"
             >
-              {{ item }}
+              {{ $t(item) }}
             </a>
             <div
                 v-if="locale === 'en'"
@@ -42,7 +42,6 @@
             </div>
 
           </div>
-
 
 
           <button
@@ -103,7 +102,7 @@
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 
-const menuItems = ['À propos', 'Compétences', 'Expériences', 'Formation', 'Contact'];
+const menuItems = ref(['menu_about', 'menu_skills', 'menu_experiences', 'menu_education', 'menu_contact']);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;

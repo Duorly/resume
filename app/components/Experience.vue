@@ -1,85 +1,71 @@
 <script setup lang="ts">
 const experiences = [
   {
+    date: 'Sept 2025 - Présent',
+    title: 'Développeur Fullstack / Mentor',
+    company: 'ITIC PARIS',
+    description:
+        "Conception de l’application ITIC COMPANION, un outil de gamification scolaire connecté à l’ERP Ymag Ypareo. En parallèle, j’assure le mentorat technique d’étudiants du BTS au Master et la mise en place d’une architecture microservices documentée pour le campus numérique.",
+    location: 'Paris, France',
+    icon: 'i-lucide-briefcase',
+    color: 'bg-amber-500'
+  },
+  {
     date: 'Oct 2024 - Présent',
     title: 'Tech Lead',
     company: 'XKSGROUP',
-    description: 'Conception d\'architecture technique et validation des choix technologiques. Revue de code et gestion de la dette technique.',
+    description:
+        "Encadrement technique des projets et conception d’architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs dans une logique de qualité et de scalabilité.",
     location: 'Cergy, France',
     icon: 'i-lucide-briefcase',
-    color: 'bg-cyan-500',
-    tasks: [
-      'Conception d\'architecture technique et validation des choix technologiques',
-      'Revue de code et gestion de la dette technique',
-      'Mentorat et accompagnement des développeurs',
-      'Documentation et veille technologique'
-    ]
+    color: 'bg-cyan-500'
   },
   {
     date: 'Mai - Sept 2024',
     title: 'Tech Lead Backend',
     company: 'FASEYA',
-    description: 'Développement backend et déploiement sur AWS. Gestion de la dette technique et choix d\'architectures.',
+    description:
+        "Conception et développement backend sur AWS avec focus sur la performance et la sécurité. Encadrement technique de l’équipe et mise en œuvre de bonnes pratiques de développement et de déploiement.",
     location: 'Dakar, Sénégal',
-    icon: 'i-lucide-server',
-    color: 'bg-blue-500',
-    tasks: [
-      'Développement backend et déploiement sur AWS',
-      'Gestion de la dette technique et choix d\'architectures',
-      'Encadrement technique des développeurs',
-      'Mise en œuvre de bonnes pratiques'
-    ]
+    icon: 'i-lucide-briefcase',
+    color: 'bg-blue-500'
   },
   {
     date: 'Oct 2023 - Mars 2024',
     title: 'Tech Lead / Chef de projet',
     company: 'Nanocreatives',
-    description: 'Conception et développement de solutions logicielles. Déploiement d\'applications sur cloud Linux.',
+    description:
+        "Direction technique et coordination des projets web. Déploiement cloud, CI/CD et supervision des équipes dans un environnement agile, garantissant fiabilité et qualité des livrables.",
     location: 'Brazzaville, Congo',
-    icon: 'i-lucide-layers',
-    color: 'bg-indigo-500',
-    tasks: [
-      'Conception et développement de solutions logicielles',
-      'Déploiement d\'applications sur cloud Linux',
-      'Pilotage de projets agiles',
-      'Gestion DNS et certificats de sécurité'
-    ]
+    icon: 'i-lucide-briefcase',
+    color: 'bg-indigo-500'
   },
   {
     date: 'Sept - Nov 2023',
     title: 'Consultant IT',
     company: 'UNFPA (Nations Unies)',
-    description: 'Déploiement de la plateforme GLPI. Collecte des besoins secteur santé et production de rapports statistiques.',
+    description:
+        "Mise en place de la plateforme GLPI pour la gestion du matériel informatique. Analyse des besoins, configuration du système et formation des utilisateurs dans le cadre d’un projet de modernisation du SI.",
     location: 'Brazzaville, Congo',
-    icon: 'i-lucide-globe',
-    color: 'bg-purple-500',
-    tasks: [
-      'Déploiement de la plateforme GLPI',
-      'Collecte des besoins secteur santé',
-      'Production de rapports statistiques',
-      'Supervision des agents GLPI'
-    ]
+    icon: 'i-lucide-briefcase',
+    color: 'bg-purple-500'
   },
   {
     date: 'Janv - Juin 2022',
     title: 'Consultant Développeur',
     company: 'AGRER - Union Européenne',
-    description: 'Développement d\'une application agricole. Pilotage de projet et coordination d\'équipes.',
+    description:
+        "Développement d’une application de suivi agricole financée par l’Union Européenne. Coordination d’équipes et formation de plus de 300 utilisateurs pour améliorer la collecte et l’analyse des données terrain.",
     location: 'Brazzaville, Congo',
     icon: 'i-lucide-leaf',
-    color: 'bg-green-500',
-    tasks: [
-      'Développement d\'une application agricole',
-      'Pilotage de projet et coordination d\'équipes',
-      'Collaboration avec la délégation UE',
-      'Formation de plus de 300 utilisateurs'
-    ]
+    color: 'bg-green-500'
   }
 ]
 </script>
 
+
 <template>
-  <section id="experiences" class="py-20 px-4 bg-slate-900/50">
+  <section id="menu_experiences" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
         Expérience Professionnelle
@@ -124,17 +110,7 @@ const experiences = [
                 <p class="text-gray-300 text-sm leading-relaxed">{{ exp.description }}</p>
 
                 <!-- Tâches -->
-                <ul class="mt-4 space-y-2" :class="index % 2 === 0 ? 'text-right' : 'text-left'">
-                  <li
-                      v-for="(task, taskIndex) in exp.tasks"
-                      :key="taskIndex"
-                      class="text-xs text-gray-400 flex items-start gap-2"
-                      :class="index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'"
-                  >
-                    <span class="text-cyan-400 mt-1">•</span>
-                    <span>{{ task }}</span>
-                  </li>
-                </ul>
+
               </UiSpotlightCard>
             </div>
 

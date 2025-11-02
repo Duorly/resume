@@ -4,5 +4,14 @@
   "contact_me": "Me contacter",
   "about_me": "À propos de moi",
   "i_am": "Je suis",
-  "profile" : "Profil"
+  "profile": "Profil",
+  "fullstack_developer": "un Développeur Fullstack",
+  "tech_lead": "un Tech Lead",
+  "project_manager": "un Chef de Projet",
+  "software_architect": "un Architecte Logiciel",
+  "menu_about": "À propos",
+  "menu_skills": "Compétences",
+  "menu_experiences": "Expériences",
+  "menu_education": "Formation",
+  "menu_contact": "Contact"
 }

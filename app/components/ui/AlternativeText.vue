@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import {ref, onMounted, onUnmounted} from 'vue';
 
-const roles = ['Développeur Full Stack', 'Tech Lead', 'Chef de projet'];
+const roles = ref(['fullstack_developer', 'tech_lead', 'project_manager', 'software_architect']);
 const currentRole = ref(0);
 
 let interval: number;
 
 onMounted(() => {
   interval = window.setInterval(() => {
-    currentRole.value = (currentRole.value + 1) % roles.length;
+    currentRole.value = (currentRole.value + 1) % roles.value.length;
   }, 2500);
 });
 
@@ -22,7 +22,7 @@ onUnmounted(() => {
     {{ $t('i_am') }}
     <transition name="fade-slide" mode="out-in">
       <span :key="roles[currentRole]" class="text-blue-400 font-bold">
-        {{ roles[currentRole] }}
+        {{ $t(roles[currentRole]) }}
       </span>
     </transition>
   </p>
