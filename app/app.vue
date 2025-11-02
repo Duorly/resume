@@ -26,7 +26,7 @@
             </a>
             <div
                 v-if="locale === 'en'"
-                class="flex items-center space-x-2 cursor-pointer border py-0.5 px-1 rounded-lg font-bold"
+                class="flex items-center space-x-2 cursor-pointer border border-slate-700/50 hover:border-cyan-500/50 py-0.5 px-2 rounded-lg font-bold"
                 @click="setLocale('fr')"
             >
               <span>FR</span>
@@ -34,7 +34,7 @@
             </div>
             <div
                 v-if="locale === 'fr'"
-                class="flex items-center space-x-2 cursor-pointer border py-0.5 px-1 rounded-lg font-bold"
+                class="flex items-center space-x-2 cursor-pointer border border-slate-700/50 hover:border-cyan-500/50 py-0.5 px-2 rounded-lg font-bold"
                 @click="setLocale('en')"
             >
               <span>EN</span>
