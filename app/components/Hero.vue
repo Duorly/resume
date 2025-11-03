@@ -1,13 +1,9 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <section id="hero" class="min-h-screen flex flex-col items-center justify-center px-4 pt-16">
     <div class="max-w-6xl mx-auto text-center">
       <div class="mb-8 inline-block">
         <div
-            class="w-32 h-32 mx-auto bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full flex items-center justify-center text-5xl font-bold shadow-2xl shadow-cyan-500/50 animate-pulse">
+            class="w-32 h-32 mx-auto bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full flex items-center justify-center text-5xl font-bold shadow-2xl shadow-cyan-500/50">
           NM
         </div>
       </div>
@@ -15,7 +11,7 @@
       <UiGradientText
           text="Duorli Rejouis Nebel MASSENGO"
           :colors="['#00d3f2', '#4c00b8', '#51a2ff', '#c27fff', '#fff']"
-          :animation-speed="6"
+          :animation-speed="5"
           :show-border="false"
           class-name="text-2xl md:text-7xl font-extrabold my-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
       />
@@ -79,14 +75,12 @@
       </div>
 
       <div class="mt-16 animate-bounce">
-        <svg class="w-8 h-8 mx-auto text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-        </svg>
+        <UIcon name="lucide:chevron-down" size="35" class="text-cyan-400"/>
       </div>
     </div>
 
-    <div class="w-full overflow-x-hidden">
-      <UMarquee class="mt-5" :overlay="true">
+    <div class="w-full bg-none">
+      <UMarquee class="my-5" :overlay="true">
         <UIcon name="logos:nuxt-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:nextjs-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:react" class="size-10 shrink-0"/>

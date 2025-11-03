@@ -6,12 +6,15 @@
   "i_am": "I am",
   "profile": "Profile",
   "fullstack_developer": "a Fullstack Developer",
-  "software_architect" : "a Software Architect",
+  "software_architect": "a Software Architect",
   "tech_lead": "a Tech Lead",
   "project_manager": "a Project Manager",
   "menu_about": "About",
   "menu_skills": "Skills",
   "menu_experiences": "Experiences",
   "menu_education": "Education",
-  "menu_contact": "Contact"
+  "menu_contact": "Contact",
+  "experiences_title": "Professional Experiences",
+  "education_title": "Education",
+  "work_together": "Let's work together"
 }

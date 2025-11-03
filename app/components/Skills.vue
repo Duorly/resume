@@ -66,10 +66,10 @@ const skillCategories = [
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
           <div class="flex items-center gap-3 mb-6">
-            <svg :class="`text-${category.color}`" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="category.icon" />
             </svg>
-            <h3 :class="`text-2xl font-bold text-${category.color}`">{{ category.title }}</h3>
+            <h3 class="text-2xl font-bold text-white">{{ category.title }}</h3>
           </div>
 
           <div class="flex flex-wrap gap-2">

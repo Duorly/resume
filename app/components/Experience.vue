@@ -67,7 +67,7 @@ const experiences = [
   <section id="menu_experiences" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        Expérience Professionnelle
+        {{ $t('experiences_title') }}
       </h2>
 
       <div class="relative">
