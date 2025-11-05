@@ -153,6 +153,12 @@ const experiences = [
           </div>
         </div>
       </div>
+
+      <div class="flex items-center justify-center mb-8 mt-4 mx-auto">
+        <UButton color="secondary" variant="subtle" trailing-icon="i-lucide-arrow-down" size="md">VOIR PLUS</UButton>
+      </div>
+
+
     </div>
   </section>
 </template>
