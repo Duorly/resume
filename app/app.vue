@@ -101,7 +101,10 @@
 </template>
 
 <script setup>
-import Testimonials from "~/components/Testimonials.vue";
+
+const colorMode = useColorMode();
+
+colorMode.value = 'dark';
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);

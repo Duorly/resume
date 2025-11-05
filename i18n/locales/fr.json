@@ -16,5 +16,7 @@
   "menu_contact": "Contact",
   "experiences_title": "Expériences Professionnelles",
   "education_title" : "Formations",
-  "work_together": "Travaillons ensemble"
+  "work_together": "Travaillons ensemble",
+  "profile_description": "Développeur Full Stack avec 0 ans d'expérience, spécialisé dans la conception de solutions robustes et optimisées. Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en méthodologie agile et accompagné des équipes techniques vers l'excellence.",
+  "skills_title": "Compétences Techniques"
 }

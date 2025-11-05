@@ -17,8 +17,7 @@
         >
           <h3 class="text-2xl font-bold mb-4 text-cyan-400">{{ $t('profile') }}</h3>
           <p class="text-slate-300 leading-relaxed">
-            Développeur Full Stack avec <strong>{{new Date().getFullYear() - 2019}} ans d'expérience</strong>, spécialisé dans la conception de solutions robustes et optimisées.
-            Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en méthodologie agile et accompagné des équipes techniques vers l'excellence.
+            {{ $t('profile_description').replace("0", (new Date().getFullYear() - 2019)).toString() }}
           </p>
         </UiSpotlightCard>
 
