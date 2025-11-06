@@ -75,14 +75,12 @@ const experiences = [
         <div class="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-purple-500" />
 
         <!-- Timeline items -->
-        <div class="space-y-8 md:space-y-12">
+        <div class="space-y-8">
           <div
               v-for="(exp, index) in experiences"
               :key="index"
               :class="[
                 'relative flex items-center',
-                // Sur mobile: toujours à droite de la ligne
-                // Sur desktop: alternance gauche/droite
                 'flex-row',
                 'md:' + (index % 2 === 0 ? 'flex-row' : 'flex-row-reverse')
               ]"

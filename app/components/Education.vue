@@ -22,7 +22,7 @@ const education = [
 </script>
 
 <template>
-  <section id="menu_education" class="py-20 px-4">
+  <section id="menu_education" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
         {{ $t('education_title') }}

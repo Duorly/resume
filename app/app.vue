@@ -20,7 +20,7 @@
         >
           <div class="flex items-center space-x-2 py-3">
             <UAvatar size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-400/30"/>
-            <UiShinyText class="font-bold text-lg md:text-xl" text="Duorli Rejouis Nebel Massengo"/>
+            <UiShinyText class="font-bold text-lg md:text-xl" text="NebelDev"/>
           </div>
 
           <div class="hidden md:flex justify-center items-center space-x-2">
@@ -115,6 +115,9 @@
 
     <!-- Experience Section -->
     <Experience/>
+
+    <!-- Projects Section -->
+    <Projects/>
 
     <!-- Education Section -->
     <Education/>

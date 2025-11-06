@@ -25,10 +25,10 @@ const contacts = [
 </script>
 
 <template>
-  <section id="menu_contact" class="py-20 px-4 bg-slate-900/50">
+  <section id="menu_contact" class="py-20 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        {{$t('work_together')}}
+        {{ $t('work_together') }}
       </h2>
 
       <p class="text-xl text-slate-300 mb-12 leading-relaxed">
@@ -44,21 +44,28 @@ const contacts = [
             :href="contact.link"
             :target="contact.external ? '_blank' : undefined"
             :rel="contact.external ? 'noopener noreferrer' : undefined"
-            class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group"
+            class="block"
         >
-          <UIcon
-              class="mx-auto mb-4 text-cyan-400 group-hover:scale-110 transition-transform w-8 h-8"
-              :name="contact.icon"/>
+          <UiSpotlightCard
+              class-name="border border-slate-700/50 hover:border-cyan-500/50"
+              spotlight-color="rgba(6, 182, 212, 0.15)"
+          >
+            <div class="flex flex-col items-center p-2 group">
+              <UIcon
+                  class="mb-4 text-cyan-400 group-hover:scale-110 transition-transform"
+                  :name="contact.icon"
+                  size="28"
+              />
 
-          <p class="text-sm text-slate-400 mb-2">{{ contact.label }}</p>
-          <p class="text-white font-semibold" :class="contact.external ? 'flex items-center justify-center gap-2' : ''">
-            {{ contact.value }}
-            <svg v-if="contact.external" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </p>
+              <p class="text-sm text-slate-400 mb-2">{{ contact.label }}</p>
+              <p
+                  class="text-white font-semibold"
+                  :class="contact.external ? 'flex items-center justify-center gap-2' : ''">
+                {{ contact.value }}
+                <UIcon v-if="contact.external" name="mi:external-link" size="22"/>
+              </p>
+            </div>
+          </UiSpotlightCard>
         </a>
       </div>
     </div>
