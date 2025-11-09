@@ -2,102 +2,154 @@
 const testimonials = [
   {
     user: {
-      name: 'Anthony Bettini',
-      description: 'CEO and founder of VulnCheck',
+      name: 'Soumya',
+      description: 'Etudiant sur Superprof',
       avatar: {
-        src: 'https://media.licdn.com/dms/image/v2/C4E03AQEY3pmXsH8hDg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1519741249442?e=1746057600&v=beta&t=dvQfBT9ah03MPNy9cnly30ugreeCdxG4nrxV3lwKAC8',
+        src: '',
         loading: 'lazy'
       }
     },
+    to: 'https://www.superprof.fr/ingenieur-logiciel-diplome-6ans-experience-accompagne-niveaux-maitrise-developpement.html',
     quote:
-        'We were using a SaaS service for the docs site, but were left unfulfilled. We put in the effort to do it in house, with UI Pro and not only did we get complimented by a prospect on our site, but they wanted to know our platform.'
+        'Parfait ! Nebel a toujours sur répondre à mes attentes ainsi que de gérer les bug que j\'ai pu générer. disponible à l\'écoute il est très pro dans son milieu je le recommande à 1000%'
   },
   {
     user: {
-      name: 'Yaz Jallad',
-      description: 'Founder Ninjaparade Digital',
+      name: 'Samy',
+      description: 'Etudiant sur Superprof',
       avatar: {
-        src: 'https://pbs.twimg.com/profile_images/1824690890222485504/lQ7v1AGt_400x400.jpg',
+        src: '',
         loading: 'lazy'
       }
     },
+    to: 'https://www.superprof.fr/ingenieur-logiciel-diplome-6ans-experience-accompagne-niveaux-maitrise-developpement.html',
     quote:
-        "Wow, Nuxt UI Pro is a total game-changer! I'm seriously impressed with the quality, attention to detail, and the insane variety of components you get. It's like hitting the jackpot for any developer. I've saved countless hours that I would've spent stressing over making my apps look good, with amazing accessible UX,  and instead, I've been able to focus on the real deal – building the app itself. It's an instant buy for me, every single time. No second thoughts!"
+        "Parfait ! Je recommande vivement Nebel pour ses cours de développement web. Sa pédagogie est géniale et ses compétences techniques m'ont permis de maîtriser tous les aspects de mon projet. Toujours patient et disponible, il sait expliquer clairement les concepts complexes. Grâce à son accompagnement de qualité, j'ai non seulement réussi mon projet mais aussi acquis des bases solides en développement web."
   },
   {
     user: {
-      name: 'Kevin Olson',
-      description: 'Founder of Fume.app',
+      name: 'Hugo Larcher',
+      description: 'Etudiant sur Superprof',
       avatar: {
-        src: 'https://ipx.nuxt.com/f_auto,s_40x40/gh_avatar/acidjazz',
-        srcset: 'https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/acidjazz 2x',
+        src: 'https://c.superprof.com/i/m/32174423/100/20241113170237/32174423.webp',
         loading: 'lazy'
       }
     },
+    to: 'https://www.superprof.fr/ingenieur-logiciel-diplome-6ans-experience-accompagne-niveaux-maitrise-developpement.html',
     quote:
-        'Nuxt UI Pro saves 100s of hours of dev and design time while delivering a clean professional look on any device.'
+        'Parfait ! Les cours que je passe avec Nebel sont très instructifs. Il m\'explique par schéma afin d\'intégrer au mieux l\'information indispensable. Il explique très bien et propose des leçons de soutiens afin de continuer à côté si jamais le sujet n\'est pas bien compris. Professionnel et je le recommande vivement !'
   },
   {
     user: {
-      name: 'Michael Hoffmann',
-      description: 'Senior Frontend Developer',
+      name: 'Yatma GUEYE',
+      description: 'CTO de Yatouze',
       avatar: {
-        src: 'https://ipx.nuxt.com/f_auto,s_40x40/gh_avatar/mokkapps',
-        srcset: 'https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/mokkapps 2x',
+        src: 'https://media.licdn.com/dms/image/v2/D4D03AQEI_z7ewlTJJA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1680446385385?e=1764201600&v=beta&t=oV8hDwtMgT6bdv6hns_kLjmmH0cbUOXZ0utNhTFo2y0',
         loading: 'lazy'
       }
     },
+    to: 'https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0',
     quote:
-        'I decided to replace my custom-built components with a component library and chose Nuxt UI Pro. It only took me a few hours, and the new UI looks more professional. Integrating the library is easy; the components are well-documented and highly customizable. I can only recommend it; this library is my new choice for new SaaS products.'
+        'J\'ai eu à travailler avec Nebel dans le cadre du développement d\'une application SaaS https://yatouze.com\n' +
+        'Nebel a été recruté en tant que développeur Full Stack Nest JS. Il a très vite pris des initiatives pour nous proposer de mieux architecturer le projet; cela démontre sa capacité d\'adaptation et la valeur ajoutée qu\'il peut apporter dans une équipe.\n' +
+        'Je recommande vivement Nebel pour son expertise dans le développement logiciel et son sérieux dans le travail en équipe.'
   },
   {
     user: {
-      name: 'Harlan Wilton',
-      description: 'Nuxt core team member',
+      name: 'Vanessa',
+      description: 'Etudiante sur Superprof',
       avatar: {
-        src: 'https://ipx.nuxt.com/f_auto,s_40x40/gh_avatar/harlan-zw',
-        srcset: 'https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/harlan-zw 2x',
+        src: '',
         loading: 'lazy'
       }
     },
+    to : 'https://www.superprof.fr/ingenieur-logiciel-diplome-6ans-experience-accompagne-niveaux-maitrise-developpement.html',
     quote:
-        'Nuxt UI Pro is my go to component library. Out-of-the-box it handles all of the UI demands I throw at it while looking great. The customisation is really worth thought out, allowing you to override components in a breeze. Always amazed at the improvements dropped in each update as well, the team is doing an amazing job.'
+        'Parfait ! Je suis très satisfaite des cours que je suis actuellement avec Nebel pour la création de mon site sous WordPress. Ses explications sont très claires et m\'aident vraiment à progresser. Grâce à lui, j’avance dans la construction de mon site tout en comprenant mieux les différentes fonctionnalités de WordPress. Je recommande vivement Nebel à toute personne qui souhaite apprendre à créer ou améliorer son site de manière efficace.'
   },
   {
     user: {
-      name: 'Thomas Sanlis',
-      description: 'Freelance developer and designer',
+      name: 'Jamila',
+      description: 'Etudiante sur Superprof',
       avatar: {
-        src: 'https://pbs.twimg.com/profile_images/1374040164180299791/ACw4G3nZ_400x400.jpg',
+        src: '',
         loading: 'lazy'
       }
     },
+    to : 'https://www.superprof.fr/ingenieur-logiciel-diplome-6ans-experience-accompagne-niveaux-maitrise-developpement.html',
     quote:
-        "I jumped at the chance to buy the Nuxt team's new UI kit as soon as I saw it. While I'm already a fan of Nuxt UI, the pro version takes it to a whole new level and lets me paste entire blocks into all my projects, saving me a ton of time."
+        "Parfait ! J'ai particulièrement apprécié l'approche de Nebel dans le cadre de mon projet. Il s'est montré très à l'écoute de mes attentes, prenant le temps de bien comprendre mes besoins et mes objectifs. Cette qualité d'écoute attentive a permis d'instaurer une communication claire et fluide dès le départ."
   },
   {
     user: {
-      name: 'Benjamin Code',
-      description: 'YouTuber and SaaS builder',
+      name: 'Ousseynou Koné',
+      description: 'Développeur & Architecte logiciel',
       avatar: {
-        src: 'https://pbs.twimg.com/profile_images/1607353032420769793/I8qQSUfQ_400x400.jpg',
+        src: 'https://media.licdn.com/dms/image/v2/D4E03AQHvp-YGzK1l5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730818400158?e=1764201600&v=beta&t=yg7T7tZsyTsZmHkTf7hDLipCtwLJNCyiJBHQY_x_ULQ',
         loading: 'lazy'
       }
     },
+    to: "https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0",
     quote:
-        'Nuxt UI has allowed me to develop my SaaS without any prior mockups. The design quality of their components and the intelligence of the DX meant that I was able to try many different layouts for my application until I found the perfect UX for my users. Nuxt UI is the ui-kit I would have dreamed of building myself, and Nuxt UI Pro makes things even easier when you want to go further with your SaaS. Kudos to the team.'
+        'A highly intelligent and versatile individual, Duorli stands out for his exceptional skills in software engineering. Beyond his technical expertise, he has accumulated a broad range of experiences across multiple domains, having had the opportunity to work in various fields and adapt successfully to diverse challenges. I can attest that without a doubt as his coworker and friend .'
   },
   {
     user: {
-      name: 'Estéban Soubiran',
-      description: 'Web developer and UnJS member',
+      name: 'Mérite Kioungou',
+      description: 'Developpeur Full Stack',
       avatar: {
-        src: 'https://pbs.twimg.com/profile_images/1801649350319218689/aS_X_iTm_400x400.jpg',
+        src: 'https://media.licdn.com/dms/image/v2/D4D03AQF4ngxwOZtE0Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1674239054328?e=1764201600&v=beta&t=_SPwsRT47ZBhRMvXJyw3W4lj7-Xcy45vxMP3udG_8Go',
         loading: 'lazy'
       }
     },
+    to: "https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0",
     quote:
-        "Nuxt UI Pro is my preferred choice for everything, from a POC to a web platform. It's ready to use out-of-the-box and assists me in crafting pixel-perfect UIs. It saves me a significant amount of time while remaining highly customizable. Give it a try, and you won't be let down."
+        "J’ai eu la chance de collaborer avec Nebel dans le cadre de nombreux projets, et je peux affirmer sans doute que c'est l'un des meilleurs mentors et développeurs avec qui il m'ait été donné de travailler.\n" +
+        "\n" +
+        "En plus de solides compétences techniques dans les tous les aspects du développement d'applications, il se distingue par une capacité de compréhension et d'accompagnement pour son équipe pour laquelle il sait créer un climat de confiance, encourager l’autonomie tout en étant toujours disponible pour guider et débloquer les situations.\n" +
+        "\n" +
+        "Travailler avec Nebel, c’est apprendre en continu, progresser, et atteindre ses objectifs de façon pérenne\n" +
+        " dans une ambiance conviviable. Je le recommande les yeux fermés !"
+  },
+  {
+    user: {
+      name: 'Seth Mukinayi Kasalu',
+      description: 'Architecte logiciel',
+      avatar: {
+        src: 'https://media.licdn.com/dms/image/v2/D4D03AQHobJaeu81S9g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731943530026?e=1764201600&v=beta&t=6tzU7wR9N2xQY1Qh57Z8da2ChW2ROyQs1ptFSnCBITk',
+        loading: 'lazy'
+      }
+    },
+    to: "https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0",
+    quote:
+        "Un profil très professionnel et bon sur le plan technologique. Maitrise parfaite des outils de développement et de l'accélération du secteur du numérique."
+  },
+  {
+    user: {
+      name: 'Smile MBAMBI',
+      description: 'Consultant DevSecOps',
+      avatar: {
+        src: 'https://media.licdn.com/dms/image/v2/C5603AQH7HqaqKk2gkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1562695300529?e=1764201600&v=beta&t=ohmQkCSrQxDx4DuTyZ1JLZGgbLniH2nWnJ0BBrq5ixs',
+        loading: 'lazy'
+      }
+    },
+    to: "https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0",
+    quote:
+        "Nebel est un bon développeurs, nous avons travaillé ensemble dans des grands projets et il m'a personnellement épaté par sa précision et sa logique de raisonnement.\n" +
+        "Je vous le recommande et je suis certain que vous ne serez pas déçu."
+  },
+  {
+    user: {
+      name: 'Josy Rigis BANZOUZI',
+      description: 'Développeur Flutter',
+      avatar: {
+        src: 'https://media.licdn.com/dms/image/v2/C5603AQGCBVCZtA_Qjw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1583584170629?e=1764201600&v=beta&t=IEwXDwR6L5l57Fnia1uJ_SS6tNYoa3qtuvUc7Y7Ph4E',
+        loading: 'lazy'
+      }
+    },
+    to: "https://www.linkedin.com/in/nebel-mass/details/recommendations/?detailScreenTabIndex=0",
+    quote:
+        "J’ai eu le plaisir de collaborer avec Duorli Nebel Massengo en tant que développeur pendant un an chez XKSGROUP, ainsi que dans le cadre d’autres missions techniques. Il s’est démarqué par sa maîtrise des langages de programmation, des frameworks modernes, ainsi que par ses solides compétences en architecture logicielle. Duorli a notamment su concevoir et structurer des applications robustes, évolutives et bien organisées, en appliquant les bonnes pratiques d’ingénierie logicielle."
   }
 ]
 </script>
@@ -106,7 +158,7 @@ const testimonials = [
   <section id="menu_contact" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        Recommandations
+        Recommendations
       </h2>
       <div class="flex flex-col gap-4 w-full">
         <UMarquee
@@ -120,12 +172,19 @@ const testimonials = [
               variant="subtle"
               :description="testimonial.quote"
               :ui="{
-          description: 'before:content-[open-quote] after:content-[close-quote] line-clamp-3'
-        }"
-              class="w-64 shrink-0"
+                description: 'before:content-[open-quote] after:content-[close-quote] line-clamp-3'
+              }"
+              class="w-96 shrink-0"
           >
             <template #footer>
-              <UUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }"/>
+              <UUser
+                  size="xl"
+                  :to="testimonial.to ?? null"
+                  target="_blank"
+                  :name="testimonial.user.name"
+                  :description="testimonial.user.description"
+                  :avatar="testimonial.user.avatar"
+              />
             </template>
           </UPageCard>
         </UMarquee>
@@ -141,8 +200,8 @@ const testimonials = [
               variant="subtle"
               :description="testimonial.quote"
               :ui="{
-          description: 'before:content-[open-quote] after:content-[close-quote] line-clamp-3'
-        }"
+                description: 'before:content-[open-quote] after:content-[close-quote] line-clamp-3'
+              }"
               class="w-64 shrink-0"
           >
             <template #footer>
