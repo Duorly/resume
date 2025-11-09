@@ -26,10 +26,10 @@
           <div class="hidden md:flex justify-center items-center space-x-2">
             <div
                 class="flex items-center space-x-1 bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-white/10 shadow-lg">
-              <a
+              <NuxtLink
                   v-for="item in menuItems"
                   :key="item"
-                  :href="`/#${item.toLowerCase()}`"
+                  :to="`/#${item}`"
                   class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group"
               >
                 <span class="relative z-10 group-hover:text-cyan-300 transition-colors duration-300">
@@ -37,7 +37,7 @@
                 </span>
                 <div
                     class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-              </a>
+              </NuxtLink>
             </div>
 
             <div class="flex items-center space-x-2">
