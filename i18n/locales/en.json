@@ -18,6 +18,11 @@
   "education_title": "Education",
   "work_together": "Let's work together",
   "profile_description": "Full Stack Developer with 0 years of experience, specializing in the design of robust and optimized solutions. An expert in software architecture and cloud deployment, I have led projects using agile methodologies and guided technical teams towards excellence.",
-    "skills_title": "Technical Skills",
-  "my_projects": "My Projects"
+  "skills_title": "Technical Skills",
+  "my_projects": "My Projects",
+  "research": "Research",
+  "job_type": "Type of contract",
+  "availability": "Availability",
+  "mobility": "Mobility",
+  "permit": "Permit"
 }
