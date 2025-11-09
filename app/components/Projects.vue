@@ -1,24 +1,24 @@
 <script setup lang="ts">
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Plateforme e-commerce complète avec gestion des stocks, paiements sécurisés et tableau de bord administrateur.',
+    title: 'ITIC COMPANION',
+    description: 'Plateforme de gestion des stages pour les étudiants en informatique, avec suivi des candidatures et évaluation des performances.',
     tags: ['Vue.js', 'Nuxt', 'Spring Boot', 'PostgreSQL'],
     image: [
-      'https://picsum.photos/640/400?random=1',
+      '/images/projects/itic-companion.png',
       'https://picsum.photos/640/400?random=2',
       'https://picsum.photos/640/400?random=3',
       'https://picsum.photos/640/400?random=4',
       'https://picsum.photos/640/400?random=5',
       'https://picsum.photos/640/400?random=6'
     ],
-    link: 'https://github.com/Duorly',
+    link: '',
     demo: 'https://demo.example.com',
     color: 'cyan',
     icon: 'M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
   },
   {
-    title: 'Task Management App',
+    title: 'MondialGP',
     description: 'Application de gestion de tâches collaborative en temps réel avec système de notifications push.',
     tags: ['React', 'Next.js', 'NestJS', 'MongoDB'],
     image: '',
@@ -28,7 +28,7 @@ const projects = [
     icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'
   },
   {
-    title: 'Social Network',
+    title: 'Banque Postale du Congo',
     description: 'Réseau social avec fils d\'actualité personnalisé, messagerie instantanée et partage de contenus multimédia.',
     tags: ['Angular', 'Laravel', 'MySQL', 'AWS'],
     image: '',
@@ -38,7 +38,7 @@ const projects = [
     icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
   },
   {
-    title: 'AI-Powered Dashboard',
+    title: 'Yatouze',
     description: 'Tableau de bord analytique avec intelligence artificielle pour prédictions et recommandations personnalisées.',
     tags: ['Vue.js', 'Python', 'TensorFlow', 'GCP'],
     image: '',
@@ -130,16 +130,17 @@ const projects = [
 
               <!-- Links -->
               <div class="flex gap-3 pt-4 border-t border-slate-700/50">
-                <a
-                    :href="project.link"
+                <NuxtLink
+                    :disabled="project.link === ''"
+                    :href="project?.link"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-cyan-600/20 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
                   <UIcon name="lucide:github" size="18"/>
                   Code
-                </a>
-                <a
+                </NuxtLink>
+                <NuxtLink
                     :href="project.demo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -147,7 +148,7 @@ const projects = [
                 >
                   <UIcon name="lucide:external-link" size="18"/>
                   Demo
-                </a>
+                </NuxtLink>
               </div>
             </div>
           </div>

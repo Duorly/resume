@@ -19,45 +19,53 @@
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
           <div class="flex items-center space-x-2 py-3">
-            <UAvatar size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-400/30"/>
+            <UAvatar chip size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-400/30"/>
             <UiShinyText class="font-bold text-lg md:text-xl" text="NebelDev"/>
           </div>
 
           <div class="hidden md:flex justify-center items-center space-x-2">
-            <div class="flex items-center space-x-1 bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-white/10 shadow-lg">
+            <div
+                class="flex items-center space-x-1 bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-white/10 shadow-lg">
               <a
                   v-for="item in menuItems"
                   :key="item"
-                  :href="`#${item.toLowerCase()}`"
+                  :href="`/#${item.toLowerCase()}`"
                   class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group"
               >
                 <span class="relative z-10 group-hover:text-cyan-300 transition-colors duration-300">
                   {{ $t(item) }}
                 </span>
-                <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
               </a>
             </div>
 
-            <div class="flex items-center space-x-2 ml-4">
+            <div class="flex items-center space-x-2">
               <div
                   v-if="locale === 'en'"
-                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-2 px-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
+                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
                   @click="setLocale('fr')"
               >
-                <span class="text-sm">FR</span>
-                <UIcon name="twemoji:flag-france" size="20"/>
+                <span class="text-md">FR</span>
+                <UIcon name="twemoji:flag-france" size="25"/>
               </div>
               <div
                   v-if="locale === 'fr'"
-                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-2 px-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
+                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
                   @click="setLocale('en')"
               >
-                <span class="text-sm">EN</span>
-                <UIcon name="twemoji:flag-united-states" size="20"/>
+                <span class="text-md">EN</span>
+                <UIcon name="twemoji:flag-united-states" size="25"/>
               </div>
 
-              <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 hover:bg-white/10 transition-all duration-300 shadow-lg">
-                <UColorModeButton />
+              <div
+                  class="flex items-center justify-center cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-3 hover:bg-white/10 transition-all duration-300 shadow-lg">
+                <UIcon
+                    v-if="colorMode.value === 'dark'"
+                    name="line-md:moon-to-sunny-outline-loop-transition"
+                    size="30"
+                    @click="colorMode.value = 'light'"/>
+                <UIcon v-else name="line-md:moon-loop" size="30" @click="colorMode.value = 'dark'"/>
               </div>
             </div>
           </div>
@@ -104,32 +112,7 @@
       </transition>
     </nav>
 
-    <!-- Hero Section -->
-    <Hero/>
-
-    <!-- About Section -->
-    <About/>
-
-    <!-- Skills Section -->
-    <Skills/>
-
-    <!-- Experience Section -->
-    <Experience/>
-
-    <!-- Projects Section -->
-    <Projects/>
-
-    <!-- Education Section -->
-    <Education/>
-
-    <!-- Contact Section -->
-    <Contact/>
-
-    <!-- Testimonials Section -->
-    <Testimonials/>
-
-    <!-- Footer -->
-    <Footer/>
+    <NuxtPage/>
   </div>
 </template>
 
