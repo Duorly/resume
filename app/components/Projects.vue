@@ -1,16 +1,35 @@
 <script setup lang="ts">
+
+import image1 from '~/assets/images/projects/iticparis/itic-companion-login.png'
+import image2 from '~/assets/images/projects/iticparis/itic-companion-dashboard.png'
+import image3 from '~/assets/images/projects/iticparis/itic-companion-assignment.png'
+import image4 from '~/assets/images/projects/iticparis/itic-companion-note.png'
+import image5 from '~/assets/images/projects/iticparis/itic-companion-note2.png'
+import image6 from '~/assets/images/projects/iticparis/itic-companion-ranking.png'
+import image7 from '~/assets/images/projects/iticparis/itic-companion-ranking2.png'
+import image8 from '~/assets/images/projects/iticparis/itic-companion-ranking3.png'
+
+import iticmobile from '~/assets/images/projects/iticparis-mobile/itic-mobile.png'
+import iticmobile2 from '~/assets/images/projects/iticparis-mobile/itic-mobile-2.png'
+import iticmobile3 from '~/assets/images/projects/iticparis-mobile/itic-mobile-3.png'
+import iticmobile4 from '~/assets/images/projects/iticparis-mobile/itic-mobile-4.png'
+import iticmobile5 from '~/assets/images/projects/iticparis-mobile/itic-mobile-5.png'
+
+
 const projects = [
   {
-    title: 'ITIC COMPANION',
-    description: 'Plateforme de gestion des stages pour les étudiants en informatique, avec suivi des candidatures et évaluation des performances.',
+    title: 'ITIC TEACHER COMPANION',
+    description: 'Plateforme de gestion de gestion des notes et gamification des étudiants pour les enseignants. Avec un système de classement et de récompenses.',
     tags: ['Vue.js', 'Nuxt', 'Spring Boot', 'PostgreSQL'],
     image: [
-      '/images/projects/itic-companion.png',
-      'https://picsum.photos/640/400?random=2',
-      'https://picsum.photos/640/400?random=3',
-      'https://picsum.photos/640/400?random=4',
-      'https://picsum.photos/640/400?random=5',
-      'https://picsum.photos/640/400?random=6'
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8
     ],
     link: '',
     demo: 'https://demo.example.com',
@@ -18,10 +37,16 @@ const projects = [
     icon: 'M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
   },
   {
-    title: 'MondialGP',
-    description: 'Application de gestion de tâches collaborative en temps réel avec système de notifications push.',
+    title: 'ITIC STUDENT COMPANION',
+    description: 'Plateforme de gestion de gestion des notes et gamification des étudiants pour les étudiants. Avec un système de classement et de récompenses.',
     tags: ['React', 'Next.js', 'NestJS', 'MongoDB'],
-    image: '',
+    image: [
+      iticmobile,
+      iticmobile2,
+      iticmobile3,
+      iticmobile4,
+      iticmobile5,
+    ],
     link: 'https://github.com/Duorly',
     demo: 'https://demo.example.com',
     color: 'blue',
@@ -37,36 +62,6 @@ const projects = [
     color: 'purple',
     icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
   },
-  {
-    title: 'Yatouze',
-    description: 'Tableau de bord analytique avec intelligence artificielle pour prédictions et recommandations personnalisées.',
-    tags: ['Vue.js', 'Python', 'TensorFlow', 'GCP'],
-    image: '',
-    link: 'https://github.com/Duorly',
-    demo: 'https://demo.example.com',
-    color: 'emerald',
-    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
-  },
-  {
-    title: 'Mobile Banking App',
-    description: 'Application bancaire mobile avec authentification biométrique, virements instantanés et gestion budgétaire.',
-    tags: ['Flutter', 'Node.js', 'Firebase', 'Docker'],
-    image: '',
-    link: 'https://github.com/Duorly',
-    demo: 'https://demo.example.com',
-    color: 'rose',
-    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-  },
-  {
-    title: 'Headless CMS',
-    description: 'Système de gestion de contenu headless avec API GraphQL et interface d\'administration intuitive.',
-    tags: ['Next.js', 'GraphQL', 'Prisma', 'PostgreSQL'],
-    image: '',
-    link: 'https://github.com/Duorly',
-    demo: 'https://demo.example.com',
-    color: 'amber',
-    icon: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z'
-  }
 ];
 </script>
 
