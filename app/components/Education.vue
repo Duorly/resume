@@ -1,24 +1,26 @@
 <script setup lang="ts">
-const education = [
+const { t } = useI18n()
+
+const education = computed(() => [
   {
-    degree: 'Mastère Expert Lead Développeur Fullstack',
+    degree: t('education.master.degree'),
     school: 'ITIC Paris',
-    level: 'Titre RNCP de niveau 7 (BAC +5)',
+    level: t('education.master.level'),
     period: '2024 - 2026'
   },
   {
-    degree: 'Bachelor Développeur Concepteur d\'Application',
+    degree: t('education.bachelor.degree'),
     school: 'OpenClassrooms',
-    level: 'Titre RNCP niveau 6 (BAC +3/4)',
+    level: t('education.bachelor.level'),
     period: '2022 - 2023'
   },
   {
-    degree: 'Licence en Informatique',
+    degree: t('education.license.degree'),
     school: 'Université Marien Ngouabi',
-    level: 'BAC +3',
+    level: t('education.license.level'),
     period: '2018 - 2021'
   }
-];
+]);
 </script>
 
 <template>

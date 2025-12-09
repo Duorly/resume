@@ -15,7 +15,7 @@
   "menu_education": "Formation",
   "menu_contact": "Contact",
   "experiences_title": "Expériences Professionnelles",
-  "education_title" : "Formations",
+  "education_title": "Formations",
   "work_together": "Travaillons ensemble",
   "profile_description": "Développeur Full Stack avec 0 ans d'expérience, spécialisé dans la conception de solutions robustes et optimisées. Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en méthodologie agile et accompagné des équipes techniques vers l'excellence.",
   "skills_title": "Compétences Techniques",
@@ -24,5 +24,106 @@
   "job_type": "Type de contrat",
   "availability": "Disponibilité",
   "mobility": "Mobilité",
+  "projects": {
+    "section_title": "Mes Projets",
+    "section_description": "Découvrez une sélection de projets que j'ai développés, allant des applications web aux solutions mobiles.",
+    "more_projects": "Vous voulez voir plus de projets ?",
+    "see_all_github": "Voir tous mes projets sur GitHub",
+    "code": "Code",
+    "demo": "Demo",
+    "itic_teacher": {
+      "title": "ITIC TEACHER COMPANION",
+      "description": "Plateforme de gestion de gestion des notes et gamification des étudiants pour les enseignants. Avec un système de classement et de récompenses."
+    },
+    "itic_student": {
+      "title": "ITIC STUDENT COMPANION",
+      "description": "Plateforme de gestion de gestion des notes et gamification des étudiants pour les étudiants. Avec un système de classement et de récompenses."
+    },
+    "banque_postale": {
+      "title": "Banque Postale du Congo",
+      "description": "Réseau social avec fils d'actualité personnalisé, messagerie instantanée et partage de contenus multimédia."
+    }
+  },
+  "experiences": {
+    "see_more": "VOIR PLUS",
+    "itic_paris": {
+      "title": "Développeur Fullstack / Mentor",
+      "description": "Conception de l'application ITIC COMPANION, un outil de gamification scolaire connecté à l'ERP Ymag Ypareo. En parallèle, j'assure le mentorat technique d'étudiants du BTS au Master et la mise en place d'une architecture microservices documentée pour le campus numérique."
+    },
+    "xksgroup": {
+      "title": "Tech Lead / Chef de projet",
+      "description": "Encadrement technique des projets et conception d'architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs dans une logique de qualité et de scalabilité."
+    },
+    "faseya": {
+      "title": "Tech Lead Backend",
+      "description": "Conception et développement backend sur AWS avec focus sur la performance et la sécurité. Encadrement technique de l'équipe et mise en œuvre de bonnes pratiques de développement et de déploiement."
+    },
+    "nanocreatives": {
+      "title": "Tech Lead / Chef de projet",
+      "description": "Direction technique et coordination des projets web. Déploiement cloud, CI/CD et supervision des équipes dans un environnement agile, garantissant fiabilité et qualité des livrables."
+    },
+    "unfpa": {
+      "title": "Consultant IT",
+      "description": "Mise en place de la plateforme GLPI pour la gestion du matériel informatique. Analyse des besoins, configuration du système et formation des utilisateurs dans le cadre d'un projet de modernisation du SI."
+    },
+    "agrer": {
+      "title": "Consultant Développeur",
+      "description": "Développement d'une application de suivi agricole financée par l'Union Européenne. Coordination d'équipes et formation de plus de 300 utilisateurs pour améliorer la collecte et l'analyse des données terrain."
+    }
+  },
+  "education": {
+    "master": {
+      "degree": "Mastère Expert Lead Développeur Fullstack",
+      "level": "Titre RNCP de niveau 7 (BAC +5)"
+    },
+    "bachelor": {
+      "degree": "Bachelor Développeur Concepteur d'Application",
+      "level": "Titre RNCP niveau 6 (BAC +3/4)"
+    },
+    "license": {
+      "degree": "Licence en Informatique",
+      "level": "BAC +3"
+    }
+  },
+  "hero": {
+    "location": "Île-de-France",
+    "reveal_number": "Cliquer 2 fois pour réveler le numéro",
+    "github": "GiHub"
+  },
+  "contact": {
+    "description": "Je suis actuellement à la recherche d'un CDI en tant que Développeur Full Stack ou Tech Lead. N'hésitez pas à me contacter pour discuter de vos projets !",
+    "email": "Email",
+    "phone": "Téléphone",
+    "github": "GitHub"
+  },
+  "about": {
+    "job_value": "CDI/CDD - Développeur Full Stack / Tech Lead",
+    "availability_value": "Immédiate",
+    "mobility_value": "Île-de-France",
+    "permit_value": "B"
+  },
+  "footer": {
+    "rights_reserved": "Tous droits réservés",
+    "role": "Développeur Full Stack",
+    "experience": "ans d'expérience",
+    "location": "Île-de-France"
+  },
+  "testimonials": {
+    "title": "Recommendations",
+    "student_superprof": "Etudiant sur Superprof",
+    "student_superprof_female": "Etudiante sur Superprof",
+    "cto": "CTO de Yatouze",
+    "dev_architect": "Développeur & Architecte logiciel",
+    "fullstack_dev": "Développeur Full Stack",
+    "software_architect": "Architecte logiciel",
+    "consultant": "Consultant DevSecOps",
+    "flutter_dev": "Développeur Flutter"
+  },
+  "skills": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "cloud_devops": "Cloud & DevOps",
+    "tools": "Outils"
+  },
   "permit": "Permis"
 }

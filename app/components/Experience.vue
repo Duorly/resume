@@ -1,66 +1,62 @@
 <script setup lang="ts">
-const experiences = [
+const { t } = useI18n()
+
+const experiences = computed(() => [
   {
     date: 'Sept 2025 - Présent',
-    title: 'Développeur Fullstack / Mentor',
+    title: t('experiences.itic_paris.title'),
     company: 'ITIC PARIS',
-    description:
-        "Conception de l'application ITIC COMPANION, un outil de gamification scolaire connecté à l'ERP Ymag Ypareo. En parallèle, j'assure le mentorat technique d'étudiants du BTS au Master et la mise en place d'une architecture microservices documentée pour le campus numérique.",
+    description: t('experiences.itic_paris.description'),
     location: 'Paris, France',
     icon: 'i-lucide-briefcase',
     color: 'bg-amber-500'
   },
   {
     date: 'Oct 2024 - Sept 2025',
-    title: 'Tech Lead / Chef de projet',
+    title: t('experiences.xksgroup.title'),
     company: 'XKSGROUP',
-    description:
-        "Encadrement technique des projets et conception d'architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs dans une logique de qualité et de scalabilité.",
+    description: t('experiences.xksgroup.description'),
     location: 'Cergy, France',
     icon: 'i-lucide-briefcase',
     color: 'bg-cyan-500'
   },
   {
     date: 'Mai - Sept 2024',
-    title: 'Tech Lead Backend',
+    title: t('experiences.faseya.title'),
     company: 'FASEYA',
-    description:
-        "Conception et développement backend sur AWS avec focus sur la performance et la sécurité. Encadrement technique de l'équipe et mise en œuvre de bonnes pratiques de développement et de déploiement.",
+    description: t('experiences.faseya.description'),
     location: 'Dakar, Sénégal',
     icon: 'i-lucide-briefcase',
     color: 'bg-blue-500'
   },
   {
     date: 'Oct 2023 - Mars 2024',
-    title: 'Tech Lead / Chef de projet',
+    title: t('experiences.nanocreatives.title'),
     company: 'Nanocreatives',
-    description:
-        "Direction technique et coordination des projets web. Déploiement cloud, CI/CD et supervision des équipes dans un environnement agile, garantissant fiabilité et qualité des livrables.",
+    description: t('experiences.nanocreatives.description'),
     location: 'Brazzaville, Congo',
     icon: 'i-lucide-briefcase',
     color: 'bg-indigo-500'
   },
   {
     date: 'Sept - Nov 2023',
-    title: 'Consultant IT',
+    title: t('experiences.unfpa.title'),
     company: 'UNFPA (Nations Unies)',
-    description:
-        "Mise en place de la plateforme GLPI pour la gestion du matériel informatique. Analyse des besoins, configuration du système et formation des utilisateurs dans le cadre d'un projet de modernisation du SI.",
+    description: t('experiences.unfpa.description'),
     location: 'Brazzaville, Congo',
     icon: 'i-lucide-briefcase',
     color: 'bg-purple-500'
   },
   {
     date: 'Janv - Juin 2022',
-    title: 'Consultant Développeur',
+    title: t('experiences.agrer.title'),
     company: 'AGRER - Union Européenne',
-    description:
-        "Développement d'une application de suivi agricole financée par l'Union Européenne. Coordination d'équipes et formation de plus de 300 utilisateurs pour améliorer la collecte et l'analyse des données terrain.",
+    description: t('experiences.agrer.description'),
     location: 'Brazzaville, Congo',
     icon: 'i-lucide-briefcase',
     color: 'bg-green-500'
   }
-]
+])
 </script>
 
 <template>
@@ -153,7 +149,7 @@ const experiences = [
       </div>
 
       <div class="flex items-center justify-center mb-8 mt-4 mx-auto">
-        <UButton to="/experiences" color="secondary" variant="subtle" trailing-icon="i-lucide-arrow-down" size="md">VOIR PLUS</UButton>
+        <UButton to="/experiences" color="secondary" variant="subtle" trailing-icon="i-lucide-arrow-down" size="md">{{ $t('experiences.see_more') }}</UButton>
       </div>
 
 

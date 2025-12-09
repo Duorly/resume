@@ -27,10 +27,10 @@
         >
           <h3 class="text-2xl font-bold mb-4 text-cyan-400">{{ $t('research') }}</h3>
           <div class="space-y-3 text-slate-300">
-            <p><strong class="text-white">{{ $t('job_type') }} :</strong> CDI/CDD - Développeur Full Stack / Tech Lead</p>
-            <p><strong class="text-white">{{ $t('availability')}} :</strong> Immédiate</p>
-            <p><strong class="text-white">{{ $t('mobility')}} :</strong> Île-de-France</p>
-            <p><strong class="text-white">{{ $t('permit')}} :</strong> B</p>
+            <p><strong class="text-white">{{ $t('job_type') }} :</strong> {{ $t('about.job_value') }}</p>
+            <p><strong class="text-white">{{ $t('availability')}} :</strong> {{ $t('about.availability_value') }}</p>
+            <p><strong class="text-white">{{ $t('mobility')}} :</strong> {{ $t('about.mobility_value') }}</p>
+            <p><strong class="text-white">{{ $t('permit')}} :</strong> {{ $t('about.permit_value') }}</p>
           </div>
         </UiSpotlightCard>
 

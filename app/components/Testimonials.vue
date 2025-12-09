@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const testimonials = [
+const { t } = useI18n()
+
+const testimonials = computed(() => [
   {
     user: {
       name: 'Soumya',
-      description: 'Etudiant sur Superprof',
+      description: t('testimonials.student_superprof_female'),
       avatar: {
         src: '',
         loading: 'lazy'
@@ -16,7 +18,7 @@ const testimonials = [
   {
     user: {
       name: 'Samy',
-      description: 'Etudiant sur Superprof',
+      description: t('testimonials.student_superprof'),
       avatar: {
         src: '',
         loading: 'lazy'
@@ -29,7 +31,7 @@ const testimonials = [
   {
     user: {
       name: 'Hugo Larcher',
-      description: 'Etudiant sur Superprof',
+      description: t('testimonials.student_superprof'),
       avatar: {
         src: 'https://c.superprof.com/i/m/32174423/100/20241113170237/32174423.webp',
         loading: 'lazy'
@@ -42,7 +44,7 @@ const testimonials = [
   {
     user: {
       name: 'Yatma GUEYE',
-      description: 'CTO de Yatouze',
+      description: t('testimonials.cto'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/D4D03AQEI_z7ewlTJJA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1680446385385?e=1764201600&v=beta&t=oV8hDwtMgT6bdv6hns_kLjmmH0cbUOXZ0utNhTFo2y0',
         loading: 'lazy'
@@ -57,7 +59,7 @@ const testimonials = [
   {
     user: {
       name: 'Vanessa',
-      description: 'Etudiante sur Superprof',
+      description: t('testimonials.student_superprof_female'),
       avatar: {
         src: '',
         loading: 'lazy'
@@ -70,7 +72,7 @@ const testimonials = [
   {
     user: {
       name: 'Jamila',
-      description: 'Etudiante sur Superprof',
+      description: t('testimonials.student_superprof_female'),
       avatar: {
         src: '',
         loading: 'lazy'
@@ -83,7 +85,7 @@ const testimonials = [
   {
     user: {
       name: 'Ousseynou Koné',
-      description: 'Développeur & Architecte logiciel',
+      description: t('testimonials.dev_architect'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/D4E03AQHvp-YGzK1l5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730818400158?e=1764201600&v=beta&t=yg7T7tZsyTsZmHkTf7hDLipCtwLJNCyiJBHQY_x_ULQ',
         loading: 'lazy'
@@ -96,7 +98,7 @@ const testimonials = [
   {
     user: {
       name: 'Mérite Kioungou',
-      description: 'Developpeur Full Stack',
+      description: t('testimonials.fullstack_dev'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/D4D03AQF4ngxwOZtE0Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1674239054328?e=1764201600&v=beta&t=_SPwsRT47ZBhRMvXJyw3W4lj7-Xcy45vxMP3udG_8Go',
         loading: 'lazy'
@@ -114,7 +116,7 @@ const testimonials = [
   {
     user: {
       name: 'Seth Mukinayi Kasalu',
-      description: 'Architecte logiciel',
+      description: t('testimonials.software_architect'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/D4D03AQHobJaeu81S9g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731943530026?e=1764201600&v=beta&t=6tzU7wR9N2xQY1Qh57Z8da2ChW2ROyQs1ptFSnCBITk',
         loading: 'lazy'
@@ -127,7 +129,7 @@ const testimonials = [
   {
     user: {
       name: 'Smile MBAMBI',
-      description: 'Consultant DevSecOps',
+      description: t('testimonials.consultant'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/C5603AQH7HqaqKk2gkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1562695300529?e=1764201600&v=beta&t=ohmQkCSrQxDx4DuTyZ1JLZGgbLniH2nWnJ0BBrq5ixs',
         loading: 'lazy'
@@ -141,7 +143,7 @@ const testimonials = [
   {
     user: {
       name: 'Josy Rigis BANZOUZI',
-      description: 'Développeur Flutter',
+      description: t('testimonials.flutter_dev'),
       avatar: {
         src: 'https://media.licdn.com/dms/image/v2/C5603AQGCBVCZtA_Qjw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1583584170629?e=1764201600&v=beta&t=IEwXDwR6L5l57Fnia1uJ_SS6tNYoa3qtuvUc7Y7Ph4E',
         loading: 'lazy'
@@ -151,14 +153,14 @@ const testimonials = [
     quote:
         "J’ai eu le plaisir de collaborer avec Duorli Nebel Massengo en tant que développeur pendant un an chez XKSGROUP, ainsi que dans le cadre d’autres missions techniques. Il s’est démarqué par sa maîtrise des langages de programmation, des frameworks modernes, ainsi que par ses solides compétences en architecture logicielle. Duorli a notamment su concevoir et structurer des applications robustes, évolutives et bien organisées, en appliquant les bonnes pratiques d’ingénierie logicielle."
   }
-]
+])
 </script>
 
 <template>
   <section id="menu_contact" class="py-20 px-4 bg-slate-900/50">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        Recommendations
+        {{ $t('testimonials.title') }}
       </h2>
       <div class="flex flex-col gap-4 w-full">
         <UMarquee

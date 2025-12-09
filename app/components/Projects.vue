@@ -15,11 +15,12 @@ import iticmobile3 from '~/assets/images/projects/iticparis-mobile/itic-mobile-3
 import iticmobile4 from '~/assets/images/projects/iticparis-mobile/itic-mobile-4.png'
 import iticmobile5 from '~/assets/images/projects/iticparis-mobile/itic-mobile-5.png'
 
+const { t } = useI18n()
 
-const projects = [
+const projects = computed(() => [
   {
-    title: 'ITIC TEACHER COMPANION',
-    description: 'Plateforme de gestion de gestion des notes et gamification des étudiants pour les enseignants. Avec un système de classement et de récompenses.',
+    title: t('projects.itic_teacher.title'),
+    description: t('projects.itic_teacher.description'),
     tags: ['Vue.js', 'Nuxt', 'Spring Boot', 'PostgreSQL'],
     image: [
       image1,
@@ -37,8 +38,8 @@ const projects = [
     icon: 'M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
   },
   {
-    title: 'ITIC STUDENT COMPANION',
-    description: 'Plateforme de gestion de gestion des notes et gamification des étudiants pour les étudiants. Avec un système de classement et de récompenses.',
+    title: t('projects.itic_student.title'),
+    description: t('projects.itic_student.description'),
     tags: ['React', 'Next.js', 'NestJS', 'MongoDB'],
     image: [
       iticmobile,
@@ -53,8 +54,8 @@ const projects = [
     icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'
   },
   {
-    title: 'Banque Postale du Congo',
-    description: 'Réseau social avec fils d\'actualité personnalisé, messagerie instantanée et partage de contenus multimédia.',
+    title: t('projects.banque_postale.title'),
+    description: t('projects.banque_postale.description'),
     tags: ['Angular', 'Laravel', 'MySQL', 'AWS'],
     image: '',
     link: 'https://github.com/Duorly',
@@ -62,17 +63,17 @@ const projects = [
     color: 'purple',
     icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
   },
-];
+]);
 </script>
 
 <template>
   <section id="menu_projects" class="py-20 px-4">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-        {{ $t('my_projects') }}
+        {{ $t('projects.section_title') }}
       </h2>
       <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
-        Découvrez une sélection de projets que j'ai développés, allant des applications web aux solutions mobiles.
+        {{ $t('projects.section_description') }}
       </p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,7 +134,7 @@ const projects = [
                     class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-cyan-600/20 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
                   <UIcon name="lucide:github" size="18"/>
-                  Code
+                  {{ $t('projects.code') }}
                 </NuxtLink>
                 <NuxtLink
                     :href="project.demo"
@@ -142,7 +143,7 @@ const projects = [
                     class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 hover:from-cyan-600/30 hover:to-blue-600/30 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 border border-cyan-500/30"
                 >
                   <UIcon name="lucide:external-link" size="18"/>
-                  Demo
+                  {{ $t('projects.demo') }}
                 </NuxtLink>
               </div>
             </div>
@@ -153,7 +154,7 @@ const projects = [
       <!-- CTA Section -->
       <div class="mt-16 text-center">
         <p class="text-slate-400 mb-6">
-          Vous voulez voir plus de projets ?
+          {{ $t('projects.more_projects') }}
         </p>
         <a
             href="https://github.com/Duorly"
@@ -162,7 +163,7 @@ const projects = [
             class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 backdrop-blur-xl border border-cyan-400/30 hover:border-cyan-400/60 px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_0_rgba(6,182,212,0.2)] hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.4)] hover:scale-105"
         >
           <UIcon name="lucide:github" size="22"/>
-          Voir tous mes projets sur GitHub
+          {{ $t('projects.see_all_github') }}
           <UIcon name="lucide:arrow-right" size="22"/>
         </a>
       </div>

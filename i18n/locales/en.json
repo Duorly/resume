@@ -24,5 +24,105 @@
   "job_type": "Type of contract",
   "availability": "Availability",
   "mobility": "Mobility",
+  "projects": {
+    "section_title": "My Projects",
+    "section_description": "Discover a selection of projects I have developed, ranging from web applications to mobile solutions.",
+    "more_projects": "Want to see more projects?",
+    "see_all_github": "See all my projects on GitHub",
+    "code": "Code",
+    "demo": "Demo",
+    "itic_teacher": {
+      "title": "ITIC TEACHER COMPANION",
+      "description": "Grade management and student gamification platform for teachers. With a ranking and reward system."
+    },
+    "itic_student": {
+      "title": "ITIC STUDENT COMPANION",
+      "description": "Grade management and student gamification platform for students. With a ranking and reward system."
+    },
+    "banque_postale": {
+      "title": "Banque Postale du Congo",
+      "description": "Social network with personalized news feeds, instant messaging, and multimedia content sharing."
+    }
+  },
+  "experiences": {
+    "see_more": "SEE MORE",
+    "itic_paris": {
+      "title": "Fullstack Developer / Mentor",
+      "description": "Design of the ITIC COMPANION application, a school gamification tool connected to the Ymag Ypareo ERP. Technical mentoring of students from BTS to Master level and implementation of a documented microservices architecture for the digital campus."
+    },
+    "xksgroup": {
+      "title": "Tech Lead / Project Manager",
+      "description": "Technical supervision of projects and design of robust architectures. Code review, technical debt management, and support for developers in a logic of quality and scalability."
+    },
+    "faseya": {
+      "title": "Backend Tech Lead",
+      "description": "Backend design and development on AWS with a focus on performance and security. Technical supervision of the team and implementation of good development and deployment practices."
+    },
+    "nanocreatives": {
+      "title": "Tech Lead / Project Manager",
+      "description": "Technical direction and coordination of web projects. Cloud deployment, CI/CD, and team supervision in an agile environment, ensuring reliability and quality of deliverables."
+    },
+    "unfpa": {
+      "title": "IT Consultant",
+      "description": "Implementation of the GLPI platform for IT asset management. Needs analysis, system configuration, and user training as part of an IS modernization project."
+    },
+    "agrer": {
+      "title": "Developer Consultant",
+      "description": "Development of an agricultural monitoring application funded by the European Union. Team coordination and training of more than 300 users to improve field data collection and analysis."
+    }
+  },
+  "education": {
+    "master": {
+      "degree": "Master Expert Lead Fullstack Developer",
+      "level": "RNCP Title Level 7 (BAC +5)"
+    },
+    "bachelor": {
+      "degree": "Bachelor Application Developer Designer",
+      "level": "RNCP Title Level 6 (BAC +3/4)"
+    },
+    "license": {
+      "degree": "Bachelor in Computer Science",
+      "level": "BAC +3"
+    }
+  },
+  "hero": {
+    "location": "Ile-de-France",
+    "reveal_number": "Double click to reveal the number",
+    "github": "GiHub"
+  },
+  "contact": {
+    "description": "I am currently looking for a permanent contract as a Full Stack Developer or Tech Lead. Feel free to contact me to discuss your projects!",
+    "email": "Email",
+    "phone": "Phone",
+    "github": "GitHub"
+  },
+  "about": {
+    "job_value": "CDI/CDD - Full Stack Developer / Tech Lead",
+    "availability_value": "Immediate",
+    "mobility_value": "Ile-de-France",
+    "permit_value": "B"
+  },
+  "footer": {
+    "rights_reserved": "All rights reserved",
+    "role": "Full Stack Developer",
+    "experience": "years of experience",
+    "location": "Ile-de-France"
+  },
+  "testimonials": {
+    "title": "Recommendations",
+    "student_superprof": "Student on Superprof",
+    "cto": "CTO of Yatouze",
+    "dev_architect": "Developer & Software Architect",
+    "fullstack_dev": "Full Stack Developer",
+    "software_architect": "Software Architect",
+    "consultant": "DevSecOps Consultant",
+    "flutter_dev": "Flutter Developer"
+  },
+  "skills": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "cloud_devops": "Cloud & DevOps",
+    "tools": "Tools"
+  },
   "permit": "Permit"
 }

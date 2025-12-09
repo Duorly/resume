@@ -1,27 +1,29 @@
 <script setup lang="ts">
-const contacts = [
+const { t } = useI18n()
+
+const contacts = computed(() => [
   {
-    label: 'Email',
+    label: t('contact.email'),
     value: 'nebel.mass@gmail.com',
     link: 'mailto:nebel.mass@gmail.com',
     icon: 'lucide:mail',
     external: false
   },
   {
-    label: 'Téléphone',
+    label: t('contact.phone'),
     value: '+33 7 75 72 55 82',
     link: 'tel:+33775725582',
     icon: 'lucide:phone',
     external: false
   },
   {
-    label: 'GitHub',
+    label: t('contact.github'),
     value: '@Duorly',
     link: 'https://github.com/Duorly',
     icon: 'lucide:github',
     external: true
   }
-];
+]);
 </script>
 
 <template>
@@ -32,9 +34,7 @@ const contacts = [
       </h2>
 
       <p class="text-xl text-slate-300 mb-12 leading-relaxed">
-        Je suis actuellement à la recherche d'un <strong class="text-white">CDI en tant que Développeur Full Stack ou
-        Tech Lead</strong>.
-        N'hésitez pas à me contacter pour discuter de vos projets !
+        {{ $t('contact.description') }}
       </p>
 
       <div class="grid md:grid-cols-3 gap-6 mb-12">
