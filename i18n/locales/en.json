@@ -111,6 +111,7 @@
   "testimonials": {
     "title": "Recommendations",
     "student_superprof": "Student on Superprof",
+    "student_superprof_female": "Student on Superprof",
     "cto": "CTO of Yatouze",
     "dev_architect": "Developer & Software Architect",
     "fullstack_dev": "Full Stack Developer",

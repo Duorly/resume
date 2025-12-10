@@ -186,6 +186,10 @@ const testimonials = computed(() => [
                   :name="testimonial.user.name"
                   :description="testimonial.user.description"
                   :avatar="testimonial.user.avatar"
+                  :ui="{
+                    description: 'text-left',
+                    name: 'text-left',
+                  }"
               />
             </template>
           </UPageCard>
@@ -207,7 +211,7 @@ const testimonials = computed(() => [
               class="w-64 shrink-0"
           >
             <template #footer>
-              <UUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }"/>
+              <UUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1 text-left', name: 'text-left' }"/>
             </template>
           </UPageCard>
         </UMarquee>

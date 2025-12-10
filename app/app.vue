@@ -64,8 +64,8 @@
                     v-if="colorMode.value === 'dark'"
                     name="line-md:moon-to-sunny-outline-loop-transition"
                     size="30"
-                    @click="colorMode.value = 'light'"/>
-                <UIcon v-else name="line-md:moon-loop" size="30" @click="colorMode.value = 'dark'"/>
+                    @click="colorMode.preference = 'light'"/>
+                <UIcon v-else name="line-md:moon-loop" size="30" @click="colorMode.preference = 'dark'"/>
               </div>
             </div>
           </div>
@@ -145,7 +145,6 @@ defineOgImageComponent('NuxtSeo', {
   title: 'Duorli Nebel — Développeur Full Stack',
   description: 'Création d’applications web modernes, performantes et scalables. Expert Vue.js, Nuxt, Spring Boot, Laravel et Cloud (AWS, GCP).',
   theme: '#06b6d4', // ton accent cyan
-  colorMode: 'dark', // s’adapte bien à ton style portfolio
 })
 </script>
 
