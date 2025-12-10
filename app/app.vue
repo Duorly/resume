@@ -58,14 +58,13 @@
                 <UIcon name="twemoji:flag-united-states" size="25"/>
               </div>
 
-              <div
+              <div @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
                   class="flex items-center justify-center cursor-pointer bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full p-3 hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300 shadow-lg text-slate-700 dark:text-slate-200">
                 <UIcon
                     v-if="colorMode.value === 'dark'"
                     name="line-md:moon-to-sunny-outline-loop-transition"
-                    size="30"
-                    @click="colorMode.preference = 'light'"/>
-                <UIcon v-else name="line-md:moon-loop" size="30" @click="colorMode.preference = 'dark'"/>
+                    size="30"/>
+                <UIcon v-else name="line-md:moon-loop" size="30"/>
               </div>
             </div>
           </div>
@@ -120,7 +119,6 @@
 
 const colorMode = useColorMode();
 
-// Removed forced dark mode
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
