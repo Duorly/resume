@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+  <div class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
     <!-- Navigation -->
     <UiSplashCursor/>
     <nav
@@ -13,26 +13,26 @@
             :class="[
             'flex justify-between items-center rounded-2xl transition-all duration-500 px-6',
             isScrolled
-              ? 'bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20'
+              ? 'bg-white/80 dark:bg-white/10 backdrop-blur-2xl shadow-lg border border-slate-200 dark:border-white/20'
               : 'bg-transparent'
           ]"
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
           <NuxtLink to="/" class="flex items-center space-x-2 py-3">
-            <UAvatar chip size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-400/30"/>
+            <UAvatar chip size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-500 dark:ring-cyan-400/30"/>
             <UiShinyText class="font-bold text-lg md:text-xl" text="NebelDev"/>
           </NuxtLink>
 
           <div class="hidden md:flex justify-center items-center space-x-2">
             <div
-                class="flex items-center space-x-1 bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-white/10 shadow-lg">
+                class="flex items-center space-x-1 bg-white/60 dark:bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-slate-200 dark:border-white/10 shadow-lg">
               <NuxtLink
                   v-for="item in menuItems"
                   :key="item"
                   :to="`/#${item}`"
-                  class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group"
+                  class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-slate-200 dark:hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group text-slate-700 dark:text-slate-200"
               >
-                <span class="relative z-10 group-hover:text-cyan-300 transition-colors duration-300">
+                <span class="relative z-10 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors duration-300">
                   {{ $t(item) }}
                 </span>
                 <div
@@ -43,7 +43,7 @@
             <div class="flex items-center space-x-2">
               <div
                   v-if="locale === 'en'"
-                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
+                  class="flex items-center space-x-2 cursor-pointer bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-400/50 hover:bg-slate-100 dark:hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20 text-slate-700 dark:text-slate-200"
                   @click="setLocale('fr')"
               >
                 <span class="text-md">FR</span>
@@ -51,7 +51,7 @@
               </div>
               <div
                   v-if="locale === 'fr'"
-                  class="flex items-center space-x-2 cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20"
+                  class="flex items-center space-x-2 cursor-pointer bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-400/50 hover:bg-slate-100 dark:hover:bg-white/10 py-4 px-5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-cyan-500/20 text-slate-700 dark:text-slate-200"
                   @click="setLocale('en')"
               >
                 <span class="text-md">EN</span>
@@ -59,7 +59,7 @@
               </div>
 
               <div
-                  class="flex items-center justify-center cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-3 hover:bg-white/10 transition-all duration-300 shadow-lg">
+                  class="flex items-center justify-center cursor-pointer bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full p-3 hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300 shadow-lg text-slate-700 dark:text-slate-200">
                 <UIcon
                     v-if="colorMode.value === 'dark'"
                     name="line-md:moon-to-sunny-outline-loop-transition"
@@ -72,7 +72,7 @@
 
 
           <button
-              class="md:hidden text-white bg-white/5 backdrop-blur-xl rounded-full p-2 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              class="md:hidden text-slate-800 dark:text-white bg-white/60 dark:bg-white/5 backdrop-blur-xl rounded-full p-2 border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300"
               @click="isMenuOpen = !isMenuOpen"
           >
             <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,13 +95,13 @@
           leave-to-class="opacity-0 transform scale-95"
       >
         <div v-if="isMenuOpen" class="md:hidden mt-4 mx-4">
-          <div class="bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
+          <div class="bg-white/90 dark:bg-white/10 backdrop-blur-2xl rounded-2xl border border-slate-200 dark:border-white/20 shadow-2xl overflow-hidden">
             <div class="px-4 pt-2 pb-4 space-y-1">
               <a
                   v-for="item in menuItems"
                   :key="item"
                   :href="`#${item.toLowerCase()}`"
-                  class="block px-4 py-3 hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+                  class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-slate-800 dark:text-white"
                   @click="isMenuOpen = false"
               >
                 {{ $t(item) }}
@@ -120,7 +120,7 @@
 
 const colorMode = useColorMode();
 
-colorMode.value = 'dark';
+// Removed forced dark mode
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);

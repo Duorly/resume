@@ -105,7 +105,7 @@ const projects = computed(() => [
 
             <!-- Content -->
             <div class="flex-1 flex flex-col">
-              <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
+              <h3 class="text-2xl font-bold mb-3 dark:text-white text-slate-800 group-hover:text-cyan-300 transition-colors duration-300">
                 {{ project.title }}
               </h3>
 

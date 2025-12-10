@@ -157,7 +157,7 @@ const testimonials = computed(() => [
 </script>
 
 <template>
-  <section id="menu_contact" class="py-20 px-4 bg-slate-900/50">
+  <section id="menu_contact" class="py-20 px-4 bg-gray-50 dark:bg-slate-900/50 transition-colors duration-300">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
         {{ $t('testimonials.title') }}

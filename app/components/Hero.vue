@@ -12,7 +12,7 @@
 
       <UiAlternativeText/>
 
-      <p class="text-lg md:text-xl mb-8 text-slate-300 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl mb-8 text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
         <UiCountUp
             :from="0"
             :to="new Date().getFullYear() - 2019"
@@ -29,7 +29,7 @@
       <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
         <a
             href="mailto:nebel.mass@gmail.com"
-            class="group relative flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 backdrop-blur-xl border border-cyan-400/30 hover:border-cyan-400/60 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_0_rgba(6,182,212,0.2)] hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.4)] hover:scale-105"
+            class="group relative flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/20 dark:to-blue-500/20 hover:from-cyan-500/20 hover:to-blue-500/20 dark:hover:from-cyan-500/30 dark:hover:to-blue-500/30 backdrop-blur-xl border border-cyan-400/30 hover:border-cyan-400/60 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_0_rgba(6,182,212,0.1)] dark:shadow-[0_8px_32px_0_rgba(6,182,212,0.2)] hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.3)] dark:hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.4)] hover:scale-105 text-slate-800 dark:text-white"
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
           <div
@@ -44,7 +44,7 @@
             href="https://github.com/Duorly"
             target="_blank"
             rel="noopener noreferrer"
-            class="group relative flex items-center gap-2 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/40 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.2)] hover:scale-105"
+            class="group relative flex items-center gap-2 bg-white/80 dark:bg-white/5 hover:bg-white/90 dark:hover:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/20 hover:border-slate-300 dark:hover:border-white/40 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] hover:shadow-xl dark:hover:shadow-[0_8px_32px_0_rgba(255,255,255,0.2)] hover:scale-105 text-slate-800 dark:text-white"
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
           <div

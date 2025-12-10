@@ -65,21 +65,21 @@ const skillCategories = computed(() => [
         <UiSpotlightCard
             v-for="(category, index) in skillCategories"
             :key="index"
-            class-name="border border-slate-700/50 hover:border-cyan-500/50"
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 shadow-lg dark:shadow-none transition-colors duration-300"
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
           <div class="flex items-center gap-3 mb-6">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="category.icon" />
             </svg>
-            <h3 class="text-2xl font-bold text-white">{{ category.title }}</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ category.title }}</h3>
           </div>
 
           <div class="flex flex-wrap gap-2">
             <div
                 v-for="(skill, i) in category.skills"
                 :key="i"
-                :class="`flex items-center gap-2 px-4 py-2 bg-slate-700/50 rounded-full text-sm font-medium hover:bg-${category.color.split('-')[0]}-600/20 hover:text-${category.color.split('-')[0]}-300 transition-colors`"
+                :class="`flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700/50 rounded-full text-sm font-medium hover:bg-${category.color.split('-')[0]}-100 dark:hover:bg-${category.color.split('-')[0]}-600/20 text-slate-700 dark:text-gray-200 hover:text-${category.color.split('-')[0]}-600 dark:hover:text-${category.color.split('-')[0]}-300 transition-colors`"
             >
               <UIcon :name="skill.icon" class="size-5 shrink-0" />
               {{ skill.name }}

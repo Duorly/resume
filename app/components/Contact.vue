@@ -33,7 +33,7 @@ const contacts = computed(() => [
         {{ $t('work_together') }}
       </h2>
 
-      <p class="text-xl text-slate-300 mb-12 leading-relaxed">
+      <p class="text-xl text-slate-600 dark:text-slate-300 mb-12 leading-relaxed">
         {{ $t('contact.description') }}
       </p>
 
@@ -47,19 +47,19 @@ const contacts = computed(() => [
             class="block"
         >
           <UiSpotlightCard
-              class-name="border border-slate-700/50 hover:border-cyan-500/50"
+              class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 shadow-lg dark:shadow-none transition-colors duration-300"
               spotlight-color="rgba(6, 182, 212, 0.15)"
           >
             <div class="flex flex-col items-center p-2 group">
               <UIcon
-                  class="mb-4 text-cyan-400 group-hover:scale-110 transition-transform"
+                  class="mb-4 text-cyan-500 dark:text-cyan-400 group-hover:scale-110 transition-transform"
                   :name="contact.icon"
                   size="28"
               />
 
-              <p class="text-sm text-slate-400 mb-2">{{ contact.label }}</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-2">{{ contact.label }}</p>
               <p
-                  class="text-white font-semibold"
+                  class="text-slate-900 dark:text-white font-semibold"
                   :class="contact.external ? 'flex items-center justify-center gap-2' : ''">
                 {{ contact.value }}
                 <UIcon v-if="contact.external" name="mi:external-link" size="22"/>

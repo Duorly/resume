@@ -210,7 +210,7 @@ const getColorClasses = (color: string) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+  <div class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
     <!-- Header -->
     <!--    <div class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50">
           <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -230,7 +230,7 @@ const getColorClasses = (color: string) => {
         <!-- Sidebar - Liste des expériences -->
         <div class="lg:col-span-1">
           <div class="sticky top-24 space-y-4">
-            <h2 class="text-2xl font-bold mb-6 text-white">Expériences professionnelles</h2>
+            <h2 class="text-2xl font-bold mb-6 text-slate-800 dark:text-white">Expériences professionnelles</h2>
 
             <div
                 v-for="exp in experiences"
@@ -239,7 +239,7 @@ const getColorClasses = (color: string) => {
                 'cursor-pointer p-4 rounded-xl border transition-all duration-300',
                 selectedExperience.id === exp.id
                   ? `${getColorClasses(exp.color).border} ${getColorClasses(exp.color).bg} shadow-lg`
-                  : 'border-slate-700/50 hover:border-slate-600 bg-slate-800/30'
+                  : 'bg-white dark:bg-slate-800/30 border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600'
               ]"
                 @click="selectExperience(exp)"
             >
@@ -247,24 +247,24 @@ const getColorClasses = (color: string) => {
                 <div
                     :class="[
                   'flex justify-center items-center p-4 rounded-lg',
-                  selectedExperience.id === exp.id ? getColorClasses(exp.color).bg : 'bg-slate-700/50'
+                  selectedExperience.id === exp.id ? getColorClasses(exp.color).bg : 'bg-slate-100 dark:bg-slate-700/50'
                 ]">
                   <UIcon
                       size="25"
                       :name="exp.icon" :class="[
-                    selectedExperience.id === exp.id ? getColorClasses(exp.color).text : 'text-slate-400'
+                    selectedExperience.id === exp.id ? getColorClasses(exp.color).text : 'text-slate-500 dark:text-slate-400'
                   ]"/>
                 </div>
                 <div class="flex-1 min-w-0">
                   <h3
                       class="font-bold text-sm mb-1 truncate" :class="
-                    selectedExperience.id === exp.id ? 'text-white' : 'text-slate-300'
+                    selectedExperience.id === exp.id ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-slate-300'
                   ">
                     {{ exp.title }}
                   </h3>
                   <p
                       class="text-xs font-medium mb-1" :class="
-                    selectedExperience.id === exp.id ? getColorClasses(exp.color).text : 'text-slate-400'
+                    selectedExperience.id === exp.id ? getColorClasses(exp.color).text : 'text-slate-500 dark:text-slate-400'
                   ">
                     {{ exp.company }}
                   </p>
@@ -278,7 +278,7 @@ const getColorClasses = (color: string) => {
         <!-- Contenu principal - Détails de l'expérience -->
         <div class="lg:col-span-2">
           <UiSpotlightCard
-              class-name="border border-slate-700/50"
+              class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 shadow-lg dark:shadow-none"
               spotlight-color="rgba(6, 182, 212, 0.15)"
           >
             <!-- Header -->
@@ -298,7 +298,7 @@ const getColorClasses = (color: string) => {
 
                 <div class="flex-1">
                   <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white">
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
                       {{ selectedExperience.title }}
                     </h2>
                     <span
@@ -316,7 +316,7 @@ const getColorClasses = (color: string) => {
                     {{ selectedExperience.company }}
                   </div>
 
-                  <div class="flex flex-wrap gap-4 text-sm text-slate-400">
+                  <div class="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
                     <div class="flex items-center gap-1">
                       <UIcon name="lucide:calendar" class="w-4 h-4"/>
                       <span>{{ selectedExperience.date }}</span>
@@ -329,14 +329,14 @@ const getColorClasses = (color: string) => {
                 </div>
               </div>
 
-              <p class="text-slate-300 leading-relaxed">
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {{ selectedExperience.description }}
               </p>
             </div>
 
             <!-- Missions -->
             <div class="mb-8">
-              <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-800 dark:text-white">
                 <UIcon name="lucide:check-circle" :class="getColorClasses(selectedExperience.color).text"/>
                 Missions principales
               </h3>
@@ -344,7 +344,7 @@ const getColorClasses = (color: string) => {
                 <li
                     v-for="(mission, index) in selectedExperience.missions"
                     :key="index"
-                    class="flex items-start gap-3 text-slate-300"
+                    class="flex items-start gap-3 text-slate-600 dark:text-slate-300"
                 >
                   <div
                       :class="[
@@ -358,7 +358,7 @@ const getColorClasses = (color: string) => {
 
             <!-- Technologies -->
             <div class="mb-8">
-              <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-800 dark:text-white">
                 <UIcon name="lucide:code" :class="getColorClasses(selectedExperience.color).text"/>
                 Stack technique
               </h3>
@@ -381,7 +381,7 @@ const getColorClasses = (color: string) => {
 
             <!-- Réalisations -->
             <div>
-              <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-800 dark:text-white">
                 <UIcon name="lucide:trophy" :class="getColorClasses(selectedExperience.color).text"/>
                 Réalisations clés
               </h3>
@@ -401,7 +401,7 @@ const getColorClasses = (color: string) => {
                       'w-5 h-5 shrink-0 mt-0.5',
                       getColorClasses(selectedExperience.color).text
                     ]"/>
-                    <span class="text-sm text-slate-300">{{ achievement }}</span>
+                    <span class="text-sm text-slate-700 dark:text-slate-300">{{ achievement }}</span>
                   </div>
                 </div>
               </div>
@@ -413,7 +413,7 @@ const getColorClasses = (color: string) => {
           <div class="flex justify-between mt-8">
             <button
                 v-if="selectedExperience.id > 1"
-                class="flex items-center gap-2 px-6 py-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all"
+                class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 transition-all text-slate-700 dark:text-slate-300"
                 @click="selectExperience(experiences[selectedExperience.id - 2])"
             >
               <UIcon name="lucide:chevron-left" size="20"/>
@@ -423,7 +423,7 @@ const getColorClasses = (color: string) => {
 
             <button
                 v-if="selectedExperience.id < experiences.length"
-                class="flex items-center gap-2 px-6 py-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all"
+                class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-700/50 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 transition-all text-slate-700 dark:text-slate-300"
                 @click="selectExperience(experiences[selectedExperience.id])"
             >
               <span>Suivant</span>

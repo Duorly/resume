@@ -60,9 +60,9 @@ const experiences = computed(() => [
 </script>
 
 <template>
-  <section id="menu_experiences" class="py-20 px-4 bg-slate-900/50">
+  <section id="menu_experiences" class="py-20 px-4 bg-gray-50 dark:bg-slate-900/50 transition-colors duration-300">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
         {{ $t('experiences_title') }}
       </h2>
 
@@ -94,10 +94,10 @@ const experiences = computed(() => [
                 ]"
             >
               <UiSpotlightCard
-                  class-name="border border-slate-700/50 hover:border-cyan-500/50"
+                  class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 shadow-lg dark:shadow-none transition-colors duration-300"
                   spotlight-color="rgba(255, 255, 255, 0.25)"
               >
-                <div class="text-sm text-cyan-400 font-semibold mb-2">{{ exp.date }}</div>
+                <div class="text-sm text-cyan-600 dark:text-cyan-400 font-semibold mb-2">{{ exp.date }}</div>
 
                 <div
                     :class="[
@@ -106,19 +106,19 @@ const experiences = computed(() => [
                     index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
                   ]"
                 >
-                  <h3 class="text-lg md:text-xl font-bold text-white">{{ exp.title }}</h3>
-                  <div class="text-cyan-300 font-medium text-sm md:text-base">{{ exp.company }}</div>
+                  <h3 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">{{ exp.title }}</h3>
+                  <div class="text-cyan-600 dark:text-cyan-300 font-medium text-sm md:text-base">{{ exp.company }}</div>
                 </div>
 
                 <div
-                    class="flex items-center gap-1 text-sm text-gray-400 mb-3"
+                    class="flex items-center gap-1 text-sm text-slate-500 dark:text-gray-400 mb-3"
                     :class="index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'"
                 >
                   <UIcon name="i-lucide-map-pin" class="w-4 h-4"/>
                   <span>{{ exp.location }}</span>
                 </div>
 
-                <p class="text-gray-300 text-sm leading-relaxed">{{ exp.description }}</p>
+                <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{{ exp.description }}</p>
               </UiSpotlightCard>
             </div>
 
@@ -134,7 +134,7 @@ const experiences = computed(() => [
             >
               <div
                   :class="[
-                    'w-12 h-12 rounded-full flex items-center justify-center border-4 border-slate-900',
+                    'w-12 h-12 rounded-full flex items-center justify-center border-4 border-gray-50 dark:border-slate-900 transition-colors duration-300',
                     exp.color
                   ]"
               >
