@@ -4,8 +4,8 @@ const { t } = useI18n()
 const contacts = computed(() => [
   {
     label: t('contact.email'),
-    value: 'nebel.mass@gmail.com',
-    link: 'mailto:nebel.mass@gmail.com',
+    value: 'contact@nebel.dev',
+    link: 'mailto:contact@nebel.dev',
     icon: 'lucide:mail',
     external: false
   },

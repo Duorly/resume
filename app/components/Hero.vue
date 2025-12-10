@@ -28,7 +28,7 @@
 
       <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
         <a
-            href="mailto:nebel.mass@gmail.com"
+            href="mailto:contact@nebel.dev"
             class="group relative flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/20 dark:to-blue-500/20 hover:from-cyan-500/20 hover:to-blue-500/20 dark:hover:from-cyan-500/30 dark:hover:to-blue-500/30 backdrop-blur-xl border border-cyan-400/30 hover:border-cyan-400/60 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_0_rgba(6,182,212,0.1)] dark:shadow-[0_8px_32px_0_rgba(6,182,212,0.2)] hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.3)] dark:hover:shadow-[0_8px_32px_0_rgba(6,182,212,0.4)] hover:scale-105 text-slate-800 dark:text-white"
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
@@ -60,8 +60,9 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-        <div class="flex items-center gap-2 cursor-pointer" :title="$t('hero.reveal_number')"
-             @dblclick="revealNumber = !revealNumber">
+        <div
+            class="flex items-center gap-2 cursor-pointer" :title="$t('hero.reveal_number')"
+            @dblclick="revealNumber = !revealNumber">
           <UIcon name="lucide:phone" size="20"/>
           +33 7 75 72 55 {{ !revealNumber ? '**' : '82' }}
         </div>

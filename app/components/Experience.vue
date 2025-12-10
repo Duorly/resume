@@ -60,15 +60,15 @@ const experiences = computed(() => [
 </script>
 
 <template>
-  <section id="menu_experiences" class="py-20 px-4 bg-gray-50 dark:bg-slate-900/50 transition-colors duration-300">
+  <section id="menu_experiences" class="py-20 px-4 bg-gray-100 dark:bg-slate-900/50 transition-colors duration-300">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center bg-linear-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
         {{ $t('experiences_title') }}
       </h2>
 
       <div class="relative">
         <!-- Ligne verticale - à gauche sur mobile, au centre sur desktop -->
-        <div class="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-purple-500" />
+        <div class="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 w-0.5 h-full bg-linear-to-b from-cyan-500 via-blue-500 to-purple-500" />
 
         <!-- Timeline items -->
         <div class="space-y-8">
