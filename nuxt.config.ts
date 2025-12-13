@@ -9,19 +9,34 @@ export default defineNuxtConfig({
         defaultLocale: 'fr',
     },
 
-
-    devtools: {enabled: true},
+    devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
     modules: [
-      '@nuxt/content',
-      '@nuxt/eslint',
-      '@nuxt/image',
-      '@nuxt/scripts',
-      '@nuxt/ui',
-      '@nuxt/test-utils',
-      '@nuxtjs/i18n',
-      '@nuxtjs/seo'
+        '@nuxt/content',
+        '@nuxt/eslint',
+        '@nuxt/image',
+        '@nuxt/scripts',
+        '@nuxt/ui',
+        '@nuxt/test-utils',
+        '@nuxtjs/i18n',
+        '@nuxtjs/seo',
     ],
+
+    scripts: {
+        registry: {
+            googleTagManager: true,
+        }
+    },
+    
+    runtimeConfig: {
+        public: {
+            scripts: {
+                googleTagManager: {
+                    id: process.env.GOOGLE_TAG_MANAGER_ID,
+                },
+            },
+        },
+    },
 
     i18n: {
         locales: [
