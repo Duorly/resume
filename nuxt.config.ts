@@ -25,14 +25,18 @@ export default defineNuxtConfig({
     scripts: {
         registry: {
             googleTagManager: true,
+            googleAnalytics: true
         }
     },
-    
+
     runtimeConfig: {
         public: {
             scripts: {
                 googleTagManager: {
                     id: process.env.GOOGLE_TAG_MANAGER_ID,
+                },
+                googleAnalytics: {
+                    id: process.env.GOOGLE_ANALYTICS_ID,
                 },
             },
         },
