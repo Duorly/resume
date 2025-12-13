@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, withDefaults, useTemplateRef } from 'vue';
+
 
 /* ---------- types ---------- */
 interface ColorRGB {

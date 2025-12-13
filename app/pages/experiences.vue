@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+
 const { t, tm, rt } = useI18n()
 
 interface Experience {

@@ -3,7 +3,7 @@
 -->
 
 <script setup lang="ts">
-import { computed } from 'vue';
+
 
 interface ShinyTextProps {
   text?: string;

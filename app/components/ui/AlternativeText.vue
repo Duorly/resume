@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref, onMounted, onUnmounted} from 'vue';
+
 
 const roles = ref(['fullstack_developer', 'tech_lead', 'project_manager', 'software_architect']);
 const currentRole = ref(0);
