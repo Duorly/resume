@@ -46,29 +46,136 @@
   },
   "experiences": {
     "see_more": "SEE MORE",
+    "missions_title": "Main Missions",
+    "stack_title": "Technical Stack",
+    "achievements_title": "Key Achievements",
+    "previous": "Previous",
+    "next": "Next",
     "itic_paris": {
       "title": "Fullstack Developer / Mentor",
-      "description": "Design of the ITIC COMPANION application, a school gamification tool connected to the Ymag Ypareo ERP. Technical mentoring of students from BTS to Master level and implementation of a documented microservices architecture for the digital campus."
+      "company": "ITIC PARIS",
+      "date": "Sept 2025 - Present",
+      "location": "Paris, France",
+      "type": "CDI",
+      "description": "Design of the ITIC COMPANION application, a school gamification tool connected to the Ymag Ypareo ERP. Technical mentoring of students from BTS to Master level and implementation of a documented microservices architecture for the digital campus.",
+      "missions": [
+        "Design and development of the ITIC COMPANION application with Vue.js and Spring Boot",
+        "API integration with Ymag Ypareo ERP for student data synchronization",
+        "Implementation of a gamification system (points, badges, rankings)",
+        "Technical mentoring of students from BTS to Master (20+ students)",
+        "Microservices architecture with Docker and Kubernetes",
+        "Complete technical documentation and team training"
+      ],
+      "achievements": [
+        "Improved student engagement by 45%",
+        "Reduced ERP synchronization time by 60%",
+        "Training of 20+ students in development best practices"
+      ]
     },
     "xksgroup": {
       "title": "Tech Lead / Project Manager",
-      "description": "Technical supervision of projects and design of robust architectures. Code review, technical debt management, and support for developers in a logic of quality and scalability."
+      "company": "XKSGROUP",
+      "date": "Oct 2024 - Sept 2025",
+      "location": "Cergy, France",
+      "type": "CDD",
+      "description": "Technical supervision of projects and design of robust architectures. Code review, technical debt management, and support for developers in a logic of quality and scalability.",
+      "missions": [
+        "Technical direction of 3 simultaneous projects with teams of 5-8 developers",
+        "Systematic code review and implementation of quality standards",
+        "Architecture of scalable solutions on AWS",
+        "Technical debt management and strategic refactoring",
+        "Technical coaching of junior and mid-level developers",
+        "Implementation of CI/CD with GitLab CI and deployment automation"
+      ],
+      "achievements": [
+        "40% reduction in deployment time",
+        "Improved test coverage from 25% to 80%",
+        "Skill improvement of 6 junior developers"
+      ]
     },
     "faseya": {
       "title": "Backend Tech Lead",
-      "description": "Backend design and development on AWS with a focus on performance and security. Technical supervision of the team and implementation of good development and deployment practices."
+      "company": "FASEYA",
+      "date": "May - Sept 2024",
+      "location": "Dakar, Senegal",
+      "type": "Mission",
+      "description": "Backend design and development on AWS with a focus on performance and security. Technical supervision of the team and implementation of good development and deployment practices.",
+      "missions": [
+        "Backend microservices architecture on AWS (Lambda, ECS, RDS)",
+        "API performance optimization (70% reduction in response times)",
+        "Security implementation (OAuth2, JWT, rate limiting)",
+        "Supervision of a team of 4 backend developers",
+        "Infrastructure as Code with Terraform",
+        "Monitoring and alerting with CloudWatch and Datadog"
+      ],
+      "achievements": [
+        "70% reduction in API response times",
+        "30% saving on AWS costs",
+        "Zero downtime over 4 months of production"
+      ]
     },
     "nanocreatives": {
       "title": "Tech Lead / Project Manager",
-      "description": "Technical direction and coordination of web projects. Cloud deployment, CI/CD, and team supervision in an agile environment, ensuring reliability and quality of deliverables."
+      "company": "Nanocreatives",
+      "date": "Oct 2023 - March 2024",
+      "location": "Brazzaville, Congo",
+      "type": "Freelance",
+      "description": "Technical direction and coordination of web projects. Cloud deployment, CI/CD, and team supervision in an agile environment, ensuring reliability and quality of deliverables.",
+      "missions": [
+        "Technical direction of web projects for international clients",
+        "Implementation of CI/CD pipelines with GitHub Actions",
+        "Multi-provider cloud deployment (AWS, GCP, DigitalOcean)",
+        "Training and supervision of agile teams (Scrum)",
+        "Estimation and planning of complex projects",
+        "Client relations and management of technical expectations"
+      ],
+      "achievements": [
+        "Delivery of 8 projects on time",
+        "95% customer satisfaction",
+        "Training of 2 teams in agile methodologies"
+      ]
     },
     "unfpa": {
       "title": "IT Consultant",
-      "description": "Implementation of the GLPI platform for IT asset management. Needs analysis, system configuration, and user training as part of an IS modernization project."
+      "company": "UNFPA (United Nations)",
+      "date": "Sept - Nov 2023",
+      "location": "Brazzaville, Congo",
+      "type": "Mission",
+      "description": "Implementation of the GLPI platform for IT asset management. Needs analysis, system configuration, and user training as part of an IS modernization project.",
+      "missions": [
+        "Analysis of IT asset management needs",
+        "Installation and configuration of GLPI on Linux infrastructure",
+        "Configuration of ticket workflows and inventory",
+        "Data migration from the old system",
+        "Training of 15 users in GLPI",
+        "Complete documentation in French and English"
+      ],
+      "achievements": [
+        "60% improvement in incident processing time",
+        "Successful training of 15 users",
+        "Complete bilingual documentation delivered"
+      ]
     },
     "agrer": {
       "title": "Developer Consultant",
-      "description": "Development of an agricultural monitoring application funded by the European Union. Team coordination and training of more than 300 users to improve field data collection and analysis."
+      "company": "AGRER - European Union",
+      "date": "Jan - June 2022",
+      "location": "Brazzaville, Congo",
+      "type": "Mission",
+      "description": "Development of an agricultural monitoring application funded by the European Union. Team coordination and training of more than 300 users to improve field data collection and analysis.",
+      "missions": [
+        "Development of Flutter mobile application for agricultural data collection",
+        "REST API with Laravel for cloud synchronization",
+        "Analytical dashboard with Vue.js for data visualization",
+        "Coordination of a team of 4 developers",
+        "Training of 300+ field users in the mobile application",
+        "Technical support and maintenance for 6 months"
+      ],
+      "achievements": [
+        "Data collection from 5000+ farmers",
+        "Successful training of 300+ field users",
+        "80% improvement in the quality of collected data"
+      ]
     }
   },
   "education": {

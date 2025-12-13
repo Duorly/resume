@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="min-h-screen flex flex-col items-center justify-center px-4 pt-16">
+  <section id="hero" class="min-h-screen bg-white dark:bg-transparent flex flex-col items-center justify-center px-4 pt-16">
     <div class="max-w-6xl mx-auto text-center">
 
       <UiGradientText
@@ -79,7 +79,7 @@
     </div>
 
     <div class="w-full bg-none">
-      <UMarquee class="my-5" :overlay="true">
+      <UMarquee class="my-5" :overlay="false">
         <UIcon name="logos:nuxt-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:nextjs-icon" class="size-10 shrink-0"/>
         <UIcon name="logos:react" class="size-10 shrink-0"/>
