@@ -28,12 +28,12 @@
                 class="flex items-center space-x-1 bg-white/60 dark:bg-white/5 backdrop-blur-xl rounded-full px-2 py-2 border border-slate-200 dark:border-white/10 shadow-lg">
               <NuxtLink
                   v-for="item in menuItems"
-                  :key="item"
-                  :to="`/#${item}`"
+                  :key="item.key"
+                  :to="item.to"
                   class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-slate-200 dark:hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group text-slate-700 dark:text-slate-200"
               >
                 <span class="relative z-10 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors duration-300">
-                  {{ $t(item) }}
+                  {{ $t(item.key) }}
                 </span>
                 <div
                     class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
@@ -96,15 +96,15 @@
         <div v-if="isMenuOpen" class="md:hidden mt-4 mx-4">
           <div class="bg-white/90 dark:bg-white/10 backdrop-blur-2xl rounded-2xl border border-slate-200 dark:border-white/20 shadow-2xl overflow-hidden">
             <div class="px-4 pt-2 pb-4 space-y-1">
-              <a
+              <NuxtLink
                   v-for="item in menuItems"
-                  :key="item"
-                  :href="`#${item.toLowerCase()}`"
+                  :key="item.key"
+                  :to="item.to"
                   class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-slate-800 dark:text-white"
                   @click="isMenuOpen = false"
               >
-                {{ $t(item) }}
-              </a>
+                {{ $t(item.key) }}
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -123,7 +123,14 @@ const colorMode = useColorMode();
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 
-const menuItems = ref(['menu_about', 'menu_skills', 'menu_experiences', 'menu_education', 'menu_contact']);
+const menuItems = ref([
+  { key: 'menu_about', to: '/#menu_about' },
+  { key: 'menu_skills', to: '/#menu_skills' },
+  { key: 'menu_experiences', to: '/#menu_experiences' },
+  { key: 'menu_education', to: '/#menu_education' },
+  { key: 'menu_blog', to: '/blog' },
+  { key: 'menu_contact', to: '/#menu_contact' }
+]);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
