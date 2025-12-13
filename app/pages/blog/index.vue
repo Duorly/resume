@@ -117,14 +117,14 @@ useSeoMeta({
                   <time>{{ formatDate(article.date) }}</time>
                 </div>
                 <div class="flex flex-wrap gap-2 mb-3">
-                  <span class="px-2 py-0.5 rounded-md bg-cyan-400/10 text-cyan-400 text-xs font-bold border border-cyan-400/20">
+                  <span class="px-2 py-0.5 rounded-md bg-cyan-600/10 dark:bg-cyan-400/10 text-cyan-700 dark:text-cyan-400 text-xs font-bold border border-cyan-600/20 dark:border-cyan-400/20">
                     {{ article.category }}
                   </span>
                 </div>
-                <h2 class="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
+                <h2 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                   {{ article.title }}
                 </h2>
-                <p class="text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 mb-4">
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-2 mb-4">
                   {{ article.description }}
                 </p>
                 <div v-if="article.tags" class="flex flex-wrap gap-2">

@@ -57,7 +57,7 @@ const projects = computed(() => [
     title: t('projects.banque_postale.title'),
     description: t('projects.banque_postale.description'),
     tags: ['Angular', 'Laravel', 'MySQL', 'AWS'],
-    image: '',
+    image: [],
     link: 'https://github.com/Duorly',
     demo: 'https://demo.example.com',
     color: 'purple',
@@ -100,7 +100,7 @@ const projects = computed(() => [
                 :autoplay="{ delay: 2000 }"
                 loop
             >
-              <img :src="item"  class="rounded-lg">
+              <img :src="item" :alt="project.title + ' screenshot ' + (index + 1)" class="rounded-lg">
             </UCarousel>
 
             <!-- Content -->

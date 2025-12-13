@@ -49,8 +49,8 @@ const formatDate = (dateString: string) => {
 
       <article v-if="article">
         <header class="mb-12">
-            <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
-              <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 font-bold border border-cyan-400/20">
+            <div class="flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-4">
+              <span class="px-3 py-1 rounded-full bg-cyan-600/10 dark:bg-cyan-400/10 text-cyan-700 dark:text-cyan-400 font-bold border border-cyan-600/20 dark:border-cyan-400/20">
                 {{ article.category }}
               </span>
               <div class="flex items-center gap-2">

@@ -111,7 +111,9 @@
       </transition>
     </nav>
 
-    <NuxtPage/>
+    <main>
+      <NuxtPage/>
+    </main>
   </div>
 </template>
 

@@ -7,21 +7,24 @@ const contacts = computed(() => [
     value: 'contact@nebel.dev',
     link: 'mailto:contact@nebel.dev',
     icon: 'lucide:mail',
-    external: false
+    external: false,
+    masked: false
   },
   {
-    label: t('contact.phone'),
-    value: '+33 7 75 72 55 82',
-    link: 'tel:+33775725582',
-    icon: 'lucide:phone',
-    external: false
+    label: t('contact.appointment'),
+    value: 'Google Calendar',
+    link: 'https://calendar.app.google/6hGWYNKqyGVmuuVM9',
+    icon: 'lucide:calendar-clock',
+    external: true,
+    masked: false
   },
   {
     label: t('contact.github'),
     value: '@Duorly',
     link: 'https://github.com/Duorly',
     icon: 'lucide:github',
-    external: true
+    external: true,
+    masked: false
   }
 ]);
 </script>
@@ -52,16 +55,20 @@ const contacts = computed(() => [
           >
             <div class="flex flex-col items-center p-2 group">
               <UIcon
-                  class="mb-4 text-cyan-500 dark:text-cyan-400 group-hover:scale-110 transition-transform"
+                  class="mb-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform"
                   :name="contact.icon"
                   size="28"
               />
 
-              <p class="text-sm text-slate-500 dark:text-slate-400 mb-2">{{ contact.label }}</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">{{ contact.label }}</p>
               <p
-                  class="text-slate-900 dark:text-white font-semibold"
-                  :class="contact.external ? 'flex items-center justify-center gap-2' : ''">
-                {{ contact.value }}
+                  class="text-slate-900 dark:text-white font-semibold flex items-center justify-center gap-2"
+              >
+                <UiReveal 
+                  v-if="contact.masked" 
+                  :text="contact.value" 
+                />
+                <span v-else>{{ contact.value }}</span>
                 <UIcon v-if="contact.external" name="mi:external-link" size="22"/>
               </p>
             </div>

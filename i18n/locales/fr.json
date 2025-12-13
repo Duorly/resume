@@ -201,7 +201,7 @@
   "contact": {
     "description": "Je suis actuellement à la recherche d'un CDI en tant que Développeur Full Stack ou Tech Lead. N'hésitez pas à me contacter pour discuter de vos projets !",
     "email": "Email",
-    "phone": "Téléphone",
+    "appointment": "Prendre un rendez-vous",
     "github": "GitHub"
   },
   "about": {
