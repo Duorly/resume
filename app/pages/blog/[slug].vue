@@ -15,7 +15,7 @@ const formatDate = (dateString: string) => {
 
 <template>
   <div class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
-    <div class="max-w-3xl mx-auto px-4 py-32">
+    <div class="max-w-5xl mx-auto px-4 py-32">
       <!-- Back Link -->
       <NuxtLink 
         to="/blog" 
@@ -27,13 +27,29 @@ const formatDate = (dateString: string) => {
 
       <article v-if="article">
         <header class="mb-12">
-            <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
-              <UIcon name="lucide:calendar" class="w-4 h-4" />
-              <time>{{ formatDate(article.date) }}</time>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
+              <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 font-bold border border-cyan-400/20">
+                {{ article.category }}
+              </span>
+              <div class="flex items-center gap-2">
+                <UIcon name="lucide:calendar" class="w-4 h-4" />
+                <time>{{ formatDate(article.date) }}</time>
+              </div>
             </div>
+
             <h1 class="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               {{ article.title }}
             </h1>
+
+            <div v-if="article.tags" class="flex flex-wrap gap-2 mb-8">
+              <span 
+                v-for="tag in article.tags" 
+                :key="tag" 
+                class="text-sm text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/50 px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700"
+              >
+                #{{ tag }}
+              </span>
+            </div>
             <p class="text-xl text-slate-600 dark:text-slate-300 leading-relaxed border-l-4 border-cyan-400/50 pl-6">
               {{ article.description }}
             </p>

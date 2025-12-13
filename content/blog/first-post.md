@@ -2,6 +2,8 @@
 title: 'Bienvenue sur mon blog'
 description: 'Ceci est le premier article de mon nouveau blog personnel créé avec Nuxt Content.'
 cover: '/images/photo1.jpg'
+category: 'Développement'
+tags: ['Nuxt', 'Vue', 'Content']
 date: '2025-12-13'
 ---
 
