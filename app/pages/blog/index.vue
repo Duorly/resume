@@ -36,6 +36,15 @@ const formatDate = (dateString: string) => {
     year: 'numeric'
   }).format(date)
 }
+
+useSeoMeta({
+  title: 'Blog - Nebeldev',
+  description: 'Partage de connaissances, tutoriels et réflexions sur le développement web, Vue.js, Nuxt et l\'architecture logicielle.',
+  ogTitle: 'Blog - Nebeldev',
+  ogDescription: 'Partage de connaissances, tutoriels et réflexions sur le développement web, Vue.js, Nuxt et l\'architecture logicielle.',
+  ogImage: '/images/photo1.jpg', // Fallback image or a dedicated blog cover
+  twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>

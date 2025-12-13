@@ -2,6 +2,28 @@
 const { path } = useRoute()
 const { data: article } = await useAsyncData(`content-${path}`, () => queryCollection('blog').path(path).first())
 
+useSeoMeta({
+  title: () => article.value?.title,
+  description: () => article.value?.description,
+  ogTitle: () => article.value?.title,
+  ogDescription: () => article.value?.description,
+  ogImage: () => article.value?.cover,
+  twitterCard: 'summary_large_image'
+})
+
+useSchemaOrg([
+  defineArticle({
+    headline: () => article.value?.title,
+    description: () => article.value?.description,
+    image: () => article.value?.cover,
+    datePublished: () => article.value?.date,
+    author: {
+      name: 'Duorli Nebel',
+      url: 'https://nebel.dev'
+    }
+  })
+])
+
 const formatDate = (dateString: string) => {
   if (!dateString) return ''
   const date = new Date(dateString)
