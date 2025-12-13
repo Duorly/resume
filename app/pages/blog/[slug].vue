@@ -39,6 +39,13 @@ const formatDate = (dateString: string) => {
             </p>
         </header>
 
+        <NuxtImg
+          v-if="article.cover"
+          :src="article.cover"
+          :alt="article.title"
+          class="w-full h-64 md:h-96 object-cover rounded-2xl mb-12 shadow-lg"
+        />
+
         <div class="prose dark:prose-invert prose-slate prose-lg max-w-none prose-headings:scroll-mt-24 prose-a:text-cyan-400 hover:prose-a:text-cyan-300">
           <ContentRenderer :value="article" />
         </div>

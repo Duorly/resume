@@ -29,6 +29,13 @@ const formatDate = (dateString: string) => {
           class="group block p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 transition-all shadow-sm hover:shadow-lg"
         >
           <div class="flex flex-col md:flex-row md:items-center gap-6">
+             <div v-if="article.cover" class="w-full md:w-48 shrink-0">
+                <NuxtImg
+                  :src="article.cover"
+                  :alt="article.title"
+                  class="w-full h-48 md:h-32 object-cover rounded-xl"
+                />
+             </div>
              <div class="flex-1">
                 <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-2">
                   <UIcon name="lucide:calendar" class="w-4 h-4" />
