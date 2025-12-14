@@ -19,7 +19,7 @@
             style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"
         >
           <NuxtLink to="/" class="flex items-center space-x-2 py-3">
-            <UAvatar chip size="2xl" src="/images/photo2.png" class="ring-2 ring-cyan-500 dark:ring-cyan-400/30"/>
+            <UAvatar chip size="2xl" src="/images/photo2.png" alt="NebelDev" class="ring-2 ring-cyan-500 dark:ring-cyan-400/30"/>
             <UiShinyText class="font-bold text-lg md:text-xl" text="NebelDev"/>
           </NuxtLink>
 

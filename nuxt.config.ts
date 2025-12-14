@@ -22,6 +22,10 @@ export default defineNuxtConfig({
         '@nuxtjs/seo',
     ],
 
+    image: {
+        format: ['webp']
+    },
+
     scripts: {
         registry: {
             googleTagManager: true,

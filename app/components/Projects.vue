@@ -100,7 +100,7 @@ const projects = computed(() => [
                 :autoplay="{ delay: 2000 }"
                 loop
             >
-              <img :src="item" :alt="project.title + ' screenshot ' + (index + 1)" class="rounded-lg">
+              <NuxtImg :src="item" :alt="project.title + ' screenshot ' + (index + 1)" class="rounded-lg" placeholder/>
             </UCarousel>
 
             <!-- Content -->

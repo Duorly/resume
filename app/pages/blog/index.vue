@@ -74,7 +74,7 @@ useSeoMeta({
             :class="[
               'px-4 py-3 rounded-xl border whitespace-nowrap transition-all font-medium',
               selectedCategory === '' 
-                ? 'bg-cyan-400/10 border-cyan-400 text-cyan-400' 
+                ? 'bg-cyan-600/10 border-cyan-600 text-cyan-700 dark:bg-cyan-400/10 dark:border-cyan-400 dark:text-cyan-400' 
                 : 'bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-cyan-400/50'
             ]"
           >
@@ -87,7 +87,7 @@ useSeoMeta({
             :class="[
               'px-4 py-3 rounded-xl border whitespace-nowrap transition-all font-medium',
               selectedCategory === category
-                ? 'bg-cyan-400/10 border-cyan-400 text-cyan-400' 
+                ? 'bg-cyan-600/10 border-cyan-600 text-cyan-700 dark:bg-cyan-400/10 dark:border-cyan-400 dark:text-cyan-400' 
                 : 'bg-white dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-cyan-400/50'
             ]"
           >
@@ -112,7 +112,7 @@ useSeoMeta({
                 />
              </div>
              <div class="flex-1">
-                <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-2">
+                <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 mb-2">
                   <UIcon name="lucide:calendar" class="w-4 h-4" />
                   <time>{{ formatDate(article.date) }}</time>
                 </div>
@@ -131,13 +131,13 @@ useSeoMeta({
                   <span 
                     v-for="tag in article.tags" 
                     :key="tag" 
-                    class="text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded"
+                    class="text-xs text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded"
                   >
                     #{{ tag }}
                   </span>
                 </div>
              </div>
-             <div class="flex items-center text-cyan-400 font-medium group-hover:translate-x-1 transition-transform">
+             <div class="flex items-center text-cyan-600 dark:text-cyan-400 font-medium group-hover:translate-x-1 transition-transform">
                 Lire
                 <UIcon name="lucide:arrow-right" class="ml-2 w-5 h-5" />
              </div>
@@ -151,12 +151,12 @@ useSeoMeta({
           <UIcon name="lucide:search-x" class="w-8 h-8 text-slate-400" />
         </div>
         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Aucun article trouvé</h3>
-        <p class="text-slate-500 dark:text-slate-400">
+        <p class="text-slate-600 dark:text-slate-400">
           Essayez de modifier votre recherche ou les filtres.
         </p>
         <button 
           @click="search = ''; selectedCategory = ''"
-          class="mt-6 text-cyan-400 hover:text-cyan-300 font-medium"
+          class="mt-6 text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 font-medium"
         >
           Réinitialiser les filtres
         </button>
