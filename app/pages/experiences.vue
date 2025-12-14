@@ -1,5 +1,10 @@
 <script setup lang="ts">
 
+useSeoMeta({
+  title: 'Experiences',
+  description: 'Mes expériences professionnelles en tant que développeur web et mobile, avec des technologies variées et des projets variés.',
+})
+
 const { t, tm, rt } = useI18n()
 
 interface Experience {
@@ -146,20 +151,8 @@ const getColorClasses = (color: string) => {
 
 <template>
   <div class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
-    <!-- Header -->
-    <!--    <div class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50">
-          <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <NuxtLink to="/" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-              <UIcon name="lucide:arrow-left" size="20"/>
-              <span class="font-semibold">Retour au portfolio</span>
-            </NuxtLink>
-            <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Parcours Professionnel
-            </h1>
-          </div>
-         </div>-->
 
-    <div class="max-w-6xl mx-auto pb-12 pt-32">
+    <div class="max-w-6xl mx-auto pb-12 pt-32 px-4 lg:px-0">
       <div class="grid lg:grid-cols-3 gap-8">
 
         <!-- Sidebar - Liste des expériences -->

@@ -8,10 +8,10 @@
         isScrolled ? 'py-2' : 'py-4'
       ]"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div
             :class="[
-            'flex justify-between items-center rounded-2xl transition-all duration-500 px-6',
+            'flex justify-between items-center rounded-2xl transition-all duration-500 px-2 lg:px-6',
             isScrolled
               ? 'bg-white/80 dark:bg-white/10 backdrop-blur-2xl shadow-lg border border-slate-200 dark:border-white/20'
               : 'bg-transparent'
@@ -73,6 +73,10 @@
           <button
               class="md:hidden text-slate-800 dark:text-white bg-white/60 dark:bg-white/5 backdrop-blur-xl rounded-full p-2 border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300"
               @click="isMenuOpen = !isMenuOpen"
+              aria-label="Toggle menu"
+              type="button"
+              role="button"
+              tabindex="0"
           >
             <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
