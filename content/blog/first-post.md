@@ -4,7 +4,7 @@ description: 'Découvrez pourquoi j’ai lancé ce blog personnel, ce que vous y
 cover: '/images/photo1.jpg'
 category: 'Développement'
 tags: ['Nuxt', 'Vue', 'Content', 'Vision', 'Développement Web']
-date: '2025-12-13'
+date: '2025-12-01'
 ---
 
 👋 Bienvenue sur mon Labo ! (Ceci est mon premier article) Après mûre réflexion, il est temps de mettre le pied à l'étrier et de lancer cet espace personnel. Ce blog est créé avec **Nuxt Content** (comme l'indique ce premier test !), et il représente bien plus qu'une simple vitrine : c'est mon **laboratoire de partage**.
