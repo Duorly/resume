@@ -145,7 +145,7 @@ const getColorClasses = (color: string) => {
       gradient: 'from-green-500/20 to-green-600/20'
     }
   }
-  return colors[color] || colors.cyan
+  return colors[color] || colors.cyan!
 }
 </script>
 
