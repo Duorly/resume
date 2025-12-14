@@ -160,9 +160,7 @@ defineOgImageComponent('NuxtSeo', {
 </script>
 
 <style scoped>
-* {
-  font-family: Roboto, sans-serif;
-}
+
 
 @keyframes pulse {
   0%, 100% {

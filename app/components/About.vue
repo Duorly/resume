@@ -15,9 +15,9 @@
             class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 shadow-lg dark:shadow-none transition-colors duration-300"
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
-          <h3 class="text-2xl font-bold mb-4 text-cyan-500 dark:text-cyan-400">{{ $t('profile') }}</h3>
+          <h3 class="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">{{ $t('profile') }}</h3>
           <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-            {{ $t('profile_description').replace("0", (new Date().getFullYear() - 2019)).toString() }}
+            {{ $t('profile_description').replace("0", (new Date().getFullYear() - 2019).toString()) }}
           </p>
         </UiSpotlightCard>
 
@@ -25,7 +25,7 @@
             class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 shadow-lg dark:shadow-none transition-colors duration-300"
             spotlight-color="rgba(255, 255, 255, 0.25)"
         >
-          <h3 class="text-2xl font-bold mb-4 text-cyan-500 dark:text-cyan-400">{{ $t('research') }}</h3>
+          <h3 class="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">{{ $t('research') }}</h3>
           <div class="space-y-3 text-slate-600 dark:text-slate-300">
             <p><strong class="text-slate-900 dark:text-white">{{ $t('job_type') }} :</strong> {{ $t('about.job_value') }}</p>
             <p><strong class="text-slate-900 dark:text-white">{{ $t('availability')}} :</strong> {{ $t('about.availability_value') }}</p>

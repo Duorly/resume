@@ -47,8 +47,11 @@ const opacity = ref<number>(0);
 const handleMouseMove = (e: MouseEvent) => {
   if (!divRef.value || isFocused.value) return;
 
-  const rect = divRef.value.getBoundingClientRect();
-  position.value = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  requestAnimationFrame(() => {
+    if (!divRef.value) return;
+    const rect = divRef.value.getBoundingClientRect();
+    position.value = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  });
 };
 
 const handleFocus = () => {

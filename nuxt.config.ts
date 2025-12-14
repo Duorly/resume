@@ -11,16 +11,7 @@ export default defineNuxtConfig({
 
     devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
-    modules: [
-        '@nuxt/content',
-        '@nuxt/eslint',
-        '@nuxt/image',
-        '@nuxt/scripts',
-        '@nuxt/ui',
-        '@nuxt/test-utils',
-        '@nuxtjs/i18n',
-        '@nuxtjs/seo',
-    ],
+    modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/scripts', '@nuxt/ui', '@nuxt/test-utils', '@nuxtjs/i18n', '@nuxtjs/seo', '@nuxt/fonts'],
 
     image: {
         format: ['webp']

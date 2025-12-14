@@ -149,7 +149,16 @@ const experiences = computed(() => [
       </div>
 
       <div class="flex items-center justify-center mb-8 mt-4 mx-auto">
-        <UButton to="/experiences" color="secondary" variant="subtle" trailing-icon="i-lucide-arrow-down" size="md">{{ $t('experiences.see_more') }}</UButton>
+        <UButton 
+          to="/experiences" 
+          color="secondary" 
+          variant="subtle" 
+          trailing-icon="i-lucide-arrow-right" 
+          size="md"
+          :aria-label="$t('experiences.see_more') + ' ' + $t('experiences_title').toLowerCase()"
+        >
+          {{ $t('experiences.see_more') }}
+        </UButton>
       </div>
 
 

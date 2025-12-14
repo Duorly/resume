@@ -792,6 +792,13 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.3.tgz#c2b9d2e374ee62c586d3adbea87199b1d7a7a6ba"
   integrity sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==
 
+"@iconify-json/lucide@^1.2.80":
+  version "1.2.80"
+  resolved "https://registry.yarnpkg.com/@iconify-json/lucide/-/lucide-1.2.80.tgz#39ac7d8bf4e67264ef730b1896ec5050170d3721"
+  integrity sha512-DwAHO+xJEJpOV5y2Q0DIoR3Au9UPk+J6an6KRO281QAxsz/+YpeySGSyZzUEK9tMrSAohkQamqlHx6lPDB8BEg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/collections@^1.0.608":
   version "1.0.616"
   resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.616.tgz#0e5f4571b91703878e8c7f708a8a34ee01ba12f2"
@@ -1471,7 +1478,7 @@
     pathe "^2.0.3"
     unimport "^5.5.0"
 
-"@nuxt/fonts@^0.12.1":
+"@nuxt/fonts@0.12.1", "@nuxt/fonts@^0.12.1":
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@nuxt/fonts/-/fonts-0.12.1.tgz#0d05a73abbde5447e53bcdcfbe041308c34bb1b3"
   integrity sha512-ALajI/HE+uqqL/PWkWwaSUm1IdpyGPbP3mYGy2U1l26/o4lUZBxjFaduMxaZ85jS5yQeJfCu2eEHANYFjAoujQ==
