@@ -1,32 +1,37 @@
 <template>
   <div>
-    <Hero/>
+    <Hero />
 
     <!-- About Section -->
-    <About/>
+    <About />
 
     <!-- Skills Section -->
-    <Skills/>
+    <Skills />
 
     <!-- Experience Section -->
-    <Experience/>
+    <Experience />
 
     <!-- Projects Section -->
-    <Projects/>
+    <Projects />
 
     <!-- Education Section -->
-    <Education/>
+    <Education />
 
     <!-- Contact Section -->
-    <Contact/>
+    <Contact />
 
     <!-- Testimonials Section -->
-    <Testimonials/>
+    <Testimonials />
 
     <!-- Footer -->
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
+defineOgImageComponent('NuxtSeo', {
+  title: 'Duorli Nebel — Développeur Full Stack',
+  description: 'Création d’applications web modernes, performantes et scalables. Expert Vue.js, Nuxt, Spring Boot, Laravel et Cloud (AWS, GCP).',
+  theme: '#06b6d4', // ton accent cyan
+})
 </script>
