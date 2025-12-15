@@ -5,13 +5,6 @@ cover: '/images/blog/git-naming.png'
 category: 'Développement'
 tags: ['Git', 'Naming', 'Workflow', 'Bonnes pratiques']
 date: '2025-12-15'
-
-ogImage:
-  component: BlogOgImage
-  props:
-    title: "Conventions de nommage Git : parler le même langage"
-    description: "Un guide simple et concret pour bien nommer ses branches, commits et tags Git, avec des règles claires et des analogies faciles à retenir."
-    image: "/images/blog/git-naming.png"
 ---
 
 Dans un projet, le vrai chaos ne vient pas toujours du code. Il vient souvent des **noms**.

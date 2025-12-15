@@ -135,13 +135,13 @@
                                     class="flex items-center space-x-2 cursor-pointer bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 py-2 px-4 rounded-full font-bold transition-all duration-300"
                                     @click="setLocale('fr')">
                                     <span class="text-sm">FR</span>
-                                    <UIcon name="twemoji:flag-france" size="20" />
+                                    <UIcon name="twemoji:flag-france" size="25" />
                                 </div>
                                 <div v-if="locale === 'fr'"
                                     class="flex items-center space-x-2 cursor-pointer bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 py-2 px-4 rounded-full font-bold transition-all duration-300"
                                     @click="setLocale('en')">
                                     <span class="text-sm">EN</span>
-                                    <UIcon name="twemoji:flag-united-states" size="20" />
+                                    <UIcon name="twemoji:flag-for-flag-united-states" size="25" />
                                 </div>
 
                                 <div @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
