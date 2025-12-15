@@ -4,7 +4,14 @@ description: 'Un guide clair et progressif pour comprendre Git, son utilité, so
 cover: '/images/blog/git.png'
 category: 'Développement'
 tags: ['Git', 'Contrôle de Version', 'VCS', 'Développement']
-date: '2025-12-14'
+date: '2025-12-13'
+
+ogImage:
+  component: BlogOgImage
+  props:
+    title: "Git pour les débutants : Comprendre et bien démarrer avec le contrôle de version"
+    description: "Un guide clair et progressif pour comprendre Git, son utilité, son vocabulaire et les commandes essentielles pour débuter sereinement."
+    image: "/images/blog/git.png"
 ---
 
 Dans le développement logiciel, le code change en permanence. On teste, on corrige, on ajoute, on casse, puis on répare. Quand on travaille à plusieurs, ces changements peuvent vite devenir chaotiques. C’est précisément pour dompter ce chaos que **Git** existe.

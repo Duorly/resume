@@ -2,6 +2,18 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
 
+    app: {
+        head: {
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: '/favicon.ico'
+                }
+            ]
+        }
+    },
+
     site: {
         url: 'https://nebel.dev',
         name: 'Duorli Nebel — Architecte Logiciel & Chef de Projet',

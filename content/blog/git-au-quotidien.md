@@ -4,7 +4,7 @@ description: 'Un guide pratique et décontracté des commandes Git du quotidien,
 cover: '/images/blog/git-daily.png'
 category: 'Développement'
 tags: ['Git', 'Workflow', 'Commandes Git', 'Développement']
-date: '2025-12-15'
+date: '2025-12-14'
 ---
 
 Une fois Git installé et compris dans les grandes lignes, une surprise attend souvent les débutants : **on utilise toujours les mêmes commandes**.

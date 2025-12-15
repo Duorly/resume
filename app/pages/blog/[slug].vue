@@ -8,7 +8,6 @@ useSeoMeta({
   ogTitle: () => article.value?.title,
   ogDescription: () => article.value?.description,
   ogImage: () => article.value?.cover,
-  twitterCard: 'summary_large_image'
 })
 
 useSchemaOrg([
