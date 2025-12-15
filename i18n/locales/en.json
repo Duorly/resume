@@ -33,16 +33,16 @@
     "code": "Code",
     "demo": "Demo",
     "itic_teacher": {
-      "title": "ITIC TEACHER COMPANION",
+      "title": "ITIC PARIS Teacher Companion",
       "description": "Grade management and student gamification platform for teachers. With a ranking and reward system."
     },
     "itic_student": {
-      "title": "ITIC STUDENT COMPANION",
+      "title": "ITIC PARIS Student Companion",
       "description": "Grade management and student gamification platform for students. With a ranking and reward system."
     },
     "banque_postale": {
       "title": "Banque Postale du Congo",
-      "description": "Social network with personalized news feeds, instant messaging, and multimedia content sharing."
+      "description": "Website for the Banque Postale du Congo. Responsive and modern website to present the bank's services and products."
     }
   },
   "experiences": {
@@ -195,7 +195,6 @@
   },
   "hero": {
     "location": "Ile-de-France",
-    "reveal_number": "Double click to reveal the number",
     "github": "GiHub"
   },
   "contact": {

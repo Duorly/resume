@@ -60,13 +60,6 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
-        <div
-            class="flex items-center gap-2 cursor-pointer" :title="$t('hero.reveal_number')"
-            @dblclick="revealNumber = !revealNumber">
-          <UIcon name="lucide:phone" size="20"/>
-          +33 7 75 72 55 {{ !revealNumber ? '**' : '82' }}
-        </div>
-
         <div class="flex items-center gap-2">
           <UIcon name="lucide:map-pin-house" size="20"/>
           {{ $t('hero.location') }}

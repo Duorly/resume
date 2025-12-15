@@ -12,6 +12,10 @@ import iticmobile3 from '~/assets/images/projects/iticparis-mobile/itic-mobile-3
 import iticmobile4 from '~/assets/images/projects/iticparis-mobile/itic-mobile-4.png'
 import iticmobile5 from '~/assets/images/projects/iticparis-mobile/itic-mobile-5.png'
 
+import bp1 from '~/assets/images/projects/bpc-congo/image1.png'
+import bp2 from '~/assets/images/projects/bpc-congo/image2.png'
+import bp3 from '~/assets/images/projects/bpc-congo/image3.png'
+
 const { t } = useI18n()
 
 const projects = computed(() => [
@@ -51,7 +55,11 @@ const projects = computed(() => [
     title: t('projects.banque_postale.title'),
     description: t('projects.banque_postale.description'),
     tags: ['Angular', 'Laravel', 'MySQL', 'AWS'],
-    image: [],
+    image: [
+      bp1,
+      bp2,
+      bp3,
+    ],
     link: 'https://github.com/Duorly',
     demo: 'https://demo.example.com',
     color: 'purple',
@@ -95,7 +103,7 @@ const projects = computed(() => [
             <!-- Content -->
             <div class="flex-1 flex flex-col">
               <h3
-                class="text-2xl font-bold mb-3 dark:text-white text-slate-800 group-hover:text-cyan-300 transition-colors duration-300">
+                class="text-xl font-bold mb-3 dark:text-white text-slate-800 group-hover:text-cyan-300 transition-colors duration-300">
                 {{ project.title }}
               </h3>
 
