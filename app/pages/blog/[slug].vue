@@ -10,10 +10,9 @@ useSeoMeta({
   ogImage: () => article.value?.cover,
 })
 
-defineOgImageComponent('BlogOgImage', {
+defineOgImageComponent('NuxtSeo', {
   title: () => article.value?.title,
   description: () => article.value?.description,
-  theme: '#06b6d4',
   image: () => article.value?.cover,
 })
 
