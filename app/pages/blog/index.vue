@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-
+const { t, locale } = useI18n()
 const { data: articles } = await useAsyncData('blog', () => queryCollection('blog').order('date', 'DESC').all())
 
 const search = ref('')
@@ -135,7 +134,8 @@ watch([search, selectedCategory], () => {
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString)
-  return new Intl.DateTimeFormat('fr-FR', {
+  const localeCode = locale.value === 'fr' ? 'fr-FR' : 'en-US'
+  return new Intl.DateTimeFormat(localeCode, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
@@ -143,10 +143,10 @@ const formatDate = (dateString: string) => {
 }
 
 useSeoMeta({
-  title: 'Blog - Nebeldev',
-  description: 'Partage de connaissances, tutoriels et réflexions sur le développement web, Vue.js, Nuxt et l\'architecture logicielle.',
-  ogTitle: 'Blog - Nebeldev',
-  ogDescription: 'Partage de connaissances, tutoriels et réflexions sur le développement web, Vue.js, Nuxt et l\'architecture logicielle.',
+  title: () => `${t('blog.title')} - Nebeldev`,
+  description: () => t('blog.seo_description'),
+  ogTitle: () => `${t('blog.title')} - Nebeldev`,
+  ogDescription: () => t('blog.seo_description'),
   ogImage: '/images/photo1.jpg',
   twitterCard: 'summary_large_image'
 })
@@ -160,10 +160,10 @@ useSeoMeta({
       <div class="mb-12">
         <h1
           class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          Blog
+          {{ $t('blog.title') }}
         </h1>
         <p class="text-xl text-slate-600 dark:text-slate-300">
-          Partage de connaissances, tutoriels et réflexions sur le développement web.
+          {{ $t('blog.description') }}
         </p>
       </div>
 
@@ -174,14 +174,14 @@ useSeoMeta({
           <div class="relative flex-1">
             <UIcon name="lucide:search"
               class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 pointer-events-none" />
-            <input v-model="search" type="text" placeholder="Rechercher un article..."
+            <input v-model="search" type="text" :placeholder="$t('blog.search_placeholder')"
               class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all placeholder:text-slate-400 text-slate-700 dark:text-slate-200">
           </div>
 
           <button @click="showFilters = !showFilters"
             class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-cyan-400/50 transition-all font-medium text-slate-700 dark:text-slate-200 relative">
             <UIcon name="lucide:filter" class="w-5 h-5" />
-            <span class="hidden sm:inline">Filtres</span>
+            <span class="hidden sm:inline">{{ $t('blog.filters') }}</span>
             <span v-if="activeFiltersCount > 0"
               class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-cyan-600 dark:bg-cyan-500 rounded-full">
               {{ activeFiltersCount }}
@@ -191,7 +191,7 @@ useSeoMeta({
           <button v-if="activeFiltersCount > 0" @click="resetFilters"
             class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/30 transition-all font-medium text-red-600 dark:text-red-400">
             <UIcon name="lucide:x" class="w-5 h-5" />
-            <span class="hidden sm:inline">Réinitialiser</span>
+            <span class="hidden sm:inline">{{ $t('blog.reset') }}</span>
           </button>
         </div>
 
@@ -206,7 +206,7 @@ useSeoMeta({
               <div>
                 <div class="flex items-center gap-2 mb-3">
                   <UIcon name="lucide:folder" class="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                  <h3 class="font-semibold text-slate-900 dark:text-white">Catégories</h3>
+                  <h3 class="font-semibold text-slate-900 dark:text-white">{{ $t('blog.categories') }}</h3>
                 </div>
                 <div class="flex flex-wrap gap-2">
                   <button @click="selectedCategory = ''; currentPage = 1" :class="[
@@ -217,7 +217,7 @@ useSeoMeta({
                   ]">
                     <span class="flex items-center gap-1.5">
                       <UIcon name="lucide:grid-3x3" class="w-4 h-4" />
-                      Toutes
+                      {{ $t('blog.all') }}
                     </span>
                   </button>
                   <button v-for="category in categories" :key="category"
@@ -236,10 +236,11 @@ useSeoMeta({
               <div>
                 <div class="flex items-center gap-2 mb-3">
                   <UIcon name="lucide:tags" class="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                  <h3 class="font-semibold text-slate-900 dark:text-white">Tags</h3>
+                  <h3 class="font-semibold text-slate-900 dark:text-white">{{ $t('blog.tags') }}</h3>
                   <span v-if="selectedTags.length > 0"
                     class="text-xs font-medium text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-0.5 rounded-full">
-                    {{ selectedTags.length }} sélectionné{{ selectedTags.length > 1 ? 's' : '' }}
+                    {{ selectedTags.length }} {{ selectedTags.length > 1 ? $t('blog.selected_plural') :
+                      $t('blog.selected') }}
                   </span>
                 </div>
                 <div class="flex flex-wrap gap-2">
@@ -286,14 +287,15 @@ useSeoMeta({
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div class="text-sm font-medium text-slate-600 dark:text-slate-400">
           <span class="text-cyan-600 dark:text-cyan-400 font-bold">{{ filteredArticles.length }}</span>
-          article{{ filteredArticles.length > 1 ? 's' : '' }} trouvé{{ filteredArticles.length > 1 ? 's' : '' }}
+          {{ filteredArticles.length > 1 ? $t('blog.articles_found_plural') : $t('blog.articles_found') }} {{
+            filteredArticles.length > 1 ? $t('blog.found_plural') : $t('blog.found') }}
           <span v-if="totalPages > 1" class="text-slate-500 dark:text-slate-500">
-            · Page {{ currentPage }} sur {{ totalPages }}
+            · {{ $t('blog.page') }} {{ currentPage }} {{ $t('blog.of') }} {{ totalPages }}
           </span>
         </div>
 
         <div class="flex items-center gap-2">
-          <label class="text-sm text-slate-600 dark:text-slate-400">Articles par page:</label>
+          <label class="text-sm text-slate-600 dark:text-slate-400">{{ $t('blog.articles_per_page') }}</label>
           <select v-model.number="articlesPerPage" @change="currentPage = 1"
             class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 outline-none transition-all">
             <option :value="3">3</option>
@@ -340,7 +342,7 @@ useSeoMeta({
             </div>
             <div
               class="flex items-center text-cyan-600 dark:text-cyan-400 font-medium group-hover:translate-x-1 transition-transform">
-              Lire
+              {{ $t('blog.read') }}
               <UIcon name="lucide:arrow-right" class="ml-2 w-5 h-5" />
             </div>
           </div>
@@ -359,7 +361,7 @@ useSeoMeta({
               : 'bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-cyan-400/50 hover:text-cyan-600 dark:hover:text-cyan-400'
           ]">
             <UIcon name="lucide:chevron-left" class="w-4 h-4" />
-            <span class="hidden sm:inline">Précédent</span>
+            <span class="hidden sm:inline">{{ $t('blog.previous') }}</span>
           </button>
 
           <!-- Page Numbers -->
@@ -384,7 +386,7 @@ useSeoMeta({
               ? 'bg-slate-100 dark:bg-slate-800/50 text-slate-400 dark:text-slate-600 cursor-not-allowed'
               : 'bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-cyan-400/50 hover:text-cyan-600 dark:hover:text-cyan-400'
           ]">
-            <span class="hidden sm:inline">Suivant</span>
+            <span class="hidden sm:inline">{{ $t('blog.next') }}</span>
             <UIcon name="lucide:chevron-right" class="w-4 h-4" />
           </button>
         </div>
@@ -396,14 +398,14 @@ useSeoMeta({
           class="inline-flex justify-center items-center w-20 h-20 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 mb-6 shadow-lg">
           <UIcon name="lucide:search-x" class="w-10 h-10 text-slate-400" />
         </div>
-        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Aucun article trouvé</h3>
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">{{ $t('blog.no_articles_title') }}</h3>
         <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-md mx-auto">
-          Aucun article ne correspond à vos critères de recherche. Essayez de modifier vos filtres.
+          {{ $t('blog.no_articles_description') }}
         </p>
         <button @click="resetFilters"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all">
           <UIcon name="lucide:refresh-ccw" class="w-4 h-4" />
-          Réinitialiser les filtres
+          {{ $t('blog.reset_filters') }}
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t, locale } = useI18n()
 const { path } = useRoute()
 const { data: article } = await useAsyncData(`content-${path}`, () => queryCollection('blog').path(path).first())
 
@@ -32,7 +33,8 @@ useSchemaOrg([
 const formatDate = (dateString: string) => {
   if (!dateString) return ''
   const date = new Date(dateString)
-  return new Intl.DateTimeFormat('fr-FR', {
+  const localeCode = locale.value === 'fr' ? 'fr-FR' : 'en-US'
+  return new Intl.DateTimeFormat(localeCode, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
@@ -48,7 +50,7 @@ const formatDate = (dateString: string) => {
       <NuxtLink :to="$localePath('/blog')"
         class="inline-flex items-center gap-2 text-slate-500 hover:text-cyan-400 mb-8 transition-colors">
         <UIcon name="lucide:arrow-left" class="w-5 h-5" />
-        Retour au blog
+        {{ $t('blog.back_to_blog') }}
       </NuxtLink>
 
       <article v-if="article">
@@ -90,8 +92,9 @@ const formatDate = (dateString: string) => {
       </article>
 
       <div v-else class="text-center py-20">
-        <h1 class="text-2xl font-bold mb-4">Article non trouvé</h1>
-        <NuxtLink :to="$localePath('/blog')" class="text-cyan-400 hover:underline">Retourner au blog</NuxtLink>
+        <h1 class="text-2xl font-bold mb-4">{{ $t('blog.article_not_found') }}</h1>
+        <NuxtLink :to="$localePath('/blog')" class="text-cyan-400 hover:underline">{{ $t('blog.return_to_blog') }}
+        </NuxtLink>
       </div>
     </div>
   </div>
