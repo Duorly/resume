@@ -14,7 +14,7 @@
                         ? 'bg-white/80 dark:bg-white/10 backdrop-blur-2xl shadow-lg border border-slate-200 dark:border-white/20'
                         : 'bg-transparent'
                 ]" style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
-                    <NuxtLink to="/" class="flex items-center space-x-2 py-3">
+                    <NuxtLink :to="$localePath('/')" class="flex items-center space-x-2 py-3">
                         <UAvatar chip size="2xl" src="/images/photo2.png" alt="NebelDev"
                             class="ring-2 ring-cyan-500 dark:ring-cyan-400/30" />
                         <UiShinyText class="font-bold text-lg md:text-xl" text="NebelDev" />
@@ -25,7 +25,7 @@
                         <div
                             class="flex items-center space-x-1 bg-white/60 dark:bg-white/5 backdrop-blur-xl rounded-full px-1.5 py-1.5 border border-slate-200 dark:border-white/10 shadow-lg">
                             <!-- Primary Menu Items (Most Important) -->
-                            <NuxtLink v-for="item in primaryMenuItems" :key="item.key" :to="item.to"
+                            <NuxtLink v-for="item in primaryMenuItems" :key="item.key" :to="$localePath(item.to)"
                                 class="relative px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-slate-200 dark:hover:bg-white/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] group text-slate-700 dark:text-slate-200">
                                 <span
                                     class="relative z-10 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors duration-300">
@@ -61,7 +61,7 @@
                                     leave-to-class="opacity-0 transform scale-95 -translate-y-2">
                                     <div v-if="isMoreMenuOpen"
                                         class="absolute top-full right-0 mt-2 w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl rounded-xl border border-slate-200 dark:border-white/20 shadow-2xl overflow-hidden">
-                                        <NuxtLink v-for="item in secondaryMenuItems" :key="item.key" :to="item.to"
+                                        <NuxtLink v-for="item in secondaryMenuItems" :key="item.key" :to="$localePath(item.to)"
                                             class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300 text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400"
                                             @click="isMoreMenuOpen = false">
                                             {{ $t(item.key) }}
@@ -122,7 +122,7 @@
                         class="bg-white/90 dark:bg-white/10 backdrop-blur-2xl rounded-2xl border border-slate-200 dark:border-white/20 shadow-2xl overflow-hidden">
                         <div class="px-4 pt-2 pb-4 space-y-1">
                             <!-- All menu items on mobile -->
-                            <NuxtLink v-for="item in allMenuItems" :key="item.key" :to="item.to"
+                            <NuxtLink v-for="item in allMenuItems" :key="item.key" :to="$localePath(item.to)"
                                 class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-slate-800 dark:text-white"
                                 @click="isMenuOpen = false">
                                 {{ $t(item.key) }}

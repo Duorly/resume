@@ -306,7 +306,7 @@ useSeoMeta({
 
       <!-- Articles Grid -->
       <div v-if="paginatedArticles.length > 0" class="grid gap-6 mb-8">
-        <NuxtLink v-for="article in paginatedArticles" :key="article.path" :to="article.path"
+        <NuxtLink v-for="article in paginatedArticles" :key="article.path" :to="$localePath(article.path)"
           class="group block p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-cyan-400/50 dark:hover:border-cyan-500/50 transition-all shadow-sm hover:shadow-xl hover:shadow-cyan-500/10">
           <div class="flex flex-col md:flex-row md:items-center gap-6">
             <div v-if="article.cover" class="w-full md:w-72 shrink-0">

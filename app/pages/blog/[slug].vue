@@ -45,7 +45,7 @@ const formatDate = (dateString: string) => {
     class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
     <div class="max-w-5xl mx-auto px-4 py-32">
       <!-- Back Link -->
-      <NuxtLink to="/blog"
+      <NuxtLink :to="$localePath('/blog')"
         class="inline-flex items-center gap-2 text-slate-500 hover:text-cyan-400 mb-8 transition-colors">
         <UIcon name="lucide:arrow-left" class="w-5 h-5" />
         Retour au blog
@@ -91,7 +91,7 @@ const formatDate = (dateString: string) => {
 
       <div v-else class="text-center py-20">
         <h1 class="text-2xl font-bold mb-4">Article non trouvé</h1>
-        <NuxtLink to="/blog" class="text-cyan-400 hover:underline">Retourner au blog</NuxtLink>
+        <NuxtLink :to="$localePath('/blog')" class="text-cyan-400 hover:underline">Retourner au blog</NuxtLink>
       </div>
     </div>
   </div>
