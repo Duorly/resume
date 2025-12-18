@@ -32,17 +32,45 @@
     "see_all_github": "Voir tous mes projets sur GitHub",
     "code": "Code",
     "demo": "Demo",
+    "back_to_projects": "Retour aux projets",
+    "key_features": "Caractéristiques principales",
+    "technical_stack": "Stack technique",
+    "view_details": "Voir les détails",
     "itic_teacher": {
       "title": "ITIC PARIS Teacher Companion",
-      "description": "Plateforme de gestion de gestion des notes et gamification des étudiants pour les enseignants. Avec un système de classement et de récompenses."
+      "description": "Plateforme de gestion des notes et gamification des étudiants pour les enseignants. Avec un système de classement et de récompenses.",
+      "full_description": "ITIC Companion est une plateforme innovante conçue pour transformer l'expérience académique à l'ITIC Paris. Pour les enseignants, elle offre des outils puissants de suivi des performances, de gestion des notes et d'engagement étudiant via des mécanismes de gamification éprouvés.",
+      "features": [
+        "Tableau de bord de suivi en temps réel",
+        "Gestion simplifiée des notes et absences",
+        "Système de récompenses et badges personnalisables",
+        "Analytique avancée sur l'engagement étudiant",
+        "Synchronisation automatique avec l'ERP Ypareo"
+      ]
     },
     "itic_student": {
       "title": "ITIC Paris Student Companion",
-      "description": "Plateforme de gestion de gestion des notes et gamification des étudiants pour les étudiants. Avec un système de classement et de récompenses."
+      "description": "Plateforme de gestion des notes et gamification des étudiants pour les étudiants. Avec un système de classement et de récompenses.",
+      "full_description": "L'application mobile ITIC Student Companion permet aux étudiants de suivre leur progression académique de manière ludique. Elle intègre des éléments de jeu pour encourager la participation et la réussite scolaire.",
+      "features": [
+        "Consultation des notes et du planning",
+        "Système de classement (Leaderboard) inter-classes",
+        "Quêtes et défis hebdomadaires",
+        "Inventaire de badges et accomplissements",
+        "Notifications en temps réel sur les résultats"
+      ]
     },
     "banque_postale": {
       "title": "Banque Postale du Congo",
-      "description": "Site web de la Banque Postale du Congo. Réalisation d'un site web responsive et moderne pour présenter les services de la banque et les produits."
+      "description": "Site web de la Banque Postale du Congo. Réalisation d'un site web responsive et moderne pour présenter les services de la banque et les produits.",
+      "full_description": "Refonte complète de la présence digitale de la Banque Postale du Congo. L'objectif était de créer une plateforme moderne, sécurisée et ergonomique permettant aux clients de découvrir les services bancaires et de simuler des projets financiers.",
+      "features": [
+        "Design responsive haut de gamme",
+        "Simulateurs de crédits et d'épargne",
+        "Localisateur d'agences et de distributeurs",
+        "Interface d'administration de contenu (CMS)",
+        "Optimisation SEO et performance maximale"
+      ]
     }
   },
   "experiences": {

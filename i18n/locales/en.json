@@ -32,17 +32,45 @@
     "see_all_github": "See all my projects on GitHub",
     "code": "Code",
     "demo": "Demo",
+    "back_to_projects": "Back to projects",
+    "key_features": "Key Features",
+    "technical_stack": "Technical Stack",
+    "view_details": "View Details",
     "itic_teacher": {
       "title": "ITIC PARIS Teacher Companion",
-      "description": "Grade management and student gamification platform for teachers. With a ranking and reward system."
+      "description": "Grade management and student gamification platform for teachers. With a ranking and reward system.",
+      "full_description": "ITIC Companion is an innovative platform designed to transform the academic experience at ITIC Paris. For teachers, it offers powerful tools for performance tracking, grade management, and student engagement through proven gamification mechanisms.",
+      "features": [
+        "Real-time tracking dashboard",
+        "Simplified grade and absence management",
+        "Customizable rewards and badges system",
+        "Advanced analytics on student engagement",
+        "Automatic synchronization with Ypareo ERP"
+      ]
     },
     "itic_student": {
       "title": "ITIC PARIS Student Companion",
-      "description": "Grade management and student gamification platform for students. With a ranking and reward system."
+      "description": "Grade management and student gamification platform for students. With a ranking and reward system.",
+      "full_description": "The ITIC Student Companion mobile app allows students to track their academic progress in a fun way. It integrates game elements to encourage participation and academic success.",
+      "features": [
+        "Grade and schedule consultation",
+        "Inter-class ranking system (Leaderboard)",
+        "Weekly quests and challenges",
+        "Badge inventory and achievements",
+        "Real-time notifications on results"
+      ]
     },
     "banque_postale": {
       "title": "Banque Postale du Congo",
-      "description": "Website for the Banque Postale du Congo. Responsive and modern website to present the bank's services and products."
+      "description": "Website for the Banque Postale du Congo. Responsive and modern website to present the bank's services and products.",
+      "full_description": "Complete overhaul of the Banque Postale du Congo's digital presence. The goal was to create a modern, secure, and ergonomic platform allowing customers to discover banking services and simulate financial projects.",
+      "features": [
+        "High-end responsive design",
+        "Loan and savings simulators",
+        "Branch and ATM locator",
+        "Content Management System (CMS)",
+        "SEO optimization and maximum performance"
+      ]
     }
   },
   "experiences": {
