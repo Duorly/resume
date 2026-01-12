@@ -39,7 +39,41 @@ Exemple d'une table `users` :
 | 1  | Neo    | neo@matrix.com   | 30  |
 | 2  | Morpheus| morph@matrix.com| 45  |
 
-## 3. Les commandes essentielles (CRUD)
+## 3. Construire la maison : Créer bases et tables
+
+Avant de manipuler quoi que ce soit, il faut construire la structure.
+
+### CREATE DATABASE (La fondation)
+Tout commence par la création de la base de données elle-même.
+
+```sql
+CREATE DATABASE ma_super_app;
+```
+
+### CREATE TABLE (Les pièces)
+Ensuite, on crée les tables. C'est à ce moment qu'on définit le "squelette" de nos données : le nom des colonnes et leur type (texte, nombre, date...).
+
+Reprenons notre table `users` :
+
+```sql
+CREATE TABLE users (
+    id INT PRIMARY KEY,    -- Identifiant unique (souvent auto-incrémenté)
+    pseudo VARCHAR(50),    -- Texte court (max 50 caractères)
+    email VARCHAR(100),    -- Texte plus long
+    age INT                -- Nombre entier
+);
+```
+
+### ALTER TABLE (La rénovation)
+Et si on a oublié quelque chose ? Pas besoin de tout casser et reconstruire. On peut modifier la structure existante.
+
+Par exemple, on veut finalement stocker la date d'inscription :
+
+```sql
+ALTER TABLE users ADD created_at DATE;
+```
+
+## 4. Les commandes essentielles (CRUD)
 
 Pour interagir avec une base de données, on utilise principalement 4 types d'actions, souvent résumées par l'acronyme **CRUD** : **C**reate, **R**ead, **U**pdate, **D**elete.
 
@@ -82,7 +116,7 @@ Même règle : **Gare au `WHERE` oublié !**
 DELETE FROM users WHERE id = 2;
 ```
 
-## 4. Aller plus loin : Les relations
+## 5. Aller plus loin : Les relations
 
 La force du SQL, c'est le "Relationnel". On peut lier les tables entre elles.
 Imaginez une table `orders` (commandes). Au lieu de réécrire toutes les infos de l'utilisateur pour chaque commande, on met juste son `id`.
