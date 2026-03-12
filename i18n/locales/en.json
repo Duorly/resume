@@ -85,7 +85,7 @@
       "company": "ITIC PARIS",
       "date": "Sept 2025 - Present",
       "location": "Paris, France",
-      "type": "CDI",
+      "type": "Apprenticeship",
       "description": "Design of the ITIC COMPANION application, a school gamification tool connected to the Ymag Ypareo ERP. Technical mentoring of students from BTS to Master level and implementation of a documented microservices architecture for the digital campus.",
       "missions": [
         "Design and development of the ITIC COMPANION application with Vue.js and Spring Boot",
@@ -106,7 +106,7 @@
       "company": "XKSGROUP",
       "date": "Oct 2024 - Sept 2025",
       "location": "Cergy, France",
-      "type": "CDD",
+      "type": "Apprenticeship",
       "description": "Technical supervision of projects and design of robust architectures. Code review, technical debt management, and support for developers in a logic of quality and scalability.",
       "missions": [
         "Technical direction of 3 simultaneous projects with teams of 5-8 developers",
@@ -120,6 +120,24 @@
         "40% reduction in deployment time",
         "Improved test coverage from 25% to 80%",
         "Skill improvement of 6 junior developers"
+      ]
+    },
+    "superprof": {
+      "title": "Web Development Trainer",
+      "company": "Superprof",
+      "date": "Oct 2024 - Present",
+      "location": "Paris area, France",
+      "type": "Freelance",
+      "description": "As a freelance web and software development trainer, I help learners of all levels master modern technologies and software tools.",
+      "missions": [
+        "Personalized courses adapted to the goals and level of each student",
+        "Creation of practical examples and concrete projects for better absorption",
+        "Teaching React, Vue.js, NestJS frameworks and CMS (WordPress, Wix)",
+        "Teaching the fundamentals of web development (HTML, CSS, JavaScript)"
+      ],
+      "achievements": [
+        "Improved technical skills and autonomy for students",
+        "Successful guidance of multiple students toward their professional goals"
       ]
     },
     "faseya": {
@@ -141,6 +159,25 @@
         "70% reduction in API response times",
         "30% saving on AWS costs",
         "Zero downtime over 4 months of production"
+      ]
+    },
+    "ms_congo": {
+      "title": "Application Developer Consultant",
+      "company": "Ministry of Health (UNICEF)",
+      "date": "Mar 2024 - May 2024",
+      "location": "Brazzaville, Congo",
+      "type": "Mission",
+      "description": "Assisting the ministry's technical team in creating a vaccine reminder application (MANGWELE) and community relay, funded by UNICEF Congo.",
+      "missions": [
+        "Development of RESTful microservices",
+        "Development of the application's back-office and API integration",
+        "Debian server configuration and application deployment",
+        "Deployment of the application within an APN network",
+        "USSD implementation and connection to operators' SMSC"
+      ],
+      "achievements": [
+        "Successful launch of the MANGWELE vaccine reminder app",
+        "Robust integration of USSD for community accessibility"
       ]
     },
     "nanocreatives": {
@@ -185,6 +222,42 @@
         "Complete bilingual documentation delivered"
       ]
     },
+    "lalla": {
+      "title": "AWS Architect / IT Manager",
+      "company": "LALLA BUSINESS",
+      "date": "Mar 2021 - Sept 2024",
+      "location": "Brazzaville, Congo",
+      "type": "Full-time",
+      "description": "Design and implementation of an international money transfer platform (LALLA TRANSFERT). Management of a technical team to drive the company's digital transformation.",
+      "missions": [
+        "Cloud architecture and AWS design for the LALLA TRANSFERT platform",
+        "Leadership of a 2-person IT expert team",
+        "Development and deployment of technical and software strategies",
+        "Project management and alignment with business objectives"
+      ],
+      "achievements": [
+        "Launch of the LALLA TRANSFERT international platform",
+        "Successful digital transformation of the company's services"
+      ]
+    },
+    "noki_noki": {
+      "title": "Frontend Developer",
+      "company": "Noki Noki services",
+      "date": "Mar 2023 - Aug 2023",
+      "location": "Brazzaville, Congo",
+      "type": "Freelance",
+      "description": "Design and development of the user interfaces for the front office of the Confort Car application using modern technologies (Nuxt 3).",
+      "missions": [
+        "Design of user interfaces for the Confort Car app",
+        "Frontend development with Nuxt 3, HTML, CSS, and JavaScript",
+        "Close collaboration with UI designers and backend developers",
+        "Optimization of code performance and accessibility"
+      ],
+      "achievements": [
+        "Smooth, user-friendly, and consistent user experience",
+        "Full compatibility with modern browsers and devices"
+      ]
+    },
     "agrer": {
       "title": "Developer Consultant",
       "company": "AGRER - European Union",
@@ -204,6 +277,24 @@
         "Data collection from 5000+ farmers",
         "Successful training of 300+ field users",
         "80% improvement in the quality of collected data"
+      ]
+    },
+    "lopango": {
+      "title": "Web Developer",
+      "company": "Lopango CG",
+      "date": "Oct 2019 - Mar 2021",
+      "location": "Brazzaville, Congo",
+      "type": "Full-time",
+      "description": "Design and editing of websites and web applications according to the latest technological standards. Started as an intern and evolved into a full-time web developer.",
+      "missions": [
+        "Design and development of websites and web applications",
+        "Strengthening security and ensuring quality of CMS platforms",
+        "Creation of user interfaces aligned with the brand identity",
+        "Technology watch and proposal of new web experiences"
+      ],
+      "achievements": [
+        "Delivery of highly performant and innovative web experiences",
+        "Increased customer satisfaction through modern interfaces"
       ]
     }
   },

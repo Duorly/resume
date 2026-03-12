@@ -3,60 +3,105 @@ const { t } = useI18n()
 
 const experiences = computed(() => [
   {
-    date: 'Sept 2025 - Présent',
+    date: t('experiences.itic_paris.date'),
     title: t('experiences.itic_paris.title'),
-    company: 'ITIC PARIS',
+    company: t('experiences.itic_paris.company'),
     description: t('experiences.itic_paris.description'),
-    location: 'Paris, France',
+    location: t('experiences.itic_paris.location'),
     icon: 'i-lucide-briefcase',
     color: 'bg-amber-500'
   },
   {
-    date: 'Oct 2024 - Sept 2025',
+    date: t('experiences.xksgroup.date'),
     title: t('experiences.xksgroup.title'),
-    company: 'XKSGROUP',
+    company: t('experiences.xksgroup.company'),
     description: t('experiences.xksgroup.description'),
-    location: 'Cergy, France',
-    icon: 'i-lucide-briefcase',
+    location: t('experiences.xksgroup.location'),
+    icon: 'i-lucide-code-2',
     color: 'bg-cyan-500'
   },
   {
-    date: 'Mai - Sept 2024',
+    date: t('experiences.superprof.date'),
+    title: t('experiences.superprof.title'),
+    company: t('experiences.superprof.company'),
+    description: t('experiences.superprof.description'),
+    location: t('experiences.superprof.location'),
+    icon: 'i-lucide-graduation-cap',
+    color: 'bg-rose-500'
+  },
+  {
+    date: t('experiences.faseya.date'),
     title: t('experiences.faseya.title'),
-    company: 'FASEYA',
+    company: t('experiences.faseya.company'),
     description: t('experiences.faseya.description'),
-    location: 'Dakar, Sénégal',
-    icon: 'i-lucide-briefcase',
+    location: t('experiences.faseya.location'),
+    icon: 'i-lucide-server',
     color: 'bg-blue-500'
   },
   {
-    date: 'Oct 2023 - Mars 2024',
+    date: t('experiences.ms_congo.date'),
+    title: t('experiences.ms_congo.title'),
+    company: t('experiences.ms_congo.company'),
+    description: t('experiences.ms_congo.description'),
+    location: t('experiences.ms_congo.location'),
+    icon: 'i-lucide-heart-pulse',
+    color: 'bg-emerald-500'
+  },
+  {
+    date: t('experiences.nanocreatives.date'),
     title: t('experiences.nanocreatives.title'),
-    company: 'Nanocreatives',
+    company: t('experiences.nanocreatives.company'),
     description: t('experiences.nanocreatives.description'),
-    location: 'Brazzaville, Congo',
-    icon: 'i-lucide-briefcase',
+    location: t('experiences.nanocreatives.location'),
+    icon: 'i-lucide-rocket',
     color: 'bg-indigo-500'
   },
   {
-    date: 'Sept - Nov 2023',
+    date: t('experiences.unfpa.date'),
     title: t('experiences.unfpa.title'),
-    company: 'UNFPA (Nations Unies)',
+    company: t('experiences.unfpa.company'),
     description: t('experiences.unfpa.description'),
-    location: 'Brazzaville, Congo',
-    icon: 'i-lucide-briefcase',
+    location: t('experiences.unfpa.location'),
+    icon: 'i-lucide-globe',
     color: 'bg-purple-500'
   },
   {
-    date: 'Janv - Juin 2022',
+    date: t('experiences.lalla.date'),
+    title: t('experiences.lalla.title'),
+    company: t('experiences.lalla.company'),
+    description: t('experiences.lalla.description'),
+    location: t('experiences.lalla.location'),
+    icon: 'i-lucide-wallet',
+    color: 'bg-orange-500'
+  },
+  {
+    date: t('experiences.noki_noki.date'),
+    title: t('experiences.noki_noki.title'),
+    company: t('experiences.noki_noki.company'),
+    description: t('experiences.noki_noki.description'),
+    location: t('experiences.noki_noki.location'),
+    icon: 'i-lucide-car',
+    color: 'bg-teal-500'
+  },
+  {
+    date: t('experiences.agrer.date'),
     title: t('experiences.agrer.title'),
-    company: 'AGRER - Union Européenne',
+    company: t('experiences.agrer.company'),
     description: t('experiences.agrer.description'),
-    location: 'Brazzaville, Congo',
-    icon: 'i-lucide-briefcase',
+    location: t('experiences.agrer.location'),
+    icon: 'i-lucide-leaf',
     color: 'bg-green-500'
+  },
+  {
+    date: t('experiences.lopango.date'),
+    title: t('experiences.lopango.title'),
+    company: t('experiences.lopango.company'),
+    description: t('experiences.lopango.description'),
+    location: t('experiences.lopango.location'),
+    icon: 'i-lucide-monitor',
+    color: 'bg-slate-500'
   }
-])
+].slice(0, 3))
 </script>
 
 <template>

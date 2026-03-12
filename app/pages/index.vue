@@ -1,5 +1,6 @@
 <template>
   <div>
+    <UiSplashCursor />
     <Hero />
 
     <!-- About Section -->
@@ -29,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
-defineOgImageComponent('NuxtSeo', {
-  title: 'Duorli Nebel — Développeur Full Stack',
-  description: 'Création d’applications web modernes, performantes et scalables. Expert Vue.js, Nuxt, Spring Boot, Laravel et Cloud (AWS, GCP).',
-  theme: '#06b6d4', // ton accent cyan
+defineOgImageComponent('PremiumPortfolio', {
+  title: 'Duorli Nebel',
+  description: 'Software Architect & Full Stack Developer',
+  siteName: 'nebel.dev'
 })
 </script>

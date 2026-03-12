@@ -2,7 +2,6 @@
     <div
         class="min-h-screen bg-gray-50 text-slate-900 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 dark:text-white transition-colors duration-300">
         <!-- Navigation -->
-        <UiSplashCursor />
         <nav :class="[
             'fixed w-full z-50 transition-all duration-500',
             isScrolled ? 'py-2' : 'py-4'

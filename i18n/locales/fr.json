@@ -85,7 +85,7 @@
       "company": "ITIC PARIS",
       "date": "Sept 2025 - Présent",
       "location": "Paris, France",
-      "type": "CDI",
+      "type": "Alternance",
       "description": "Conception de l'application ITIC COMPANION, un outil de gamification scolaire connecté à l'ERP Ymag Ypareo. En parallèle, j'assure le mentorat technique d'étudiants du BTS au Master et la mise en place d'une architecture microservices documentée pour le campus numérique.",
       "missions": [
         "Conception et développement de l'application ITIC COMPANION avec Vue.js et Spring Boot",
@@ -106,7 +106,7 @@
       "company": "XKSGROUP",
       "date": "Oct 2024 - Sept 2025",
       "location": "Cergy, France",
-      "type": "CDD",
+      "type": "Alternance",
       "description": "Encadrement technique des projets et conception d'architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs dans une logique de qualité et de scalabilité.",
       "missions": [
         "Direction technique de 3 projets simultanés avec équipes de 5-8 développeurs",
@@ -120,6 +120,24 @@
         "Réduction de 40% du temps de déploiement",
         "Amélioration de la couverture de tests de 25% à 80%",
         "Montée en compétences de 6 développeurs juniors"
+      ]
+    },
+    "superprof": {
+      "title": "Formateur en Développement Web",
+      "company": "Superprof",
+      "date": "Oct 2024 - Présent",
+      "location": "Paris et périphérie",
+      "type": "Freelance",
+      "description": "En tant que formateur indépendant en développement web et logiciel, j'accompagne des apprenants de tous niveaux dans la maîtrise des technologies modernes et des outils logiciels.",
+      "missions": [
+        "Cours personnalisés adaptés aux objectifs et au niveau de chaque élève",
+        "Création d'exemples pratiques et de projets concrets pour une meilleure assimilation",
+        "Enseignement des frameworks React, Vue.js, NestJS et des CMS (WordPress, Wix)",
+        "Enseignement des bases du développement web (HTML, CSS, JavaScript)"
+      ],
+      "achievements": [
+        "Amélioration des compétences techniques et autonomie des élèves",
+        "Accompagnement réussi de plusieurs élèves vers leurs objectifs professionnels"
       ]
     },
     "faseya": {
@@ -141,6 +159,25 @@
         "Réduction de 70% des temps de réponse API",
         "Économie de 30% sur les coûts AWS",
         "Zero downtime sur 4 mois de production"
+      ]
+    },
+    "ms_congo": {
+      "title": "Consultant Développeur d'Application",
+      "company": "Ministère de la Santé (UNICEF)",
+      "date": "Mars 2024 - Mai 2024",
+      "location": "Brazzaville, Congo",
+      "type": "Mission",
+      "description": "Accompagnement de l’équipe technique du ministère dans la réalisation d’une application de rappel vaccinal (MANGWELE) et du relais communautaire financé par UNICEF Congo.",
+      "missions": [
+        "Développement des micro services de type RESTful",
+        "Développement du back-office de l’application et intégration des APIs",
+        "Configuration de serveur sous Debian et déploiement",
+        "Déploiement de l’application dans un réseau APN",
+        "Implémentation USSD et connexion au SMSC des opérateurs"
+      ],
+      "achievements": [
+        "Lancement réussi de l'application de rappel vaccinal MANGWELE",
+        "Intégration robuste de l'USSD pour l'accessibilité communautaire"
       ]
     },
     "nanocreatives": {
@@ -185,6 +222,42 @@
         "Documentation bilingue complète livrée"
       ]
     },
+    "lalla": {
+      "title": "AWS Architect / IT Manager",
+      "company": "LALLA BUSINESS",
+      "date": "Mars 2021 - Sept 2024",
+      "location": "Brazzaville, Congo",
+      "type": "CDI",
+      "description": "Conception et mise en place d'une plateforme de transfert de fonds internationaux (LALLA TRANSFERT). Direction d'une équipe technique pour accompagner la transformation numérique de l'entreprise.",
+      "missions": [
+        "Conception et architecture cloud AWS de la plateforme LALLA TRANSFERT",
+        "Direction d'une équipe de deux experts en informatique",
+        "Élaboration et déploiement de stratégies techniques et logicielles",
+        "Gestion de projet et alignement avec les objectifs business"
+      ],
+      "achievements": [
+        "Lancement de la plateforme internationale LALLA TRANSFERT",
+        "Transformation numérique réussie des services de l'entreprise"
+      ]
+    },
+    "noki_noki": {
+      "title": "Développeur Frontend",
+      "company": "Noki Noki services",
+      "date": "Mars 2023 - Août 2023",
+      "location": "Brazzaville, Congo",
+      "type": "Freelance",
+      "description": "Conception et développement des interfaces utilisateur du front office de l'application Confort Car en utilisant des technologies modernes (Nuxt 3).",
+      "missions": [
+        "Conception des interfaces utilisateur pour l'application Confort Car",
+        "Développement frontend avec Nuxt 3, HTML, CSS et JavaScript",
+        "Collaboration étroite avec les designers et développeurs backend",
+        "Optimisation des performances et de l'accessibilité du code"
+      ],
+      "achievements": [
+        "Expérience utilisateur fluide, conviviale et homogène",
+        "Compatibilité totale avec les navigateurs et appareils modernes"
+      ]
+    },
     "agrer": {
       "title": "Consultant Développeur",
       "company": "AGRER - Union Européenne",
@@ -204,6 +277,24 @@
         "Collecte de données auprès de 5000+ agriculteurs",
         "Formation réussie de 300+ utilisateurs terrain",
         "Amélioration de 80% de la qualité des données collectées"
+      ]
+    },
+    "lopango": {
+      "title": "Développeur web",
+      "company": "Lopango CG",
+      "date": "Oct 2019 - Mars 2021",
+      "location": "Brazzaville, Congo",
+      "type": "CDI",
+      "description": "Conception et édition de sites internet et d'applications web selon les dernières normes technologiques. Stage initial puis évolution en tant que développeur web à temps plein.",
+      "missions": [
+        "Conception et développement de sites et applications web",
+        "Renforcement de la sécurité et assurance qualité des plateformes CMS",
+        "Création d'interfaces utilisateurs respectant l'identité de marque",
+        "Veille technologique et proposition de nouvelles expériences web"
+      ],
+      "achievements": [
+        "Création d'expériences web performantes et innovantes",
+        "Amélioration de la satisfaction client via des interfaces modernes"
       ]
     }
   },

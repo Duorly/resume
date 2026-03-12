@@ -42,31 +42,66 @@ const experiencesList = [
   },
   {
     id: 3,
+    key: 'superprof',
+    icon: 'lucide:graduation-cap',
+    color: 'rose',
+    technologies: ['React', 'Vue.js', 'NestJS', 'WordPress', 'HTML', 'CSS', 'JavaScript']
+  },
+  {
+    id: 4,
     key: 'faseya',
     icon: 'lucide:server',
     color: 'blue',
     technologies: ['Node.js', 'NestJS', 'AWS Lambda', 'DynamoDB', 'PostgreSQL', 'Redis', 'Terraform', 'Docker']
   },
   {
-    id: 4,
+    id: 5,
+    key: 'ms_congo',
+    icon: 'lucide:heart-pulse',
+    color: 'emerald',
+    technologies: ['REST API', 'Debian', 'USSD', 'Linux', 'Microservices', 'SMSC']
+  },
+  {
+    id: 6,
     key: 'nanocreatives',
     icon: 'lucide:rocket',
     color: 'indigo',
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'AWS', 'GCP', 'GitHub Actions', 'Docker', 'Nginx']
   },
   {
-    id: 5,
+    id: 7,
     key: 'unfpa',
     icon: 'lucide:globe',
     color: 'purple',
     technologies: ['GLPI', 'PHP', 'MySQL', 'Linux', 'Apache', 'LDAP']
   },
   {
-    id: 6,
+    id: 8,
+    key: 'lalla',
+    icon: 'lucide:wallet',
+    color: 'orange',
+    technologies: ['AWS', 'Cloud Architecture', 'Management', 'Fintech', 'Microservices']
+  },
+  {
+    id: 9,
+    key: 'noki_noki',
+    icon: 'lucide:car',
+    color: 'teal',
+    technologies: ['Nuxt 3', 'Vue.js', 'HTML', 'CSS', 'JavaScript']
+  },
+  {
+    id: 10,
     key: 'agrer',
     icon: 'lucide:leaf',
     color: 'green',
     technologies: ['Flutter', 'Laravel', 'Vue.js', 'MySQL', 'Google Maps API', 'Firebase']
+  },
+  {
+    id: 11,
+    key: 'lopango',
+    icon: 'lucide:monitor',
+    color: 'slate',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'CMS', 'Web Design']
   }
 ]
 
@@ -143,9 +178,47 @@ const getColorClasses = (color: string) => {
       text: 'text-green-400',
       border: 'border-green-500/30',
       gradient: 'from-green-500/20 to-green-600/20'
+    },
+    rose: {
+      bg: 'bg-rose-500/10',
+      text: 'text-rose-400',
+      border: 'border-rose-500/30',
+      gradient: 'from-rose-500/20 to-rose-600/20'
+    },
+    emerald: {
+      bg: 'bg-emerald-500/10',
+      text: 'text-emerald-400',
+      border: 'border-emerald-500/30',
+      gradient: 'from-emerald-500/20 to-emerald-600/20'
+    },
+    orange: {
+      bg: 'bg-orange-500/10',
+      text: 'text-orange-400',
+      border: 'border-orange-500/30',
+      gradient: 'from-orange-500/20 to-orange-600/20'
+    },
+    teal: {
+      bg: 'bg-teal-500/10',
+      text: 'text-teal-400',
+      border: 'border-teal-500/30',
+      gradient: 'from-teal-500/20 to-teal-600/20'
+    },
+    slate: {
+      bg: 'bg-slate-500/10',
+      text: 'text-slate-400',
+      border: 'border-slate-500/30',
+      gradient: 'from-slate-500/20 to-slate-600/20'
     }
   }
-  return colors[color] || colors.cyan!
+  
+  const defaultColor = {
+    bg: 'bg-cyan-500/10',
+    text: 'text-cyan-400',
+    border: 'border-cyan-500/30',
+    gradient: 'from-cyan-500/20 to-cyan-600/20'
+  }
+  
+  return colors[color] || defaultColor
 }
 </script>
 
