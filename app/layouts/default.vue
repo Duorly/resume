@@ -180,7 +180,8 @@ const primaryMenuItems = ref([
 const secondaryMenuItems = ref([
     { key: 'menu_experiences', to: '/#menu_experiences' },
     { key: 'menu_education', to: '/#menu_education' },
-    { key: 'menu_contact', to: '/#menu_contact' }
+    { key: 'menu_contact', to: '/#menu_contact' },
+    { key: 'menu_github', to: '/github' }
 ]);
 
 // Tous les éléments pour mobile
