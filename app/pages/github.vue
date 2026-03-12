@@ -1,15 +1,16 @@
 <template>
-  <div class="min-h-screen pt-24 pb-20 px-4 bg-gray-50 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 transition-colors duration-300">
+  <div
+    class="min-h-screen pt-24 pb-20 px-4 bg-gray-50 dark:bg-gradient-to-br dark:from-slate-950 dark:via-blue-950 dark:to-slate-900 transition-colors duration-300">
     <div class="max-w-6xl mx-auto">
-      
+
       <!-- Headings / Setup -->
-      <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+      <div class="text-center my-16">
+        <h1
+          class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           {{ $t('github.title', 'GitHub Insights') }}
         </h1>
         <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-          {{ $t('github.description', 'A deep dive into my open-source contributions, repositories, and favorite languages.') }}
-        </p>
+          {{ $t('github.description', 'A deep dive into my open-source contributions, repositories, and favorite languages.') }}        </p>
       </div>
 
       <!-- Loading State -->
@@ -19,41 +20,56 @@
       </div>
 
       <!-- Error State -->
-      <div v-else-if="error || data?.error" class="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-6 rounded-xl text-center shadow-lg border border-red-200 dark:border-red-800/50">
+      <div v-else-if="error || data?.error"
+        class="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-6 rounded-xl text-center shadow-lg border border-red-200 dark:border-red-800/50">
         <UIcon name="lucide:alert-circle" size="32" class="mx-auto mb-2" />
         <h3 class="text-xl font-bold mb-2">Oops!</h3>
-        <p>{{ error?.message || data?.error || 'Could not load GitHub statistics at this time. Please try again later.' }}</p>
+        <p>{{ error?.message || data?.error || 'Could not load GitHub statistics at this time. Please try again later.'
+        }}</p>
       </div>
 
       <!-- Content -->
       <div v-else-if="data" class="space-y-12">
-        
+
         <!-- Top Metrics Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
             <UIcon name="lucide:star" class="text-yellow-400 mb-3" size="32" />
-            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1"><UiCountUp :to="data.stats.totalStars" /></div>
-            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Total Stars</div>
+            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1">
+              <UiCountUp :to="data.stats.totalStars" />
+            </div>
+            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Total Stars
+            </div>
           </UiSpotlightCard>
-          
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
+
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
             <UIcon name="lucide:git-fork" class="text-cyan-500 mb-3" size="32" />
-            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1"><UiCountUp :to="data.stats.totalForks" /></div>
-            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Total Forks</div>
+            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1">
+              <UiCountUp :to="data.stats.totalForks" />
+            </div>
+            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Total Forks
+            </div>
           </UiSpotlightCard>
-          
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
+
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col items-center text-center">
             <UIcon name="lucide:folder-dot" class="text-emerald-500 mb-3" size="32" />
-            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1"><UiCountUp :to="data.profile.public_repos" /></div>
-            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Public Repos</div>
+            <div class="text-3xl font-extrabold text-slate-800 dark:text-white mb-1">
+              <UiCountUp :to="data.profile.public_repos" />
+            </div>
+            <div class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Public Repos
+            </div>
           </UiSpotlightCard>
         </div>
 
         <!-- Charts Section -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
+
           <!-- Top Languages Chart -->
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <UIcon name="lucide:code-xml" class="text-cyan-500" />
               {{ $t('github.most_used_languages', 'Most Used Languages') }}
@@ -64,7 +80,8 @@
           </UiSpotlightCard>
 
           <!-- Top Repositories Chart -->
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <UIcon name="lucide:award" class="text-yellow-400" />
               {{ $t('github.most_starred_repos', 'Most Starred Repositories') }}
@@ -78,41 +95,66 @@
 
         <!-- Heatmap Graph -->
         <div class="mt-8">
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col">
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <UIcon name="lucide:activity" class="text-emerald-500" />
               {{ $t('github.contribution_graph', 'Contribution Graph') }}
             </h3>
-            
+
             <div class="w-full flex justify-center overflow-hidden mb-4">
               <div class="overflow-x-auto pb-4 max-w-full custom-scrollbar">
+                
+                <!-- Month Labels -->
+                <div class="flex mb-2 min-w-max relative h-5 text-xs text-slate-500 dark:text-slate-400 font-medium" v-if="heatmapMonths.length">
+                  <span v-for="(month, idx) in heatmapMonths" :key="idx" 
+                        class="absolute"
+                        :style="`left: ${month.offset * 20}px`">
+                    {{ month.label }}
+                  </span>
+                </div>
+
                 <div class="inline-grid grid-flow-col grid-rows-7 gap-1.5" v-if="heatmapDays.length">
                   <!-- Tooltip for each day -->
-                  <div v-for="day in heatmapDays" :key="day.date" 
-                       class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] transition-all duration-300 relative group"
-                       :class="[getHeatmapColor(day.intensity), { 'cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-cyan-500 dark:hover:ring-offset-slate-900 border border-slate-200/50 dark:border-slate-800/50': !day.isEmpty, 'opacity-0': day.isEmpty }]">
-                    
-                    <div v-if="!day.isEmpty" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-slate-900 dark:bg-slate-700 text-white font-medium text-xs rounded-lg shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap z-10 pointer-events-none transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                  <div v-for="day in heatmapDays" :key="day.date"
+                    class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] transition-all duration-300 relative group"
+                    :class="[getHeatmapColor(day.intensity), { 'cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-cyan-500 dark:hover:ring-offset-slate-900 border border-slate-200/50 dark:border-slate-800/50': !day.isEmpty, 'opacity-0': day.isEmpty }]">
+
+                    <div v-if="!day.isEmpty"
+                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-slate-900 dark:bg-slate-700 text-white font-medium text-xs rounded-lg shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap z-10 pointer-events-none transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                       <span v-if="day.intensity === '0'">No contributions</span>
                       <span v-else>{{ getContributionText(day.intensity) }}</span>
                       <span class="text-slate-400 ml-1">on {{ new Date(day.date).toLocaleDateString() }}</span>
                       <!-- Little arrow for tooltip -->
-                      <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-900 dark:border-t-slate-700"></div>
+                      <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-900 dark:border-t-slate-700">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Heatmap Legend -->
-            <div class="flex items-center justify-end gap-2 mt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+            <div
+              class="flex items-center justify-end gap-2 mt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
               Less
               <div class="flex gap-1.5">
-                <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-slate-100 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-800/50"></div>
-                <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-200 dark:bg-cyan-900/60 border border-cyan-300/30 dark:border-cyan-800/30"></div>
-                <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-300 dark:bg-cyan-700/80 border border-cyan-400/30 dark:border-cyan-600/30"></div>
-                <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-400 dark:bg-cyan-500 border border-cyan-500/30 dark:border-cyan-400/30"></div>
-                <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-500 dark:bg-cyan-400 border border-cyan-600/30 dark:border-cyan-300/30 shadow-[0_0_8px_rgba(6,182,212,0.4)]"></div>
+                <div
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-slate-100 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-800/50">
+                </div>
+                <div
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-200 dark:bg-cyan-900/60 border border-cyan-300/30 dark:border-cyan-800/30">
+                </div>
+                <div
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-300 dark:bg-cyan-700/80 border border-cyan-400/30 dark:border-cyan-600/30">
+                </div>
+                <div
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-400 dark:bg-cyan-500 border border-cyan-500/30 dark:border-cyan-400/30">
+                </div>
+                <div
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-[4px] bg-cyan-500 dark:bg-cyan-400 border border-cyan-600/30 dark:border-cyan-300/30 shadow-[0_0_8px_rgba(6,182,212,0.4)]">
+                </div>
               </div>
               More
             </div>
@@ -121,7 +163,8 @@
 
         <!-- Commits per Year Chart -->
         <div class="mt-8">
-          <UiSpotlightCard class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
+          <UiSpotlightCard
+            class-name="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm dark:shadow-none p-6 flex flex-col h-full min-h-[400px]">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
               <UIcon name="lucide:calendar-days" class="text-violet-500" />
               {{ $t('github.commits_per_year', 'Commits per Year') }}
@@ -131,7 +174,7 @@
             </div>
           </UiSpotlightCard>
         </div>
-        
+
         <!-- Top Repositories List -->
         <div class="mt-12">
           <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
@@ -139,20 +182,17 @@
             {{ $t('github.featured_repos', 'Featured Repositories') }}
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a
-              v-for="repo in data.topRepos"
-              :key="repo.name"
-              :href="repo.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block group"
-            >
-              <UiSpotlightCard class-name="h-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm dark:shadow-none p-5 transition-transform duration-300 group-hover:-translate-y-1">
+            <a v-for="repo in data.topRepos" :key="repo.name" :href="repo.url" target="_blank" rel="noopener noreferrer"
+              class="block group">
+              <UiSpotlightCard
+                class-name="h-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm dark:shadow-none p-5 transition-transform duration-300 group-hover:-translate-y-1">
                 <div class="flex justify-between items-start mb-3">
-                  <h4 class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                  <h4
+                    class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                     {{ repo.name }}
                   </h4>
-                  <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md text-sm">
+                  <div
+                    class="flex items-center gap-1 text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md text-sm">
                     <UIcon name="lucide:star" size="14" class="text-yellow-500" />
                     {{ repo.stars }}
                   </div>
@@ -161,7 +201,8 @@
                   {{ repo.description || 'No description provided.' }}
                 </p>
                 <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
-                  <UIcon name="lucide:arrow-right" class="text-cyan-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  <UIcon name="lucide:arrow-right"
+                    class="text-cyan-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                 </div>
               </UiSpotlightCard>
             </a>
@@ -232,7 +273,9 @@ defineOgImageComponent('PremiumPortfolio', {
 })
 
 // Fetch data from our cached Nitro endpoint
-const { data, pending, error } = await useFetch<GithubStatsResponse>('/api/github-stats')
+const { data, pending, error } = await useFetch<GithubStatsResponse>('/api/github-stats', {
+  key: 'github-stats-v4'
+})
 
 const colorMode = useColorMode()
 const isDark = computed(() => colorMode.value === 'dark')
@@ -247,11 +290,11 @@ const CHART_COLORS = [
 ]
 
 const CHART_BORDERS = [
-  'rgba(6, 182, 212, 1)',   
-  'rgba(59, 130, 246, 1)',  
-  'rgba(139, 92, 246, 1)',  
-  'rgba(236, 72, 153, 1)',  
-  'rgba(245, 158, 11, 1)',  
+  'rgba(6, 182, 212, 1)',
+  'rgba(59, 130, 246, 1)',
+  'rgba(139, 92, 246, 1)',
+  'rgba(236, 72, 153, 1)',
+  'rgba(245, 158, 11, 1)',
 ]
 
 // Base chart options for styling readability depending on theme
@@ -339,10 +382,10 @@ const repoChartData = computed(() => {
 
 const commitsChartData = computed(() => {
   if (!data.value?.contributionsYears) return null
-  
+
   // Sort by year ascending
   const sortedYears = [...data.value.contributionsYears].sort((a, b) => parseInt(a.year) - parseInt(b.year))
-  
+
   return {
     labels: sortedYears.map((c: any) => c.year),
     datasets: [{
@@ -360,23 +403,55 @@ const commitsChartData = computed(() => {
 // Pad the heatmap so the grid starts on a Sunday
 const heatmapDays = computed(() => {
   if (!data.value?.dailyContributions?.length) return []
-  
-  const days = [...data.value.dailyContributions].map(d => ({...d, isEmpty: false}))
+
+  const days = [...data.value.dailyContributions].map(d => ({ ...d, isEmpty: false }))
   const firstDay = days.length > 0 ? new Date(days[0]?.date || '').getDay() : 0 // 0 = Sunday
-  
+
   const paddedDays = []
   for (let i = 0; i < firstDay; i++) {
     paddedDays.push({ date: `empty-${i}`, count: 0, intensity: '0', isEmpty: true })
   }
-  
+
   return [...paddedDays, ...days]
+})
+
+// Calculate the months to display above the heatmap
+const heatmapMonths = computed(() => {
+  const months: Array<{ label: string; offset: number }> = []
+  if (!heatmapDays.value.length) return months
+  
+  let currentMonth = -1
+  
+  // 1 column = 7 days. We iterate through columns.
+  // The gap + width is approx 20px per column.
+  for (let i = 0; i < heatmapDays.value.length; i += 7) {
+    const day = heatmapDays.value[i]
+    if (!day || day.isEmpty) continue
+    
+    // Check the month of this day
+    const dateObj = new Date(day.date)
+    const month = dateObj.getMonth()
+    
+    // If it's the first time we see this month (and it's not the very start to avoid cutting off labels)
+    if (month !== currentMonth && i > 0) {
+      months.push({
+        label: dateObj.toLocaleDateString(undefined, { month: 'short' }),
+        offset: i / 7
+      })
+      currentMonth = month
+    } else if (currentMonth === -1) {
+       currentMonth = month // Set initial but don't add label at the very 0px mark
+    }
+  }
+  
+  return months
 })
 
 // Helper for Heatmap colors
 const getHeatmapColor = (intensity: string) => {
   // Empty padded days
   if (intensity === '0') return 'bg-slate-100 dark:bg-slate-800/80'
-  
+
   switch (intensity) {
     case '1': return 'bg-cyan-200 dark:bg-cyan-900/60'
     case '2': return 'bg-cyan-300 dark:bg-cyan-700/80'
@@ -402,13 +477,16 @@ const getContributionText = (intensity: string) => {
 .custom-scrollbar::-webkit-scrollbar {
   height: 6px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(148, 163, 184, 0.3);
   border-radius: 20px;
 }
+
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(51, 65, 85, 0.5);
 }

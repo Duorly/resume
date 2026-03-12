@@ -233,8 +233,9 @@ const getColorClasses = (color: string) => {
           <div class="sticky top-24 space-y-4">
             <h2 class="text-2xl font-bold mb-6 text-slate-800 dark:text-white">{{ t('experiences_title') }}</h2>
 
-            <div
-                v-for="exp in experiences"
+            <div class="space-y-4 overflow-y-auto max-h-[calc(100vh-12rem)] pr-2 custom-scrollbar">
+              <div
+                  v-for="exp in experiences"
                 :key="exp.id"
                 :class="[
                 'cursor-pointer p-4 rounded-xl border transition-all duration-300',
@@ -275,6 +276,7 @@ const getColorClasses = (color: string) => {
             </div>
           </div>
         </div>
+      </div>
 
         <!-- Contenu principal - Détails de l'expérience -->
         <div class="lg:col-span-2">
@@ -452,5 +454,22 @@ const getColorClasses = (color: string) => {
 
 .lg\:col-span-2 > div {
   animation: fadeIn 0.4s ease-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(51, 65, 85, 0.5);
 }
 </style>

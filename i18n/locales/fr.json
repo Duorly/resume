@@ -381,5 +381,14 @@
     "no_articles_description": "Aucun article ne correspond à vos critères de recherche. Essayez de modifier vos filtres.",
     "reset_filters": "Réinitialiser les filtres"
   },
-  "permit": "Permis"
+  "permit": "Permis",
+  "github": {
+    "title": "Statistiques GitHub",
+    "description": "Une analyse en profondeur de mes contributions open-source, de mes dépôts et de mes langages favoris.",
+    "most_used_languages": "Langages les plus utilisés",
+    "most_starred_repos": "Dépôts les plus étoilés",
+    "contribution_graph": "Graphe d'activité",
+    "commits_per_year": "Commits par an",
+    "featured_repos": "Dépôts en vedette"
+  }
 }

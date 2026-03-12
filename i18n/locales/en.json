@@ -381,5 +381,14 @@
     "no_articles_description": "No articles match your search criteria. Try modifying your filters.",
     "reset_filters": "Reset filters"
   },
-  "permit": "Permit"
+  "permit": "Permit",
+  "github": {
+    "title": "GitHub Insights",
+    "description": "A deep dive into my open-source contributions, repositories, and favorite languages.",
+    "most_used_languages": "Most Used Languages",
+    "most_starred_repos": "Most Starred Repositories",
+    "contribution_graph": "Contribution Graph",
+    "commits_per_year": "Commits per Year",
+    "featured_repos": "Featured Repositories"
+  }
 }
